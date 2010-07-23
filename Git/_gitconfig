@@ -5,3 +5,5 @@
 	ssij = pull
 [color]
 	ui = auto
+[core]
+	editor = vim
