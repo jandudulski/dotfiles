@@ -1,0 +1,7 @@
+[user]
+	name = Jan Dudulski
+	email = jan@dudulski.pl
+[alias]
+	ssij = pull
+[color]
+	ui = auto
