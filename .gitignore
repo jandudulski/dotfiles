@@ -1,2 +1,4 @@
 # ignore temporary vimrc
 .vimrc~
+*swp
+*swo
