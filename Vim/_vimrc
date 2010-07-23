@@ -1,0 +1,151 @@
+" My simply vimrc ;]
+"
+" @author: Jan Dudulski <jan@dudulski.pl>
+
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+if has("vms")
+  set nobackup " do not keep a backup file, use versions instead
+else
+  set backup " more backups
+  set backupdir=~/tmp " keep backups in tmp
+  if $USER == "root"
+    " 'sudo vi' on certain machines cannot write to ~/tmp (NFS root-sqash)
+    " http://mg.pov.lt/vim/vimrc
+    set backupdir=/root/tmp
+  endif
+
+  if !isdirectory(&backupdir)
+    " create the backup directory if it doesn't already exist
+    exec "silent !mkdir -p " . &backupdir
+  endif
+endif
+set history=100 " keep 100 lines of command line history
+set ruler " show the cursor position all the time
+set list " show end of line:
+set listchars=tab:>-,trail:.,extends:>
+let &sbr = nr2char(8618).' ' " show ↪ at the beginning of wrapped lines
+highlight OverLenght ctermbg=red ctermfg=00FF00 guibg=#0000FF
+match OverLenght /\%>80v.\+/
+set showcmd " display incomplete commands
+set incsearch " do incremental searching
+set smartcase " do smart search
+set title " show filename in titlebar
+set autochdir " change current working directory whenever open file
+
+" UTF!
+set encoding=utf-8
+" text width
+set textwidth=79
+set wrapmargin=0 " disable autowrapping
+
+" line number and highlight
+set nu
+set cursorline
+set numberwidth=4
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+" Automatically indent when adding a curly bracket, etc.
+set cindent
+" set smartindent
+set autoindent
+
+" Tabs should be converted to a group of 2 spaces.
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set smarttab
+
+" statusline
+set statusline=
+" syntax checker
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" format
+set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %12.(%c:%l/%L%)
+set laststatus=2
+
+" set color scheme
+if has("gui_running")
+    colorscheme mustang
+else
+    colorscheme darkblue
+endif
+
+" font
+set guifont=Praxis\ 12
+
+"" noremaps
+" alt-j and alt-k for tab switch
+noremap <A-j> gT
+noremap <A-k> gt
+" nerdtree on F7
+noremap <silent> <F7> :NERDTreeToggle<CR>
+" omnicompletition on ctrl+space
+inoremap <c-space> <c-x><c-o>
+" ctrl-s
+nmap <c-s> :w<CR>
+imap <c-s> <ESC>:w<CR>a
+" tab and untab
+nmap <tab> v>
+nmap <s-tab> v<
+vmap <tab> >gv
+vmap <s-tab> <gv
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " start less
+  au BufNewFile,BufRead *.less set filetype=less
+
+  " match to width lines
+  autocmd BufRead * highlight OverLenght ctermbg=darkgrey guibg=#592929
+  autocmd BufRead * match OverLenght /\%79v.*/
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  " Also don't do it when the mark is in the first line, that is the default
+  " position when opening a file.
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+  augroup END
+
+else
+
+    " anything here?
+
+endif " has("autocmd")
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
