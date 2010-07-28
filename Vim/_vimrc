@@ -47,6 +47,7 @@ set wrapmargin=0 " disable autowrapping
 " line number and highlight
 set nu
 set cursorline
+set cursorcolumn
 set numberwidth=4
 
 " Switch syntax highlighting on, when the terminal has colors
