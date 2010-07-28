@@ -28,7 +28,7 @@ endif
 set history=100 " keep 100 lines of command line history
 set ruler " show the cursor position all the time
 set list " show end of line:
-set listchars=tab:>-,trail:.,extends:>,eol:.
+set listchars=tab:>-,trail:.,extends:>
 let &sbr = nr2char(8618).' ' " show ↪ at the beginning of wrapped lines
 highlight OverLenght ctermbg=red ctermfg=00FF00 guibg=#0000FF
 match OverLenght /\%>80v.\+/
