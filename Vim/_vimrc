@@ -80,7 +80,8 @@ set laststatus=2
 
 " set color scheme
 if has("gui_running")
-    colorscheme mustang
+    " colorscheme mustang
+    colorscheme bespin
 else
     colorscheme darkblue
 endif
