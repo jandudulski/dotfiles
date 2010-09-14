@@ -122,6 +122,9 @@ if has("autocmd")
   " start less
   au BufNewFile,BufRead *.less set filetype=less
 
+  " add jQuery syntax
+  au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
   " match to width lines
   autocmd BufRead * highlight OverLenght ctermbg=darkgrey guibg=#592929
   autocmd BufRead * match OverLenght /\%79v.*/
