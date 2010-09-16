@@ -1,0 +1,1 @@
+{'version': 0.3, 'files': [{'file': '/home/yanoo/.vim/autoload/htmlcomplete.vim', 'checksum': ''}, {'file': '/home/yanoo/.vim/autoload/xml/html5.vim', 'checksum': ''}, {'file': '/home/yanoo/.vim/syntax/html/html5.vim', 'checksum': ''}], 'install_type': 'makefile', 'script_version': '0.2', 'package': 'html5.vim', 'generated_by': 'Vim-Makefile'}
