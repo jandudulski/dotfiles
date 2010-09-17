@@ -40,6 +40,12 @@ set cursorline
 set cursorcolumn
 set numberwidth=4
 
+" set color scheme
+if &t_Co >= 256 || has("gui_running")
+  " colorscheme mustang
+  colorscheme bespin
+endif
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
@@ -67,16 +73,6 @@ set statusline+=%*
 " format
 set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %12.(%c:%l/%L%)
 set laststatus=2
-
-" set color scheme
-if &t_Co >= 256 || has("gui_running")
-  " colorscheme mustang
-  colorscheme bespin
-endif
-
-if &t_Co > 2 || has("gui_running")
-  syntax on
-endif
 
 " font
 set guifont=Praxis\ 12
