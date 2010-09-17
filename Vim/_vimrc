@@ -9,26 +9,15 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup " do not keep a backup file, use versions instead
-else
-  set backup " more backups
-  set backupdir=~/tmp " keep backups in tmp
-  if $USER == "root"
-    " 'sudo vi' on certain machines cannot write to ~/tmp (NFS root-sqash)
-    " http://mg.pov.lt/vim/vimrc
-    set backupdir=/root/tmp
-  endif
+set nobackup " do not keep a backup file, use versions instead
+set noswapfile
 
-  if !isdirectory(&backupdir)
-    " create the backup directory if it doesn't already exist
-    exec "silent !mkdir -p " . &backupdir
-  endif
-endif
 set history=100 " keep 100 lines of command line history
+set undolevels=100 " use many undos
+set wildignore=*.swp,*.bak,*.pyc
 set ruler " show the cursor position all the time
 set list " show end of line:
-set listchars=tab:>-,trail:.,extends:>
+set listchars=tab:>-,trail:.,extends:>,nbsp:·
 let &sbr = nr2char(8618).' ' " show ↪ at the beginning of wrapped lines
 highlight OverLenght ctermbg=red ctermfg=00FF00 guibg=#0000FF
 match OverLenght /\%>80v.\+/
@@ -37,6 +26,7 @@ set incsearch " do incremental searching
 set smartcase " do smart search
 set title " show filename in titlebar
 set autochdir " change current working directory whenever open file
+set hidden " don't remove the buffer, just hide it
 
 " UTF!
 set encoding=utf-8
@@ -79,11 +69,13 @@ set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %
 set laststatus=2
 
 " set color scheme
-if has("gui_running")
-    " colorscheme mustang
-    colorscheme bespin
-else
-    colorscheme darkblue
+if &t_Co >= 256 || has("gui_running")
+  " colorscheme mustang
+  colorscheme bespin
+endif
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
 endif
 
 " font
