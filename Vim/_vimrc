@@ -96,6 +96,9 @@ vmap <s-tab> <gv
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+" ctrl+c and ctrl+v with global buffer
+vmap <silent> <C-c> "+y
+nmap <silent> <C-v> "+gP
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
