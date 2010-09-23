@@ -73,6 +73,9 @@ set statusline+=%*
 " format
 set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %12.(%c:%l/%L%)
 set laststatus=2
+" open errors list on save
+let g:syntastic_auto_loc_list=1
+
 
 " font
 set guifont=Praxis\ 12
@@ -98,7 +101,7 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " ctrl+c and ctrl+v with global buffer
 vmap <silent> <C-c> "+y
-nmap <silent> <C-v> "+gP
+imap <silent> <C-v> <ESC>"+gP
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
