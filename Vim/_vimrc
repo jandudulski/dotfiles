@@ -130,4 +130,4 @@ set ttymouse=xterm2
 set hidden
 
 "plugins configuration
-
+noremap <silent> <F7> :NERDTreeToggle<CR>
