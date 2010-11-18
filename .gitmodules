@@ -7,3 +7,6 @@
 [submodule "Vim/_vim/bundle/syntastic"]
 	path = Vim/_vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "Vim/_vim/bundle/matchit"]
+	path = Vim/_vim/bundle/matchit
+	url = git://github.com/edsono/vim-matchit.git
