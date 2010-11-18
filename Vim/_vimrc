@@ -51,7 +51,7 @@ set fo=1
 
 "statusline setup
 set statusline=%f                                             "tail of the filename
-"set statusline+=[%{GitBranch()}]                              "Git
+set statusline+=\ %{fugitive#statusline()}                      "Git
 set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} "RVM
 set statusline+=%=                                            "left/right separator
 set statusline+=%c,                                           "cursor column
