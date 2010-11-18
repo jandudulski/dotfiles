@@ -13,3 +13,6 @@
 [submodule "Vim/_vim/bundle/snipmate"]
 	path = Vim/_vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "Vim/_vim/bundle/Command-T"]
+	path = Vim/_vim/bundle/Command-T
+	url = git://github.com/wincent/Command-T.git
