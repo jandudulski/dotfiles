@@ -8,10 +8,10 @@
 "@author Jan Dudulski
 "@see    http://github.com/jandudulski
 
-"necessary on some Linux distros for pathogen to properly load bundles
+"Necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
-"load pathogen managed plugins
+"Load pathogen managed plugins
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -22,10 +22,17 @@ set encoding=utf-8
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-"allow backspacing over everything in insert mode
+"Switch mapleader from \ to ,
+let mapleader=","
+
+"Shortcut for edit/reload vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>rv :so $MYVIMRC<CR>
+
+"Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-"store lots of :cmdline history and undos
+"Store lots of :cmdline history and undos
 set history=1000
 set undolevels=1000
 
@@ -39,40 +46,40 @@ set number     "add line numbers
 set showbreak=↪
 set wrap linebreak nolist
 
-"add some line space for easy reading
+"Add some line space for easy reading
 set linespace=4
 
-"disable visual bell
+"Disable visual bell
 set visualbell t_vb=
 
-"make possible to navigate within lines of wrapped lines
+"Make possible to navigate within lines of wrapped lines
 nmap <Down> gj
 nmap <Up> gk
 
-"fold wrapped lines
+"Fold wrapped lines
 set fo=1
 
-"change current working directory whenever open file
+"Change current working directory whenever open file
 set autochdir
 
-"statusline setup
+"Statusline setup
 set statusline=%f                                             "tail of the filename
-set statusline+=\ %{fugitive#statusline()}                    "Git
-set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} "RVM
+set statusline+=\ %{fugitive#statusline()}                    "git
+set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} "rvm
 set statusline+=%=                                            "left/right separator
 set statusline+=%c,                                           "cursor column
 set statusline+=%l/%L                                         "cursor line/total lines
 set statusline+=\ %P                                          "percent through file
 set laststatus=2
 
-"turn off needless toolbar on gvim
+"Turn off needless toolbar on gvim
 set guioptions-=T
 
-"recalculate the trailing whitespace warning when idle, and after saving
+"Recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 
-"return '[\s]' if trailing white space is detected
-"return '' otherwise
+"Return '[\s]' if trailing white space is detected
+"Return '' otherwise
 function! StatuslineTrailingSpaceWarning()
   if !exists("b:statusline_trailing_space_warning")
     if search('\s\+$', 'nw') != 0
@@ -84,12 +91,12 @@ function! StatuslineTrailingSpaceWarning()
   return b:statusline_trailing_space_warning
 endfunction
 
-"recalculate the tab warning flag when idle and after writing
+"Recalculate the tab warning flag when idle and after writing
 autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 
-"return '[&et]' if &et set wrong
-"return '[mixed-indenting]' if spaces and tabs are used to indent
-"return '' if everything is fine
+"Return '[&et]' if &et set wrong
+"Return '[mixed-indenting]' if spaces and tabs are used to indent
+"Return '' if everything is fine
 function! StatuslineTabWarning()
   if !exists("b:statusline_tab_warning")
     let tabs = search('^\t', 'nw') != 0
@@ -106,13 +113,13 @@ function! StatuslineTabWarning()
   return b:statusline_tab_warning
 endfunction
 
-"indent settings
+"Indent settings
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
 
-"folding settings
+"Folding settings
 set foldmethod=indent    "fold based on indent
 set foldnestmax=3        "deepest fold is 3 levels
 set nofoldenable         "disable on default
@@ -121,23 +128,23 @@ set wildmode=list:longest  "make cmdline tab completion similar to bash
 set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~,*.pyc
 
-"load ftplugins and indent files
+"Load ftplugins and indent files
 filetype plugin on
 filetype indent on
 
-"turn on syntax highlighting
+"Turn on syntax highlighting
 syntax on
 
-"some stuff to get the mouse going in term
+"Some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
 
-"hide buffers when not displayed
+"Hide buffers when not displayed
 set hidden
 
-"has gui
+"Has gui
 if has("gui_running")
-  "tell the term has 256 colors
+  "Tell the term has 256 colors
   set t_Co=256
 
   colorscheme mustang
@@ -157,7 +164,12 @@ if has("gui_running")
   endif
 endif
 
-"plugins configuration
-noremap <silent> <F7> :NERDTreeToggle<CR>    "NERDTree
+"""""""""""""""""""""""
+"Plugins configuration"
+"""""""""""""""""""""""
+"NERDTree
+noremap <silent> <F7> :NERDTreeToggle<CR>
+
+"Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 
