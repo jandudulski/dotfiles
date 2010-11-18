@@ -15,6 +15,9 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"Use utf-8
+set encoding=utf-8
+
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -46,12 +49,15 @@ set visualbell t_vb=
 nmap <Down> gj
 nmap <Up> gk
 
-" fold wrapped lines
+"fold wrapped lines
 set fo=1
+
+"change current working directory whenever open file
+set autochdir
 
 "statusline setup
 set statusline=%f                                             "tail of the filename
-set statusline+=\ %{fugitive#statusline()}                      "Git
+set statusline+=\ %{fugitive#statusline()}                    "Git
 set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} "RVM
 set statusline+=%=                                            "left/right separator
 set statusline+=%c,                                           "cursor column
@@ -128,6 +134,28 @@ set ttymouse=xterm2
 
 "hide buffers when not displayed
 set hidden
+
+"has gui
+if has("gui_running")
+  "tell the term has 256 colors
+  set t_Co=256
+
+  colorscheme mustang
+  set guitablabel=%M%t
+  set lines=40
+  set columns=115
+
+  if has("gui_gnome")
+    set term=gnome-256color
+    set guifont=Praxis\ 12
+  endif
+
+  if has("gui_mac")
+  endif
+
+  if has("gui_win32") || has("gui_win32s")
+  endif
+endif
 
 "plugins configuration
 noremap <silent> <F7> :NERDTreeToggle<CR>    "NERDTree
