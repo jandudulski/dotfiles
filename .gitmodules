@@ -16,3 +16,6 @@
 [submodule "Vim/_vim/bundle/Command-T"]
 	path = Vim/_vim/bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
+[submodule "Vim/_vim/bundle/sparkup"]
+	path = Vim/_vim/bundle/sparkup
+	url = git://github.com/bingaman/vim-sparkup
