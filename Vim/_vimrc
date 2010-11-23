@@ -62,6 +62,9 @@ set fo=1
 "Change current working directory whenever open file
 set autochdir
 
+"Paste mode prevents insane pasting from another file
+set pastetoggle=<F2>
+
 "Statusline setup
 set statusline=%f                                             "tail of the filename
 set statusline+=\ %{fugitive#statusline()}                    "git
