@@ -39,8 +39,10 @@ set undolevels=1000
 set showcmd    "show incomplete cmds down the bottom
 set showmode   "show current mode down the bottom
 
-set incsearch  "find the next match as we type search
-set hlsearch   "highlight searches by default
+set incsearch                     "find the next match as we type search
+set hlsearch                      "highlight searches by default
+"Clear highlight
+nmap <silent> ,/ :nohlsearch<CR>
 
 set number     "add line numbers
 set showbreak=↪
