@@ -65,6 +65,12 @@ set visualbell t_vb=
 "Make possible to navigate within lines of wrapped lines
 nmap <Down> gj
 nmap <Up> gk
+"Yank/Paste to the OS clipboard with ,y and ,p and Ctrl-V
+nmap <leader>y "+Y
+vmap <leader>y "+y
+nmap <leader>p "+p
+nmap <leader>P "+P
+imap <C-v> <esc>"+pi
 
 "Fold wrapped lines
 set fo=1
