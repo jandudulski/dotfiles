@@ -19,3 +19,6 @@
 [submodule "Vim/_vim/bundle/sparkup"]
 	path = Vim/_vim/bundle/sparkup
 	url = git://github.com/bingaman/vim-sparkup
+[submodule "Vim/_vim/bundle/YankRing"]
+	path = Vim/_vim/bundle/YankRing
+	url = git://github.com/chrismetcalf/vim-yankring.git
