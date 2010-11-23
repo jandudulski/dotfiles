@@ -15,6 +15,10 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"Load ftplugins and indent files
+filetype plugin on
+filetype indent on
+
 "Use utf-8
 set encoding=utf-8
 
@@ -46,7 +50,9 @@ set hlsearch                      "highlight searches by default
 "Clear highlight
 nmap <silent> ,/ :nohlsearch<CR>
 
-set number     "add line numbers
+set number        "add line numbers
+set cursorline    "highlight current line
+set cursorcolumn  "highlight current column
 set showbreak=↪
 set wrap linebreak nolist
 
@@ -137,10 +143,6 @@ set nofoldenable         "disable on default
 set wildmode=list:longest  "make cmdline tab completion similar to bash
 set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~,*.pyc
-
-"Load ftplugins and indent files
-filetype plugin on
-filetype indent on
 
 "Turn on syntax highlighting
 syntax on
