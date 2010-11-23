@@ -114,10 +114,13 @@ function! StatuslineTabWarning()
 endfunction
 
 "Indent settings
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+set tabstop=2      "two characters space for tab
+set shiftwidth=2   "two spaces for autoindent
+set softtabstop=2  "two spaces when pressing tab
+set expandtab      "use spaces instead of tabs
 set autoindent
+set copyindent     "copy last indent
+set shiftround     "keep multiple indenting
 
 "Folding settings
 set foldmethod=indent    "fold based on indent
@@ -141,6 +144,9 @@ set ttymouse=xterm2
 
 "Hide buffers when not displayed
 set hidden
+"Don't use backup files
+set nobackup
+set noswapfile
 
 "Has gui
 if has("gui_running")
