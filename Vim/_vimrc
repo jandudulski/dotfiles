@@ -58,7 +58,17 @@ set wrap linebreak nolist
 
 "End of line
 if v:version >= 703
-  set colorcolumn=80
+  set colorcolumn=80 "do not cross the red line!
+
+  if has("autocmd")
+    "Set filetype specific end column
+    autocmd filetype php set colorcolumn=81
+  endif
+else
+  if has("autocmd")
+    autocmd BufRead * highlight OverLenght ctermbg=darkgrey guibg=#592929
+    autocmd BufRead * match OverLenght /\%79v.*/
+  endif
 endif
 
 "Add some line space for easy reading
@@ -190,6 +200,13 @@ if has("gui_running")
 
   if has("gui_win32") || has("gui_win32s")
   endif
+endif
+
+"Has autocmd
+if has("autocmd")
+  autocmd filetype php set tabstop=4
+  autocmd filetype php set shiftwidth=4
+  autocmd filetype php set softtabstop=4
 endif
 
 """""""""""""""""""""""
