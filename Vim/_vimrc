@@ -56,6 +56,11 @@ set cursorcolumn  "highlight current column
 set showbreak=↪
 set wrap linebreak nolist
 
+"End of line
+if v:version >= 703
+  set colorcolumn=80
+endif
+
 "Add some line space for easy reading
 set linespace=4
 
@@ -202,3 +207,5 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 "Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 
+"YankRing
+nmap <silent> <F11> :YRShow<CR>
