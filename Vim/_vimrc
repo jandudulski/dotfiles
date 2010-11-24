@@ -40,6 +40,8 @@ cmap w!! w !sudo tee % >/dev/null
 
 "Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+"Improves screen redrawing
+set ttyfast
 
 "Store lots of :cmdline history and undos
 set history=1000
@@ -48,8 +50,14 @@ set undolevels=1000
 set showcmd    "show incomplete cmds down the bottom
 set showmode   "show current mode down the bottom
 
-set incsearch                     "find the next match as we type search
-set hlsearch                      "highlight searches by default
+"Set regex into Perl formatting
+nnoremap / /\v
+vnoremap / /\v
+set incsearch   "find the next match as we type search
+set hlsearch    "highlight searches by default
+set ignorecase  "not case sensitive
+set smartcase   "try to match case if can
+set gdefault    "global for default
 "Clear highlight
 nmap <silent> ,/ :nohlsearch<CR>
 
@@ -57,6 +65,8 @@ set number        "add line numbers
 set cursorline    "highlight current line
 set cursorcolumn  "highlight current column
 set showbreak=↪
+set list
+set listchars=tab:>-,trail:.,extends:>,nbsp:·,eol:¬
 set wrap linebreak nolist
 
 "End of line
@@ -75,7 +85,9 @@ else
 endif
 
 "Add some line space for easy reading
-set linespace=4
+set linespace=3
+"Add some space below and over the cursor
+set scrolloff=3
 
 "Disable visual bell
 set visualbell t_vb=
@@ -208,6 +220,9 @@ if has("autocmd")
   autocmd filetype php set tabstop=4
   autocmd filetype php set shiftwidth=4
   autocmd filetype php set softtabstop=4
+
+  "Save on focus lost
+  autocmd FocusLost * :wa
 endif
 
 """""""""""""""""""""""
