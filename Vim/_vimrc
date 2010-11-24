@@ -164,6 +164,8 @@ set ttymouse=xterm2
 
 "Hide buffers when not displayed
 set hidden
+"Buffers as tabs
+set switchbuf=usetab,newtab
 "Don't use backup files
 set nobackup
 set noswapfile
