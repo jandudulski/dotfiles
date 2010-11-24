@@ -15,6 +15,9 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"Prevents some security exploits
+set modelines=0
+
 "Load ftplugins and indent files
 filetype plugin on
 filetype indent on
