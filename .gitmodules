@@ -28,3 +28,6 @@
 [submodule "Vim/_vim/bundle/vimbuddy"]
 	path = Vim/_vim/bundle/vimbuddy
 	url = git://github.com/vim-scripts/vimbuddy.vim.git
+[submodule "Vim/_vim/bundle/AutoComplPop"]
+	path = Vim/_vim/bundle/AutoComplPop
+	url = git://github.com/vim-scripts/AutoComplPop.git
