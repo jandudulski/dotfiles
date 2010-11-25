@@ -37,3 +37,6 @@
 [submodule "Vim/_vim/bundle/bufexplorer"]
 	path = Vim/_vim/bundle/bufexplorer
 	url = git://github.com/edsono/vim-bufexplorer.git
+[submodule "Vim/_vim/bundle/rails"]
+	path = Vim/_vim/bundle/rails
+	url = git://github.com/tpope/vim-rails.git
