@@ -67,7 +67,7 @@ set cursorcolumn  "highlight current column
 set showbreak=↪
 set list
 set listchars=tab:>-,trail:.,extends:>,nbsp:·,eol:¬
-set wrap linebreak nolist
+set wrap linebreak
 
 "End of line
 if v:version >= 703
