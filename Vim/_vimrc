@@ -67,7 +67,7 @@ set cursorcolumn  "highlight current column
 set showbreak=↪
 set list
 set listchars=tab:>-,trail:.,extends:>,nbsp:·,eol:¬
-set wrap linebreak nolist
+set wrap linebreak
 
 "End of line
 if v:version >= 703
@@ -206,6 +206,7 @@ if has("gui_running")
   if has("gui_gnome")
     set term=gnome-256color
     set guifont=Praxis\ 12
+    set columns=120
   endif
 
   if has("gui_mac")
@@ -244,3 +245,17 @@ let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 
 "YankRing
 nmap <silent> <F11> :YRShow<CR>
+
+" taglist and ctags conf
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_Use_Horiz_Window = 0 " open TagList in the sidebar
+let Tlist_Use_Right_Window = 1 " on the right
+let Tlist_Close_On_Select = 1 " close sidebar on select
+let Tlist_Process_File_Always = 1 " process file in background
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Exit_OnlyWindow = 1 " Exit if TagList is only opend
+let Tlist_Show_One_File = 1 " Show tags only from current file
+let Tlist_WinWidth = 50
+map <silent> <F4> :TlistToggle<cr>
+" search for any tags file
+set tags=tags;$HOME
