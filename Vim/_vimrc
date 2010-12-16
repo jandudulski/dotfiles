@@ -260,3 +260,6 @@ let Tlist_WinWidth = 50
 map <silent> <F4> :TlistToggle<cr>
 " search for any tags file
 set tags=tags;$HOME
+
+"Ack
+let g:ackprog="ack-grep -H --nocolor --nogroup --column"
