@@ -49,3 +49,6 @@
 [submodule "Vim/_vim/bundle/Ack"]
 	path = Vim/_vim/bundle/Ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "Vim/_vim/bundle/autoclose"]
+	path = Vim/_vim/bundle/autoclose
+	url = git://github.com/Townk/vim-autoclose.git
