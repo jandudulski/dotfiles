@@ -102,9 +102,6 @@ nmap <leader>p "+p
 nmap <leader>P "+P
 imap <C-v> <esc>"+pi
 
-"Fold wrapped lines
-set fo=1
-
 "Change current working directory whenever open file
 set autochdir
 
@@ -172,10 +169,15 @@ set copyindent     "copy last indent
 set shiftround     "keep multiple indenting
 
 "Folding settings
+set foldenable           "enable on default
+set foldlevel=1          "default fold from second level
+set foldcolumn=2         "display fold levels at side of window
+set foldclose=all        "automatically close folds
+set foldminlines=3       "don't fold tiny things
 set foldmethod=indent    "fold based on indent
 set foldnestmax=3        "deepest fold is 3 levels
-set nofoldenable         "disable on default
 
+"Wild menu
 set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:full     "make cmdline tab completion similar to bash
 set wildignore=*.o,*.obj,*~,*.pyc
@@ -202,7 +204,7 @@ if has("gui_running")
 
   colorscheme mustang
   set guitablabel=%M%t
-  set guifont=Praxis\ 12
+  set guifont=Praxis\ 10
   set columns=120
   set lines=35
 
@@ -257,9 +259,10 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Exit_OnlyWindow = 1 " Exit if TagList is only opend
 let Tlist_Show_One_File = 1 " Show tags only from current file
 let Tlist_WinWidth = 50
+let Tlist_Sort_Type = "name" " Sort names in alphabetically order
 map <silent> <F4> :TlistToggle<cr>
 " search for any tags file
 set tags=tags;$HOME
 
 "Ack
-let g:ackprog="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
