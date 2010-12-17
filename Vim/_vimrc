@@ -61,9 +61,10 @@ set gdefault    "global for default
 "Clear highlight
 nmap <silent> ,/ :nohlsearch<CR>
 
-set number        "add line numbers
-set cursorline    "highlight current line
-set cursorcolumn  "highlight current column
+set number         "add line numbers
+set relativenumber "relative line numbers
+set cursorline     "highlight current line
+set cursorcolumn   "highlight current column
 set showbreak=↪
 set list
 set listchars=tab:>-,trail:.,extends:>,nbsp:·,eol:¬
@@ -260,6 +261,7 @@ let Tlist_Exit_OnlyWindow = 1 " Exit if TagList is only opend
 let Tlist_Show_One_File = 1 " Show tags only from current file
 let Tlist_WinWidth = 50
 let Tlist_Sort_Type = "name" " Sort names in alphabetically order
+let Tlist_Enable_Fold_Column=0 "do not show fold level column
 map <silent> <F4> :TlistToggle<cr>
 " search for any tags file
 set tags=tags;$HOME
