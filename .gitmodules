@@ -52,3 +52,9 @@
 [submodule "Vim/_vim/bundle/closetag"]
 	path = Vim/_vim/bundle/closetag
 	url = git://github.com/vim-scripts/closetag.vim.git
+[submodule "Vim/_vim/bundle/textobj-user"]
+	path = Vim/_vim/bundle/textobj-user
+	url = git://github.com/kana/vim-textobj-user.git
+[submodule "Vim/_vim/bundle/textobj-rubyblock"]
+	path = Vim/_vim/bundle/textobj-rubyblock
+	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
