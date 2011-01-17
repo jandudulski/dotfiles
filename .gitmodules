@@ -58,3 +58,6 @@
 [submodule "Vim/_vim/bundle/textobj-rubyblock"]
 	path = Vim/_vim/bundle/textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "Vim/_vim/bundle/indent-guides"]
+	path = Vim/_vim/bundle/indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
