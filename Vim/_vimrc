@@ -227,7 +227,7 @@ if has("autocmd")
   autocmd filetype php set softtabstop=4
 
   "Save on focus lost
-  autocmd FocusLost * :wa
+  autocmd FocusLost ? :wa
 endif
 
 """""""""""""""""""""""
