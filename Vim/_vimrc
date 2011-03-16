@@ -210,7 +210,6 @@ if has("gui_running")
   set lines=35
 
   if has("gui_gnome")
-    set term=gnome-256color
   endif
 
   if has("gui_mac")
