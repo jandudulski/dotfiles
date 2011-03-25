@@ -61,3 +61,6 @@
 [submodule "Vim/_vim/bundle/indent-guides"]
 	path = Vim/_vim/bundle/indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "Vim/_vim/bundle/JavaScript-Indent"]
+	path = Vim/_vim/bundle/JavaScript-Indent
+	url = git://github.com/vim-scripts/JavaScript-Indent.git
