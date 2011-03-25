@@ -64,3 +64,6 @@
 [submodule "Vim/_vim/bundle/JavaScript-Indent"]
 	path = Vim/_vim/bundle/JavaScript-Indent
 	url = git://github.com/vim-scripts/JavaScript-Indent.git
+[submodule "Vim/_vim/bundle/css-color"]
+	path = Vim/_vim/bundle/css-color
+	url = git://github.com/skammer/vim-css-color.git
