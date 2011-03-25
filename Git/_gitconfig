@@ -3,6 +3,7 @@
 	email = jan@dudulski.pl
 [alias]
 	ssij = pull
+	suck = pull
 [color]
 	ui = auto
 [core]
