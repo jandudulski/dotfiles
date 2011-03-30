@@ -267,3 +267,6 @@ set tags=tags;$HOME
 
 "Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+"Gundo
+nnoremap <F5> :GundoToggle<CR>

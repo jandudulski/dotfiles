@@ -76,3 +76,6 @@
 [submodule "Vim/_vim/bundle/tabular"]
 	path = Vim/_vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "Vim/_vim/bundle/gundo"]
+	path = Vim/_vim/bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
