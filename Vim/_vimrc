@@ -203,9 +203,11 @@ if has("gui_running")
   "Tell the term has 256 colors
   set t_Co=256
 
-  colorscheme mustang
+  "colorscheme mustang
+  colorscheme bespin
   set guitablabel=%M%t
-  set guifont=Praxis\ 10
+  "set guifont=Praxis\ 10
+  set guifont=Inconsolata\ 12
   set columns=120
   set lines=35
 
@@ -235,8 +237,8 @@ endif
 "NERDTree
 noremap <silent> <F7> :NERDTreeToggle<CR>
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
-let NERDTReeShowBookmarks=1 "show bookmarks on startup
-let NERDTReeShowFiles=1
+let NERDTreeShowBookmarks=1 "show bookmarks on startup
+let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorline=1
