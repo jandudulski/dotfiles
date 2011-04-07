@@ -231,11 +231,24 @@ if has("autocmd")
   autocmd FocusLost ? :wa
 endif
 
+"""""""""""""""
+"F<n> bindings"
+"""""""""""""""
+"Bufexplorer
+nnoremap <silent> <F2> :BufExplorer<CR>
+"taglist
+nnoremap <silent> <F4> :TlistToggle<CR>
+"Gundo
+nnoremap <F5> :GundoToggle<CR>
+"NERDTree
+nnoremap <silent> <F7> :NERDTreeToggle<CR>
+"YankRing
+nnoremap <silent> <F11> :YRShow<CR>
+
 """""""""""""""""""""""
 "Plugins configuration"
 """""""""""""""""""""""
 "NERDTree
-noremap <silent> <F7> :NERDTreeToggle<CR>
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
 let NERDTreeShowBookmarks=1 "show bookmarks on startup
 let NERDTreeShowFiles=1
@@ -247,9 +260,6 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 
 "Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
-
-"YankRing
-nmap <silent> <F11> :YRShow<CR>
 
 " taglist and ctags conf
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
@@ -263,12 +273,9 @@ let Tlist_Show_One_File = 1 " Show tags only from current file
 let Tlist_WinWidth = 50
 let Tlist_Sort_Type = "name" " Sort names in alphabetically order
 let Tlist_Enable_Fold_Column=0 "do not show fold level column
-map <silent> <F4> :TlistToggle<cr>
 " search for any tags file
 set tags=tags;$HOME
 
 "Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-"Gundo
-nnoremap <F5> :GundoToggle<CR>
