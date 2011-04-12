@@ -79,3 +79,6 @@
 [submodule "Vim/_vim/bundle/gundo"]
 	path = Vim/_vim/bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
+[submodule "Vim/_vim/bundle/ragtag"]
+	path = Vim/_vim/bundle/ragtag
+	url = git://github.com/tpope/vim-ragtag.git
