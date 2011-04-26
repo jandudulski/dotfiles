@@ -102,6 +102,14 @@ vmap <leader>y "+y
 nmap <leader>p "+p
 nmap <leader>P "+P
 imap <C-v> <esc>"+pi
+"Bubble sinle lines (Vimcast#26)
+nmap <C-Up> [e
+nmap <C-Down> ]e
+"Bubble multiple lines (Vimcast#26)
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+"Visually select the text that was last edited/pasted (Vimcast#26)
+nmap gV `[v`]
 
 "Change current working directory whenever open file
 set autochdir
