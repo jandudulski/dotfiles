@@ -251,7 +251,9 @@ endif
 "Bufexplorer
 nnoremap <silent> <F2> :BufExplorer<CR>
 "taglist
-nnoremap <silent> <F4> :TlistToggle<CR>
+"nnoremap <silent> <F4> :TlistToggle<CR>
+"tagbar
+nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
 nnoremap <F5> :GundoToggle<CR>
 "NERDTree

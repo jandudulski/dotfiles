@@ -85,3 +85,6 @@
 [submodule "Vim/_vim/bundle/unimpaired"]
 	path = Vim/_vim/bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "Vim/_vim/bundle/tagbar"]
+	path = Vim/_vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
