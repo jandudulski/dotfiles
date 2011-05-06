@@ -292,6 +292,10 @@ let Tlist_Show_One_File = 1 " Show tags only from current file
 let Tlist_WinWidth = 50
 let Tlist_Sort_Type = "name" " Sort names in alphabetically order
 let Tlist_Enable_Fold_Column=0 "do not show fold level column
+" tagbar conf
+let g:tagbar_autofocus = 1 " focus on tagbar when opened
+autocmd filetype php TagbarOpen " always open for php
+
 " search for any tags file
 set tags=tags;$HOME
 
