@@ -212,7 +212,10 @@ if has("gui_running")
   set t_Co=256
 
   "colorscheme mustang
-  colorscheme bespin
+  "colorscheme bespin
+  set background=dark
+  colorscheme solarized
+
   set guitablabel=%M%t
   "set guifont=Praxis\ 10
   set guifont=Inconsolata\ 12
