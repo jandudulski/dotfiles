@@ -234,15 +234,11 @@ endif
 
 "Has autocmd
 if has("autocmd")
-  autocmd filetype php set tabstop=4
-  autocmd filetype php set shiftwidth=4
-  autocmd filetype php set softtabstop=4
+  autocmd filetype php setlocal tabstop=4
+  autocmd filetype php setlocal shiftwidth=4
+  autocmd filetype php setlocal softtabstop=4
 
   autocmd BufEnter *.phtml set filetype=html
-
-  autocmd filetype css set tabstop=2
-  autocmd filetype css set shiftwidth=2
-  autocmd filetype css set softtabstop=2
 
   "Save on focus lost
   autocmd FocusLost ? :wa
