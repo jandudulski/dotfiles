@@ -91,3 +91,6 @@
 [submodule "Vim/_vim/bundle/coffee-script"]
 	path = Vim/_vim/bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "Vim/_vim/bundle/repeat"]
+	path = Vim/_vim/bundle/repeat
+	url = git://github.com/tpope/vim-repeat.git
