@@ -244,13 +244,27 @@ if has("autocmd")
   autocmd FocusLost ? :wa
 endif
 
+"Disable arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+"Fast escape
+inoremap jj <ESC>
+inoremap jk <ESC>
 """""""""""""""
 "F<n> bindings"
 """""""""""""""
+"F1 = <ESC>
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 "Bufexplorer
 nnoremap <silent> <F2> :BufExplorer<CR>
-"taglist
-"nnoremap <silent> <F4> :TlistToggle<CR>
 "tagbar
 nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
