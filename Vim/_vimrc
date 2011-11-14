@@ -234,11 +234,20 @@ endif
 
 "Has autocmd
 if has("autocmd")
-  autocmd filetype php,python,xml,html,htmldjango setlocal tabstop=4
-  autocmd filetype php,python,xml,html,htmldjango setlocal shiftwidth=4
-  autocmd filetype php,python,xml,html,htmldjango setlocal softtabstop=4
+  autocmd FileType php,python,xml,html,htmldjango setlocal tabstop=4
+  autocmd FileType php,python,xml,html,htmldjango setlocal shiftwidth=4
+  autocmd FileType php,python,xml,html,htmldjango setlocal softtabstop=4
 
   autocmd BufEnter *.phtml set filetype=html
+
+  "autocompletion per type
+  autocmd FileType python set omnifunc=pythoncomplete#Complete
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 endif
 
 "Disable arrow keys
