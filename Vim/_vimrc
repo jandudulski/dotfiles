@@ -234,6 +234,7 @@ endif
 
 "Has autocmd
 if has("autocmd")
+  autocmd FileType html,htmldjango setlocal textwidth=0
   autocmd FileType php,python,xml,html,htmldjango setlocal tabstop=4
   autocmd FileType php,python,xml,html,htmldjango setlocal shiftwidth=4
   autocmd FileType php,python,xml,html,htmldjango setlocal softtabstop=4
