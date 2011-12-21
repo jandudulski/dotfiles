@@ -260,9 +260,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-"Fast escape
-inoremap jj <ESC>
-inoremap jk <ESC>
+
 """""""""""""""
 "F<n> bindings"
 """""""""""""""
