@@ -100,3 +100,6 @@
 [submodule "Vim/_vim/bundle/MatchTag"]
 	path = Vim/_vim/bundle/MatchTag
 	url = git://github.com/gregsexton/MatchTag.git
+[submodule "Vim/_vim/bundle/numbertoggle"]
+	path = Vim/_vim/bundle/numbertoggle
+	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
