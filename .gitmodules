@@ -103,3 +103,9 @@
 [submodule "Vim/_vim/bundle/numbertoggle"]
 	path = Vim/_vim/bundle/numbertoggle
 	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "Vim/_vim/bundle/jquery-doc"]
+	path = Vim/_vim/bundle/jquery-doc
+	url = git://github.com/lucapette/vim-jquery-doc.git
+[submodule "Vim/_vim/bundle/ruby-doc"]
+	path = Vim/_vim/bundle/ruby-doc
+	url = git://github.com/lucapette/vim-ruby-doc.git
