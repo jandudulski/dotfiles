@@ -106,3 +106,6 @@
 [submodule "Vim/_vim/bundle/ruby-doc"]
 	path = Vim/_vim/bundle/ruby-doc
 	url = git://github.com/lucapette/vim-ruby-doc.git
+[submodule "Vim/_vim/bundle/grep"]
+	path = Vim/_vim/bundle/grep
+	url = git://github.com/vim-scripts/grep.vim.git
