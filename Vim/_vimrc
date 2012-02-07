@@ -298,6 +298,11 @@ let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 " search for any tags file
 set tags=tags;$HOME
 
+"CommandT
+let g:codepath=expand("$HOME/Code")
+map <silent> <C-T> :CommandT <c-r>=codepath#path()<CR><CR>
+imap <silent> <C-T> <ESC>:CommandT <c-r>=codepath#path()<CR><CR>
+
 "Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 

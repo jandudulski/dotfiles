@@ -97,3 +97,6 @@
 [submodule "Vim/_vim/bundle/MatchTag"]
 	path = Vim/_vim/bundle/MatchTag
 	url = git://github.com/gregsexton/MatchTag.git
+[submodule "Vim/_vim/bundle/codepath"]
+	path = Vim/_vim/bundle/codepath
+	url = git://github.com/lucapette/codepath.vim.git
