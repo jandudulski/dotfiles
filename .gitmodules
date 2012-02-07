@@ -40,9 +40,6 @@
 [submodule "Vim/_vim/bundle/surround"]
 	path = Vim/_vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "Vim/_vim/bundle/Ack"]
-	path = Vim/_vim/bundle/Ack
-	url = git://github.com/mileszs/ack.vim.git
 [submodule "Vim/_vim/bundle/textobj-user"]
 	path = Vim/_vim/bundle/textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
@@ -97,6 +94,18 @@
 [submodule "Vim/_vim/bundle/MatchTag"]
 	path = Vim/_vim/bundle/MatchTag
 	url = git://github.com/gregsexton/MatchTag.git
+<<<<<<< HEAD
 [submodule "Vim/_vim/bundle/codepath"]
 	path = Vim/_vim/bundle/codepath
 	url = git://github.com/lucapette/codepath.vim.git
+=======
+[submodule "Vim/_vim/bundle/numbertoggle"]
+	path = Vim/_vim/bundle/numbertoggle
+	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "Vim/_vim/bundle/jquery-doc"]
+	path = Vim/_vim/bundle/jquery-doc
+	url = git://github.com/lucapette/vim-jquery-doc.git
+[submodule "Vim/_vim/bundle/ruby-doc"]
+	path = Vim/_vim/bundle/ruby-doc
+	url = git://github.com/lucapette/vim-ruby-doc.git
+>>>>>>> 7cb21e1be9f196ab03b48e114a6aed7c5c2bf00a
