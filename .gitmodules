@@ -34,9 +34,6 @@
 [submodule "Vim/_vim/bundle/rails"]
 	path = Vim/_vim/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "Vim/_vim/bundle/taglist"]
-	path = Vim/_vim/bundle/taglist
-	url = git://github.com/vim-scripts/taglist.vim.git
 [submodule "Vim/_vim/bundle/php"]
 	path = Vim/_vim/bundle/php
 	url = git://github.com/vim-scripts/php.vim--Garvin.git
