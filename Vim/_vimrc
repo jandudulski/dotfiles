@@ -240,6 +240,7 @@ if has("autocmd")
   autocmd FileType php,python,xml,html,htmldjango setlocal softtabstop=4
 
   autocmd BufEnter *.phtml set filetype=html
+  autocmd BufEnter *.hamlc set filetype=haml
 
   "autocompletion per type
   autocmd FileType python set omnifunc=pythoncomplete#Complete
