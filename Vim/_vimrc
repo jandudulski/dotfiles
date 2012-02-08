@@ -218,7 +218,7 @@ if has("gui_running")
 
   set guitablabel=%M%t
   "set guifont=Praxis\ 10
-  set guifont=Inconsolata\ 12
+  set guifont=Inconsolata:h18
   set columns=120
   set lines=35
 
@@ -296,6 +296,7 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 
 " taglist and ctags conf
+let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_Use_Horiz_Window = 0 " open TagList in the sidebar
 let Tlist_Use_Right_Window = 1 " on the right
