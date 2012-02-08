@@ -295,23 +295,14 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 "Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 
-" taglist and ctags conf
+"Tagbar
 let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-let Tlist_Use_Horiz_Window = 0 " open TagList in the sidebar
-let Tlist_Use_Right_Window = 1 " on the right
-let Tlist_Close_On_Select = 1 " close sidebar on select
-let Tlist_Process_File_Always = 1 " process file in background
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Exit_OnlyWindow = 1 " Exit if TagList is only opend
-let Tlist_Show_One_File = 1 " Show tags only from current file
-let Tlist_WinWidth = 50
-let Tlist_Sort_Type = "name" " Sort names in alphabetically order
-let Tlist_Enable_Fold_Column=0 "do not show fold level column
 
 " search for any tags file
 set tags=tags;$HOME
 
-"Ack
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+"CommandT
+let g:codepath=expand("$HOME/Code")
+nnoremap <silent> <Leader>t :CommandT <c-r>=codepath#path()<CR><CR>
+inoremap <silent> <C-T> <ESC>:CommandT <c-r>=codepath#path()<CR><CR>
 
