@@ -309,3 +309,5 @@ let g:codepath=expand("$HOME/Code")
 nnoremap <silent> <Leader>t :CommandT <c-r>=codepath#path()<CR><CR>
 inoremap <silent> <C-T> <ESC>:CommandT <c-r>=codepath#path()<CR><CR>
 
+"Grep
+let g:Grep_Find_Use_Xargs=0
