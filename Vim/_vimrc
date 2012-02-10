@@ -50,6 +50,8 @@ set undolevels=1000
 set showcmd    "show incomplete cmds down the bottom
 set showmode   "show current mode down the bottom
 
+set tildeop    "~ behaves like an operator
+
 "Set regex into Perl formatting
 nnoremap / /\v
 vnoremap / /\v
