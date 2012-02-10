@@ -220,7 +220,7 @@ if has("gui_running")
 
   set guitablabel=%M%t
   "set guifont=Praxis\ 10
-  set guifont=Inconsolata\ 12
+  set guifont=Inconsolata:h18
   set columns=120
   set lines=35
 
@@ -242,6 +242,7 @@ if has("autocmd")
   autocmd FileType php,python,xml,html,htmldjango setlocal softtabstop=4
 
   autocmd BufEnter *.phtml set filetype=html
+  autocmd BufEnter *.hamlc set filetype=haml
 
   "autocompletion per type
   autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -296,6 +297,9 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 
 "Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
+
+"Tagbar
+let g:tagbar_ctags_bin = "/usr/local/bin/ctags"
 
 " search for any tags file
 set tags=tags;$HOME
