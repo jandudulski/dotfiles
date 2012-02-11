@@ -220,7 +220,7 @@ if has("gui_running")
 
   set guitablabel=%M%t
   "set guifont=Praxis\ 10
-  set guifont=Inconsolata:h18
+  set guifont=Inconsolata\ 12
   set columns=120
   set lines=35
 
@@ -228,6 +228,7 @@ if has("gui_running")
   endif
 
   if has("gui_mac")
+    set guifont=Inconsolata:h18
   endif
 
   if has("gui_win32") || has("gui_win32s")
@@ -243,6 +244,8 @@ if has("autocmd")
 
   autocmd BufEnter *.phtml set filetype=html
   autocmd BufEnter *.hamlc set filetype=haml
+  " non ruby files which are ruby
+  autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,*.rake set filetype=ruby
 
   "autocompletion per type
   autocmd FileType python set omnifunc=pythoncomplete#Complete
