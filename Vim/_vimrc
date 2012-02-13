@@ -255,6 +255,13 @@ if has("autocmd")
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+  "missing html5 tags for erb
+  autocmd BufRead *.erb syn keyword htmlTagName contained article aside audio canvas command
+  autocmd BufRead *.erb syn keyword htmlTagName contained datalist details dialog embed figcaption figure footer
+  autocmd BufRead *.erb syn keyword htmlTagName contained header hgroup keygen mark meter menu nav output
+  autocmd BufRead *.erb syn keyword htmlTagName contained progress time ruby rt rp section source summary time track video
+  autocmd BufRead *.erb syn keyword htmlTagName contained wbr bdi
 endif
 
 "Disable arrow keys
