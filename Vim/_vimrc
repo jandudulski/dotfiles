@@ -227,7 +227,7 @@ if has("gui_running")
   if has("gui_gnome")
   endif
 
-  if has("gui_mac")
+  if has("gui_macvim")
     set guifont=Inconsolata:h18
   endif
 
