@@ -113,6 +113,9 @@ vmap <C-Down> ]egv
 "Visually select the text that was last edited/pasted (Vimcast#26)
 nmap gV `[v`]
 
+" I can type :help on my own, thanks.
+noremap <F1> <Esc>
+
 "Change current working directory whenever open file
 set autochdir
 
