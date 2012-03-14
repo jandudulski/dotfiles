@@ -251,13 +251,10 @@ if has("autocmd")
   autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,*.rake set filetype=ruby
 
   "autocompletion per type
-  autocmd FileType python set omnifunc=pythoncomplete#Complete
-  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+  autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
   "missing html5 tags for erb
   autocmd BufRead *.erb syn keyword htmlTagName contained article aside audio canvas command
