@@ -284,7 +284,7 @@ vnoremap <F1> <ESC>
 "Bufexplorer
 nnoremap <silent> <F2> :BufExplorer<CR>
 "Sort css
-nnoremap <F7> :g#\({\n\)\@<=#.,/}/sort<CR>
+nnoremap <F8> :g#\({\n\)\@<=#.,/}/sort<CR>
 "tagbar
 nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
