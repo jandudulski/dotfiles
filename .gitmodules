@@ -112,3 +112,6 @@
 [submodule "Vim/_vim/bundle/vim-ruby"]
 	path = Vim/_vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "Vim/_vim/bundle/argtextobj"]
+	path = Vim/_vim/bundle/argtextobj
+	url = git://github.com/vim-scripts/argtextobj.vim.git
