@@ -112,3 +112,6 @@
 [submodule "Vim/_vim/bundle/argtextobj"]
 	path = Vim/_vim/bundle/argtextobj
 	url = git://github.com/vim-scripts/argtextobj.vim.git
+[submodule "Vim/_vim/bundle/bufexplorer"]
+	path = Vim/_vim/bundle/bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
