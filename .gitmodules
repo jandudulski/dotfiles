@@ -115,3 +115,6 @@
 [submodule "Vim/_vim/bundle/bufexplorer"]
 	path = Vim/_vim/bundle/bufexplorer
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "Vim/_vim/bundle/hammer"]
+	path = Vim/_vim/bundle/hammer
+	url = git://github.com/matthias-guenther/hammer.vim.git
