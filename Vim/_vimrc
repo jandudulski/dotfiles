@@ -248,7 +248,7 @@ if has("autocmd")
   autocmd BufEnter *.phtml set filetype=html
   autocmd BufEnter *.hamlc set filetype=haml
   " non ruby files which are ruby
-  autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,*.rake set filetype=ruby
+  autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,Procfile,*.rake set filetype=ruby
 
   "autocompletion per type
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
