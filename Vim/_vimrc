@@ -103,7 +103,6 @@ nmap <leader>y "+Y
 vmap <leader>y "+y
 nmap <leader>p "+p
 nmap <leader>P "+P
-imap <C-v> <esc>"+pi
 "Bubble sinle lines (Vimcast#26)
 nmap <C-Up> [e
 nmap <C-Down> ]e
