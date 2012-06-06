@@ -290,8 +290,6 @@ nnoremap <silent> <F4> :TagbarToggle<CR>
 nnoremap <F5> :GundoToggle<CR>
 "NERDTree
 nnoremap <silent> <F7> :NERDTreeToggle<CR>
-"YankRing
-nnoremap <silent> <F11> :YRShow<CR>
 
 """""""""""""""""""""""
 "Plugins configuration"
@@ -322,3 +320,6 @@ inoremap <silent> <C-T> <ESC>:CommandT <c-r>=codepath#path()<CR><CR>
 
 "Grep
 let g:Grep_Find_Use_Xargs=0
+
+"YankRing
+nnoremap <silent> <Leader>y :YRShow<CR>
