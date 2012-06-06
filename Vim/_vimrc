@@ -322,4 +322,4 @@ inoremap <silent> <C-T> <ESC>:CommandT <c-r>=codepath#path()<CR><CR>
 let g:Grep_Find_Use_Xargs=0
 
 "YankRing
-nnoremap <silent> <Leader>y :YRShow<CR>
+nnoremap <silent> <Leader>c :YRShow<CR>
