@@ -50,8 +50,6 @@ set undolevels=1000
 set showcmd    "show incomplete cmds down the bottom
 set showmode   "show current mode down the bottom
 
-set tildeop    "~ behaves like an operator
-
 "Set regex into Perl formatting
 nnoremap / /\v
 vnoremap / /\v
@@ -315,8 +313,9 @@ set tags=tags;$HOME
 
 "CommandT
 let g:codepath=expand("$HOME/Code")
-nnoremap <silent> <Leader>t :CommandT <c-r>=codepath#path()<CR><CR>
-inoremap <silent> <C-T> <ESC>:CommandT <c-r>=codepath#path()<CR><CR>
+nnoremap <silent> <Leader>t :CommandT <C-r>=codepath#path()<CR><CR>
+nnoremap <silent> <Leader>f :CommandTFlush
+inoremap <silent> <C-T> <ESC>:CommandT <C-r>=codepath#path()<CR><CR>
 
 "Grep
 let g:Grep_Find_Use_Xargs=0
