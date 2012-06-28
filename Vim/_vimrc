@@ -94,21 +94,21 @@ set scrolloff=3
 set visualbell t_vb=
 
 "Make possible to navigate within lines of wrapped lines
-nmap <Down> gj
-nmap <Up> gk
+noremap <Up> gk
+noremap <Down> gj
 "Yank/Paste to the OS clipboard with ,y and ,p and Ctrl-V
-nmap <leader>y "+Y
-vmap <leader>y "+y
-nmap <leader>p "+p
-nmap <leader>P "+P
+nnoremap <Leader>y "+Y
+vnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
 "Bubble sinle lines (Vimcast#26)
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nnoremap <C-Up> [e
+nnoremap <C-Down> ]e
 "Bubble multiple lines (Vimcast#26)
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vnoremap <C-Up> [egv
+vnoremap <C-Down> ]egv
 "Visually select the text that was last edited/pasted (Vimcast#26)
-nmap gV `[v`]
+noremap gV `[v`]
 
 " I can type :help on my own, thanks.
 noremap <F1> <Esc>
@@ -262,8 +262,8 @@ if has("autocmd")
 endif
 
 "Disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 inoremap <up> <nop>
