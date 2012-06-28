@@ -314,7 +314,7 @@ set tags=tags;$HOME
 "CommandT
 let g:codepath=expand("$HOME/Code")
 nnoremap <silent> <Leader>t :CommandT <C-r>=codepath#path()<CR><CR>
-nnoremap <silent> <Leader>f :CommandTFlush
+nnoremap <silent> <Leader>f :CommandTFlush<CR>
 inoremap <silent> <C-T> <ESC>:CommandT <C-r>=codepath#path()<CR><CR>
 
 "Grep
