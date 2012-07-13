@@ -259,6 +259,9 @@ if has("autocmd")
   autocmd BufRead *.erb syn keyword htmlTagName contained header hgroup keygen mark meter menu nav output
   autocmd BufRead *.erb syn keyword htmlTagName contained progress time ruby rt rp section source summary time track video
   autocmd BufRead *.erb syn keyword htmlTagName contained wbr bdi
+
+  " remove trailing white spaces
+  autocmd BufWritePre * :%s/\s\+$//e
 endif
 
 "Disable arrow keys
