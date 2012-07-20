@@ -115,3 +115,9 @@
 [submodule "Vim/_vim/bundle/hammer"]
 	path = Vim/_vim/bundle/hammer
 	url = git://github.com/matthias-guenther/hammer.vim.git
+[submodule "Vim/_vim/bundle/vim-rvm"]
+	path = Vim/_vim/bundle/vim-rvm
+	url = git://github.com/tpope/vim-rvm.git
+[submodule "Vim/_vim/bundle/textobj-word-column"]
+	path = Vim/_vim/bundle/textobj-word-column
+	url = git://github.com/coderifous/textobj-word-column.vim.git
