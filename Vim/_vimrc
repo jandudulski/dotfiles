@@ -180,7 +180,6 @@ set copyindent     "copy last indent
 set shiftround     "keep multiple indenting
 
 "Folding settings
-set foldenable           "enable on default
 set foldlevel=1          "default fold from second level
 set foldcolumn=2         "display fold levels at side of window
 "set foldclose=all        "automatically close folds
