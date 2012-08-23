@@ -69,6 +69,7 @@ set showbreak=↪
 set list
 set listchars=tab:>-,trail:.,extends:>,nbsp:·,eol:¬
 set wrap linebreak
+set iskeyword+=-   "treat - as a part of word
 
 "End of line
 if v:version >= 703
@@ -180,6 +181,7 @@ set copyindent     "copy last indent
 set shiftround     "keep multiple indenting
 
 "Folding settings
+set nofoldenable
 set foldlevel=1          "default fold from second level
 set foldcolumn=2         "display fold levels at side of window
 "set foldclose=all        "automatically close folds
