@@ -115,3 +115,6 @@
 [submodule "Vim/_vim/bundle/textobj-word-column"]
 	path = Vim/_vim/bundle/textobj-word-column
 	url = git://github.com/coderifous/textobj-word-column.vim.git
+[submodule "Vim/_vim/bundle/ctrlp"]
+	path = Vim/_vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
