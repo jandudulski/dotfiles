@@ -211,16 +211,14 @@ set switchbuf=usetab,newtab
 set nobackup
 set noswapfile
 
+"Tell the term has 256 colors
+set t_Co=256
+
+set background=dark
+colorscheme solarized
+
 "Has gui
 if has("gui_running")
-  "Tell the term has 256 colors
-  set t_Co=256
-
-  "colorscheme mustang
-  "colorscheme bespin
-  set background=dark
-  colorscheme solarized
-
   set guitablabel=%M%t
   "set guifont=Praxis\ 10
   set guifont=Inconsolata\ 12
