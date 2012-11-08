@@ -326,7 +326,8 @@ let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_working_path_mode = 'rc'
 
 "Grep
-let g:Grep_Find_Use_Xargs=0
+let g:Grep_Find_Use_Xargs = 0
+let g:Grep_Skip_Dirs = '.git tmp RCS CVS SCCS'
 
 "YankRing
 nnoremap <silent> <Leader>c :YRShow<CR>
