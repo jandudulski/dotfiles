@@ -11,6 +11,13 @@
 "Necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
+let g:pathogen_disabled = []
+
+if !has('gui_running')
+  " css color drastically slows down in terminal
+  call add(g:pathogen_disabled, 'css-color')
+endif
+
 "Load pathogen managed plugins
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
