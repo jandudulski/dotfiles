@@ -19,8 +19,7 @@ if !has('gui_running')
 endif
 
 "Load pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 "Prevents some security exploits
 set modelines=0
