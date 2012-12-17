@@ -124,3 +124,6 @@
 [submodule "Vim/_vim/bundle/vim-rsi"]
 	path = Vim/_vim/bundle/vim-rsi
 	url = git://github.com/tpope/vim-rsi.git
+[submodule "Vim/_vim/bundle/vim-javascript"]
+	path = Vim/_vim/bundle/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
