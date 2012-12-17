@@ -121,3 +121,6 @@
 [submodule "Vim/_vim/bundle/vim-signature"]
 	path = Vim/_vim/bundle/vim-signature
 	url = git://github.com/kshenoy/vim-signature.git
+[submodule "Vim/_vim/bundle/vim-rsi"]
+	path = Vim/_vim/bundle/vim-rsi
+	url = git://github.com/tpope/vim-rsi.git
