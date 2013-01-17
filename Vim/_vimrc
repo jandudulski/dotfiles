@@ -41,8 +41,6 @@ let mapleader=","
 "Shortcut for edit/reload vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>rv :so $MYVIMRC<CR>
-"Reopen with root privilege
-cmap w!! w !sudo tee % >/dev/null
 
 "Allow backspacing over everything in insert mode
 set backspace=indent,eol,start

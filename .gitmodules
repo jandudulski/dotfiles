@@ -127,3 +127,6 @@
 [submodule "Vim/_vim/bundle/vim-slim"]
 	path = Vim/_vim/bundle/vim-slim
 	url = git://github.com/slim-template/vim-slim.git
+[submodule "Vim/_vim/bundle/vim-eunuch"]
+	path = Vim/_vim/bundle/vim-eunuch
+	url = git://github.com/tpope/vim-eunuch.git
