@@ -1,12 +1,14 @@
 [user]
 	name = Jan Dudulski
 	email = jan@dudulski.pl
-[alias]
-	ssij = pull
-	suck = pull
+[core]
+	editor = vim -f
 [color]
 	ui = auto
-[core]
-	editor = vim
 [push]
 	default = current
+[branch]
+	autosetupmerge = true
+	autosetuprebase = always
+[merge]
+	ff = true
