@@ -130,3 +130,6 @@
 [submodule "Vim/_vim/bundle/vim-eunuch"]
 	path = Vim/_vim/bundle/vim-eunuch
 	url = git://github.com/tpope/vim-eunuch.git
+[submodule "Vim/_vim/bundle/gitv"]
+	path = Vim/_vim/bundle/gitv
+	url = git://github.com/gregsexton/gitv.git
