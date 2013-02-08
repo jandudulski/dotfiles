@@ -98,20 +98,11 @@ set scrolloff=3
 "Disable visual bell
 set visualbell t_vb=
 
-"Make possible to navigate within lines of wrapped lines
-noremap <Up> gk
-noremap <Down> gj
 "Yank/Paste to the OS clipboard with ,y and ,p and Ctrl-V
 nnoremap <Leader>y "+Y
 vnoremap <Leader>y "+y
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
-"Bubble sinle lines (Vimcast#26)
-nnoremap <C-Up> [e
-nnoremap <C-Down> ]e
-"Bubble multiple lines (Vimcast#26)
-vnoremap <C-Up> [egv
-vnoremap <C-Down> ]egv
 "Visually select the text that was last edited/pasted (Vimcast#26)
 noremap gV `[v`]
 " Easy expansion of the active file directory
@@ -190,7 +181,6 @@ set shiftround     "keep multiple indenting
 set nofoldenable
 set foldlevel=1          "default fold from second level
 set foldcolumn=2         "display fold levels at side of window
-"set foldclose=all        "automatically close folds
 set foldminlines=3       "don't fold tiny things
 set foldmethod=indent    "fold based on indent
 set foldnestmax=3        "deepest fold is 3 levels
@@ -224,7 +214,6 @@ colorscheme solarized
 "Has gui
 if has("gui_running")
   set guitablabel=%M%t
-  "set guifont=Praxis\ 10
   set guifont=Inconsolata\ 12
   set columns=120
   set lines=35
@@ -243,11 +232,7 @@ endif
 "Has autocmd
 if has("autocmd")
   autocmd FileType html,htmldjango setlocal textwidth=0
-  autocmd FileType php,python,xml,html,htmldjango setlocal tabstop=4
-  autocmd FileType php,python,xml,html,htmldjango setlocal shiftwidth=4
-  autocmd FileType php,python,xml,html,htmldjango setlocal softtabstop=4
 
-  autocmd BufEnter *.phtml set filetype=html
   autocmd BufEnter *.hamlc set filetype=haml
   " non ruby files which are ruby
   autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,Procfile,*.rake set filetype=ruby
@@ -269,15 +254,15 @@ if has("autocmd")
   autocmd BufWritePre * :%s/\s\+$//e
 endif
 
-"Disable arrow keys
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"Arrow keys
+nnoremap <Up> <C-p>
+nnoremap <Down> <C-n>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+inoremap <Up> <C-p>
+inoremap <Down> <C-n>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
 
 """""""""""""""
 "F<n> bindings"
@@ -294,22 +279,10 @@ nnoremap <F8> :g#\({\n\)\@<=#.,/}/sort<CR>
 nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
 nnoremap <F5> :GundoToggle<CR>
-"NERDTree
-nnoremap <silent> <F7> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""
 "Plugins configuration"
 """""""""""""""""""""""
-"NERDTree
-let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
-let NERDTreeShowBookmarks=1 "show bookmarks on startup
-let NERDTreeShowFiles=1
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeHighlightCursorline=1
-let NERDTreeMouseMode=2     "fold/unfold dirs and dbl-click for open
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '\.svn$', '\.sass-cache$', '\.git$' ]
-
 "Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 
