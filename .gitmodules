@@ -133,3 +133,6 @@
 [submodule "Vim/_vim/bundle/gitv"]
 	path = Vim/_vim/bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
+[submodule "Vim/_vim/bundle/vim-sensible"]
+	path = Vim/_vim/bundle/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git
