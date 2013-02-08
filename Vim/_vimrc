@@ -24,10 +24,6 @@ call pathogen#infect()
 "Prevents some security exploits
 set modelines=0
 
-"Load ftplugins and indent files
-filetype plugin on
-filetype indent on
-
 "Use utf-8
 set encoding=utf-8
 
@@ -42,13 +38,10 @@ let mapleader=","
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>rv :so $MYVIMRC<CR>
 
-"Allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 "Improves screen redrawing
 set ttyfast
 
-"Store lots of :cmdline history and undos
-set history=1000
+"Store lots of undos
 set undolevels=1000
 
 set showcmd    "show incomplete cmds down the bottom
@@ -57,13 +50,10 @@ set showmode   "show current mode down the bottom
 "Set regex into Perl formatting
 nnoremap / /\v
 vnoremap / /\v
-set incsearch   "find the next match as we type search
 set hlsearch    "highlight searches by default
 set ignorecase  "not case sensitive
 set smartcase   "try to match case if can
 set gdefault    "global for default
-"Clear highlight
-nmap <silent> ,/ :nohlsearch<CR>
 
 set number         "add line numbers
 set relativenumber "relative line numbers
@@ -71,18 +61,12 @@ set cursorline     "highlight current line
 set cursorcolumn   "highlight current column
 set showbreak=↪
 set list
-set listchars=tab:>-,trail:.,extends:>,nbsp:·,eol:¬
 set wrap linebreak
 set iskeyword+=-   "treat - as a part of word
 
 "End of line
 if v:version >= 703
   set colorcolumn=80 "do not cross the red line!
-
-  if has("autocmd")
-    "Set filetype specific end column
-    autocmd filetype php set colorcolumn=81
-  endif
 else
   if has("autocmd")
     autocmd BufRead * highlight OverLenght ctermbg=darkgrey guibg=#592929
@@ -108,14 +92,8 @@ noremap gV `[v`]
 " Easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" I can type :help on my own, thanks.
-noremap <F1> <Esc>
-
 "Change current working directory whenever open file
 set autochdir
-
-"Paste mode prevents insane pasting from another file
-set pastetoggle=<F2>
 
 "Statusline setup
 set statusline=%f                                             "tail of the filename
@@ -125,30 +103,12 @@ set statusline+=%=                                            "left/right separa
 set statusline+=%c,                                           "cursor column
 set statusline+=%l/%L                                         "cursor line/total lines
 set statusline+=\ %P                                          "percent through file
-set laststatus=2
 
 "Turn off needless toolbar on gvim
 set guioptions-=T
 
-"Recalculate the trailing whitespace warning when idle, and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
-
-"Return '[\s]' if trailing white space is detected
-"Return '' otherwise
-function! StatuslineTrailingSpaceWarning()
-  if !exists("b:statusline_trailing_space_warning")
-    if search('\s\+$', 'nw') != 0
-      let b:statusline_trailing_space_warning = '[\s]'
-    else
-      let b:statusline_trailing_space_warning = ''
-    endif
-  endif
-  return b:statusline_trailing_space_warning
-endfunction
-
 "Recalculate the tab warning flag when idle and after writing
 autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
-
 "Return '[&et]' if &et set wrong
 "Return '[mixed-indenting]' if spaces and tabs are used to indent
 "Return '' if everything is fine
@@ -173,9 +133,7 @@ set tabstop=2      "two characters space for tab
 set shiftwidth=2   "two spaces for autoindent
 set softtabstop=2  "two spaces when pressing tab
 set expandtab      "use spaces instead of tabs
-set autoindent
 set copyindent     "copy last indent
-set shiftround     "keep multiple indenting
 
 "Folding settings
 set nofoldenable
@@ -190,9 +148,6 @@ set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:full     "make cmdline tab completion similar to bash
 set wildignore=*.o,*.obj,*~,*.pyc
 
-"Turn on syntax highlighting
-syntax on
-
 "Some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
@@ -204,9 +159,6 @@ set switchbuf=usetab,newtab
 "Don't use backup files
 set nobackup
 set noswapfile
-
-"Tell the term has 256 colors
-set t_Co=256
 
 set background=dark
 colorscheme solarized
@@ -237,12 +189,6 @@ if has("autocmd")
   " non ruby files which are ruby
   autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,Procfile,*.rake set filetype=ruby
 
-  "autocompletion per type
-  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-  autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
   "missing html5 tags for erb
   autocmd BufRead *.erb syn keyword htmlTagName contained article aside audio canvas command
   autocmd BufRead *.erb syn keyword htmlTagName contained datalist details dialog embed figcaption figure footer
@@ -268,17 +214,18 @@ inoremap <Right> <nop>
 "F<n> bindings"
 """""""""""""""
 "F1 = <ESC>
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+" I can type :help on my own, thanks.
+noremap <F1> <Esc>
+"Paste mode prevents insane pasting from another file
+set pastetoggle=<F2>
 "Bufexplorer
 nnoremap <silent> <F2> :BufExplorer<CR>
-"Sort css
-nnoremap <F8> :g#\({\n\)\@<=#.,/}/sort<CR>
 "tagbar
 nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
 nnoremap <F5> :GundoToggle<CR>
+"Sort css
+nnoremap <F8> :g#\({\n\)\@<=#.,/}/sort<CR>
 
 """""""""""""""""""""""
 "Plugins configuration"
