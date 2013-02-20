@@ -146,7 +146,8 @@ set foldnestmax=3        "deepest fold is 3 levels
 "Wild menu
 set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:full     "make cmdline tab completion similar to bash
-set wildignore=*.o,*.obj,*~,*.pyc
+set wildignore=*.o,*.obj,*~,*.pyc,*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.git/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store
+
 
 "Some stuff to get the mouse going in term
 set mouse=a
