@@ -159,6 +159,7 @@ set switchbuf=usetab,newtab
 "Don't use backup files
 set nobackup
 set noswapfile
+nnoremap <C-d> :bdelete<CR>
 
 set background=dark
 colorscheme solarized
