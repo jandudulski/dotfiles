@@ -201,8 +201,8 @@ if has("autocmd")
   autocmd BufWritePre * :%s/\s\+$//e
 
   " Help File speedups, <enter> to follow tag, delete for back
-  autocmd filetype help nnoremap <buffer><cr> <c-]>
-  autocmd filetype help nnoremap <buffer><bs> <c-T>
+  autocmd filetype help nnoremap <buffer><CR> <c-]>
+  autocmd filetype help nnoremap <buffer><BS> <c-T>
   autocmd filetype help nnoremap <buffer>q :q<CR>
   set splitbelow
   autocmd filetype help wincmd _ " Maximize the help on open
