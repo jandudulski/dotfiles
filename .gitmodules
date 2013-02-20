@@ -73,9 +73,6 @@
 [submodule "Vim/_vim/bundle/commentary"]
 	path = Vim/_vim/bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
-[submodule "Vim/_vim/bundle/snipmate_for_django"]
-	path = Vim/_vim/bundle/snipmate_for_django
-	url = git://github.com/robhudson/snipmate_for_django.git
 [submodule "Vim/_vim/bundle/MatchTag"]
 	path = Vim/_vim/bundle/MatchTag
 	url = git://github.com/gregsexton/MatchTag.git
