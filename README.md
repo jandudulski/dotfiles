@@ -27,7 +27,6 @@ Others:
   1. [Html5](https://github.com/othree/html5.vim) - syntax and omnicompletion
   1. [indent-guides](https://github.com/nathanaelkane/vim-indent-guides) - show indents
   1. [javascipt](https://github.com/pangloss/vim-javascript) - javascript indentation done right
-  1. [jquery-doc](https://github.com/lucapette/vim-jquery-doc) - browse jquery documentation
   1. [matchit](https://github.com/edsono/vim-matchit) - better matching under % sign
   1. [MatchTag](https://github.com/gregsexton/MatchTag) - show matching html tags
   1. [numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle) - automatically toggle between number and relativenumber
@@ -44,10 +43,10 @@ Others:
   1. [sparkup](https://github.com/bingaman/vim-sparkup) - zen coding
   1. [surround](https://github.com/tpope/vim-surround) - manipulate surrounding characters
   1. [syntastic](https://github.com/scrooloose/syntastic) - syntax checker
-  1. [tabular](https://github.com/godlygeek/tabular) - text alignment 
+  1. [tabular](https://github.com/godlygeek/tabular) - text alignment
   1. [tagbar](http://majutsushi.github.com/tagbar/) - newer taglist
   1. [textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock) - better handling for ruby blocks
-  1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects 
+  1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects
   1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
