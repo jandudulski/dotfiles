@@ -1,7 +1,7 @@
 [submodule "Vim/_vim/bundle/fugitive"]
 	path = Vim/_vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submoduly "Vim/_vim/bundle/syntastic"]
+[submodule "Vim/_vim/bundle/syntastic"]
 	path = Vim/_vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 [submodule "Vim/_vim/bundle/matchit"]
