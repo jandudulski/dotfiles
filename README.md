@@ -45,6 +45,7 @@ Others:
   1. [tabular](https://github.com/godlygeek/tabular) - text alignment
   1. [tagbar](http://majutsushi.github.com/tagbar/) - newer taglist
   1. [textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock) - better handling for ruby blocks
+  1. [textobj-underscore](https://github.com/lucapette/vim-textobj-underscore) - underscore text objects
   1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects
   1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings

@@ -124,3 +124,6 @@
 [submodule "Vim/_vim/bundle/vim-sensible"]
 	path = Vim/_vim/bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
+[submodule "Vim/_vim/bundle/vim-textobj-underscore"]
+	path = Vim/_vim/bundle/vim-textobj-underscore
+	url = git://github.com/lucapette/vim-textobj-underscore.git
