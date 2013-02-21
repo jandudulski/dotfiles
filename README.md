@@ -34,7 +34,6 @@ Others:
   1. [rails.vim](https://github.com/tpope/vim-rails) - rails utilities
   1. [repeat](https://github.com/tpope/vim-repeat) - better dot usage
   1. [rsi](https://github.com/tpope/vim-rsi) - readline style insertion
-  1. [ruby-doc](https://github.com/lucapette/vim-ruby-doc) - browse Ruby, Rspec and Rails documentation
   1. [sensible](https://github.com/tpope/vim-sensible) - defaults everone can agree on
   1. [signature](https://github.com/kshenoy/vim-signature) - display marks
   1. [snipMate](https://github.com/msanders/snipmate.vim) - snippets
