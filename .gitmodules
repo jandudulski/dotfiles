@@ -127,3 +127,9 @@
 [submodule "Vim/_vim/bundle/vim-textobj-underscore"]
 	path = Vim/_vim/bundle/vim-textobj-underscore
 	url = git://github.com/lucapette/vim-textobj-underscore.git
+[submodule "Vim/_vim/bundle/vim-gitgutter"]
+	path = Vim/_vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "Vim/_vim/bundle/vim-qargs"]
+	path = Vim/_vim/bundle/vim-qargs
+	url = git://github.com/nelstrom/vim-qargs.git
