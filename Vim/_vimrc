@@ -207,6 +207,9 @@ if has("autocmd")
   autocmd filetype help nnoremap <buffer>q :q<CR>
   set splitbelow
   autocmd filetype help wincmd _ " Maximize the help on open
+
+  "Auto-clean fugitive buffers (Vimcast#34)
+  autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 
 "Arrow keys
