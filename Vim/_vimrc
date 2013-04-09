@@ -231,7 +231,7 @@ noremap <F1> <Esc>
 "Paste mode prevents insane pasting from another file
 set pastetoggle=<F2>
 "Bufexplorer
-nnoremap <silent> <F2> :BufExplorer<CR>
+nnoremap <silent> <F2> :CtrlPBuffer<CR>
 "tagbar
 nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
