@@ -9,7 +9,6 @@ The most important is [Pathogen](https://github.com/tpope/vim-pathogen) - thanks
 Others:
 
   1. [argtextobj](https://github.com/vim-scripts/argtextobj.vim) - arguments text objects
-  1. [BufExplorer](https://github.com/vim-scripts/bufexplorer.zip) - convenient access to buffers
   1. [Codepath](https://github.com/lucapette/codepath.vim) - shortcut for finding projects root
   1. [Coffee-Script](https://github.com/kchmck/vim-coffee-script) - syntax and tools for coffee-script
   1. [Commentary](https://github.com/tpope/vim-commentary) - `gc` to comment the code
