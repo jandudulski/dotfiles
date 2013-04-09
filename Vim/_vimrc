@@ -13,11 +13,6 @@ filetype off
 
 let g:pathogen_disabled = []
 
-if !has('gui_running')
-  " css color drastically slows down in terminal
-  call add(g:pathogen_disabled, 'css-color')
-endif
-
 "Load pathogen managed plugins
 call pathogen#infect()
 

@@ -37,9 +37,6 @@
 [submodule "Vim/_vim/bundle/indent-guides"]
 	path = Vim/_vim/bundle/indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "Vim/_vim/bundle/css-color"]
-	path = Vim/_vim/bundle/css-color
-	url = git://github.com/skammer/vim-css-color.git
 [submodule "Vim/_vim/bundle/css3-syntax"]
 	path = Vim/_vim/bundle/css3-syntax
 	url = git://github.com/hail2u/vim-css3-syntax.git
@@ -130,3 +127,6 @@
 [submodule "Vim/_vim/bundle/vim-qargs"]
 	path = Vim/_vim/bundle/vim-qargs
 	url = git://github.com/nelstrom/vim-qargs.git
+[submodule "Vim/_vim/bundle/vim-css-color"]
+	path = Vim/_vim/bundle/vim-css-color
+	url = git://github.com/ap/vim-css-color.git
