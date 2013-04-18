@@ -130,3 +130,6 @@
 [submodule "Vim/_vim/bundle/vim-css-color"]
 	path = Vim/_vim/bundle/vim-css-color
 	url = git://github.com/ap/vim-css-color.git
+[submodule "Vim/_vim/bundle/vim-abolish"]
+	path = Vim/_vim/bundle/vim-abolish
+	url = git://github.com/tpope/vim-abolish.git

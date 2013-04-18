@@ -8,6 +8,7 @@ The most important is [Pathogen](https://github.com/tpope/vim-pathogen) - thanks
 
 Others:
 
+  1. [abolish](https://github.com/tpope/vim-abolish.git) - easily search for, substitute, and abbreviate multiple variants of a word
   1. [argtextobj](https://github.com/vim-scripts/argtextobj.vim) - arguments text objects
   1. [Codepath](https://github.com/lucapette/codepath.vim) - shortcut for finding projects root
   1. [Coffee-Script](https://github.com/kchmck/vim-coffee-script) - syntax and tools for coffee-script
