@@ -50,6 +50,7 @@ Others:
   1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
+  1. [vim-ruby-minitest](https://github.com/sunaku/vim-ruby-minitest) - highlight and completion for MiniTest
   1. [YankRing](https://github.com/vim-scripts/YankRing.vim) - yank explorer
 
 ## Inspirations
