@@ -1,0 +1,9 @@
+# Ignore releases shared folder
+public/system/*
+# rbenv and rvm
+.rvmrc
+.ruby-version
+.rbenv-version
+# tmp files
+.DS_Store
+./config/database.yml
