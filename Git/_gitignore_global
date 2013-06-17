@@ -6,4 +6,5 @@ public/system/*
 .rbenv-version
 # tmp files
 .DS_Store
+.*.un~
 ./config/database.yml
