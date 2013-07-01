@@ -8,3 +8,5 @@ public/system/*
 .DS_Store
 .*.un~
 ./config/database.yml
+# vim
+tags
