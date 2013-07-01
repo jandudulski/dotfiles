@@ -13,3 +13,5 @@
 	autosetuprebase = always
 [merge]
 	ff = true
+[init]
+	templatedir = /home/yanoo/.git_template
