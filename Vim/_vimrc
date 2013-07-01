@@ -8,13 +8,12 @@
 "@author Jan Dudulski
 "@see    http://github.com/jandudulski
 
-"Necessary on some Linux distros for pathogen to properly load bundles
-filetype off
-
 let g:pathogen_disabled = []
 
 "Load pathogen managed plugins
-call pathogen#infect()
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
 "Prevents some security exploits
 set modelines=0
