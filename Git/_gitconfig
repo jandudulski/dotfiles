@@ -2,7 +2,7 @@
 	name = Jan Dudulski
 	email = jan@dudulski.pl
 [core]
-	editor = vim -f
+	editor = gvim -v -f
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
