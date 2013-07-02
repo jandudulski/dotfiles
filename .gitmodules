@@ -136,3 +136,6 @@
 [submodule "Vim/_vim/bundle/vim-ruby-minitest"]
 	path = Vim/_vim/bundle/vim-ruby-minitest
 	url = git://github.com/sunaku/vim-ruby-minitest.git
+[submodule "Vim/_vim/bundle/ack"]
+	path = Vim/_vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
