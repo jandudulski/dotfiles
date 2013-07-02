@@ -25,7 +25,6 @@ Others:
   1. [Haml](https://github.com/tpope/vim-haml) - haml syntax
   1. [Hammer](https://github.com/matthias-guenther/hammer.vim) - Markdown preview
   1. [Html5](https://github.com/othree/html5.vim) - syntax and omnicompletion
-  1. [indent-guides](https://github.com/nathanaelkane/vim-indent-guides) - show indents
   1. [javascipt](https://github.com/pangloss/vim-javascript) - javascript indentation done right
   1. [matchit](https://github.com/edsono/vim-matchit) - better matching under % sign
   1. [MatchTag](https://github.com/gregsexton/MatchTag) - show matching html tags

@@ -34,9 +34,6 @@
 [submodule "Vim/_vim/bundle/textobj-rubyblock"]
 	path = Vim/_vim/bundle/textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "Vim/_vim/bundle/indent-guides"]
-	path = Vim/_vim/bundle/indent-guides
-	url = git://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "Vim/_vim/bundle/css3-syntax"]
 	path = Vim/_vim/bundle/css3-syntax
 	url = git://github.com/hail2u/vim-css3-syntax.git
