@@ -1,0 +1,2 @@
+set nextpattern=\\bnext|more|następna\\b,^>$,^(>>|»)$,^(>|»),(>|»)$
+set previouspattern=\\bprev|previous|poprzednia\\b,^<$,^(<<|«)$,^(<|«),(<|«)$
