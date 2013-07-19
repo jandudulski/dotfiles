@@ -64,3 +64,4 @@ Others:
 * [Marius Gedminas' vimrc](http://mg.pov.lt/vim/vimrc)
 * [Vim for Ruby on Rails instead of an IDE](http://joshuaborn.info/blog/9d0b)
 * [StackOverflow](http://stackoverflow.com/questions/tagged/vim)
+* [Example projections gist](https://gist.github.com/jsteiner/5556217)
