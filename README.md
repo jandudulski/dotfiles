@@ -11,6 +11,7 @@ Others:
   1. [abolish](https://github.com/tpope/vim-abolish.git) - easily search for, substitute, and abbreviate multiple variants of a word
   1. [ack.vim](https://github.com/mileszs/ack.vim) - Ack wrapper
   1. [argtextobj](https://github.com/vim-scripts/argtextobj.vim) - arguments text objects
+  1. [bundler.vim](https://github.com/tpope/vim-bundler) - simple wrapper for ruby bundler
   1. [Coffee-Script](https://github.com/kchmck/vim-coffee-script) - syntax and tools for coffee-script
   1. [Commentary](https://github.com/tpope/vim-commentary) - `gc` to comment the code
   1. [css-color](https://github.com/ap/vim-css-color.git) - highlights color's hexes

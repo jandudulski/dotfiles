@@ -133,3 +133,6 @@
 [submodule "Vim/_vim/bundle/ack"]
 	path = Vim/_vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "Vim/_vim/bundle/vim-bundler"]
+	path = Vim/_vim/bundle/vim-bundler
+	url = git://github.com/tpope/vim-bundler.git
