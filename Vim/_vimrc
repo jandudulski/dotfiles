@@ -76,7 +76,7 @@ set scrolloff=3
 "Disable visual bell
 set visualbell t_vb=
 
-"Yank/Paste to the OS clipboard with ,y and ,p and Ctrl-V
+"Yank/Paste to the OS clipboard with ,y and ,p
 nnoremap <Leader>y "+Y
 vnoremap <Leader>y "+y
 nnoremap <Leader>p "+p
