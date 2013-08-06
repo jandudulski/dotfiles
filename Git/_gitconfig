@@ -15,3 +15,5 @@
 	ff = true
 [init]
 	templatedir = /home/yanoo/.git_template
+[rerere]
+	enabled = true
