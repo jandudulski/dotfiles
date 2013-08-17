@@ -37,6 +37,7 @@ set ttyfast
 
 "Store lots of undos
 set undolevels=1000
+set undofile
 
 set showcmd    "show incomplete cmds down the bottom
 set showmode   "show current mode down the bottom
