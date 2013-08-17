@@ -176,6 +176,7 @@ if has("autocmd")
   autocmd FileType html,htmldjango setlocal textwidth=0
 
   autocmd BufEnter *.hamlc set filetype=haml
+  autocmd BufEnter *.slim set filetype=slim
   " non ruby files which are ruby
   autocmd BufEnter Gemfile,Gemfile.lock,Guardfile,Rakefile,Procfile,*.rake set filetype=ruby
 

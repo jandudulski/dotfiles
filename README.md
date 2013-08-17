@@ -9,7 +9,6 @@ The most important is [Pathogen](https://github.com/tpope/vim-pathogen) - thanks
 Others:
 
   1. [abolish](https://github.com/tpope/vim-abolish.git) - easily search for, substitute, and abbreviate multiple variants of a word
-  1. [ack.vim](https://github.com/mileszs/ack.vim) - Ack wrapper
   1. [argtextobj](https://github.com/vim-scripts/argtextobj.vim) - arguments text objects
   1. [bundler.vim](https://github.com/tpope/vim-bundler) - simple wrapper for ruby bundler
   1. [Coffee-Script](https://github.com/kchmck/vim-coffee-script) - syntax and tools for coffee-script
@@ -20,7 +19,6 @@ Others:
   1. [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in ruby
   1. [eunuch](https://github.com/tpope/vim-eunuch) - some unix shell commands
   1. [Fugitive](https://github.com/tpope/vim-fugitive) - git wrapper
-  1. [Gitv](https://github.com/gregsexton/gitv) - git logs browser fugitive
   1. [Grep](https://github.com/vim-scripts/grep.vim) - any comments needed?
   1. [Gundo](https://github.com/sjl/gundo.vim) - wrapper for undo feature
   1. [Haml](https://github.com/tpope/vim-haml) - haml syntax
@@ -43,14 +41,14 @@ Others:
   1. [surround](https://github.com/tpope/vim-surround) - manipulate surrounding characters
   1. [syntastic](https://github.com/scrooloose/syntastic) - syntax checker
   1. [tabular](https://github.com/godlygeek/tabular) - text alignment
-  1. [tagbar](http://majutsushi.github.com/tagbar/) - newer taglist
   1. [textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock) - better handling for ruby blocks
-  1. [textobj-underscore](https://github.com/lucapette/vim-textobj-underscore) - underscore text objects
   1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects
   1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
+  1. [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - sign changes related to prev. commit
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
   1. [vim-ruby-minitest](https://github.com/sunaku/vim-ruby-minitest) - highlight and completion for MiniTest
+  1. [vim-qargs](https://github.com/nelstrom/vim-qargs) - populate arguments from quickfix list
   1. [YankRing](https://github.com/vim-scripts/YankRing.vim) - yank explorer
 
 ## Inspirations
