@@ -87,9 +87,6 @@ noremap gV `[v`]
 " Easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-"Change current working directory whenever open file
-set autochdir
-
 "Statusline setup
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
