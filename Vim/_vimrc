@@ -87,9 +87,6 @@ noremap gV `[v`]
 " Easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-"Statusline setup
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
 "Turn off needless toolbar on gvim
 set guioptions-=T
 
@@ -229,6 +226,8 @@ nnoremap <F8> :g#\({\n\)\@<=#.,/}/sort<CR>
 """""""""""""""""""""""
 "Plugins configuration"
 """""""""""""""""""""""
+"Airline
+let g:airline_powerline_fonts=1
 "Syntastic
 let g:syntastic_enable_signs=1               "mark syntax errors with :signs
 

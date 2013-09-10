@@ -124,3 +124,6 @@
 [submodule "Vim/_vim/bundle/vim-bundler"]
 	path = Vim/_vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "Vim/_vim/bundle/vim-airline"]
+	path = Vim/_vim/bundle/vim-airline
+	url = git://github.com/bling/vim-airline.git

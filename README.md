@@ -45,6 +45,7 @@ Others:
   1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects
   1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
+  1. [vim-airline](https://github.com/bling/vim-airline) - powerline like status bar
   1. [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - sign changes related to prev. commit
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
   1. [vim-ruby-minitest](https://github.com/sunaku/vim-ruby-minitest) - highlight and completion for MiniTest
