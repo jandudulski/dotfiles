@@ -50,8 +50,8 @@ set ignorecase  "not case sensitive
 set smartcase   "try to match case if can
 set gdefault    "global for default
 
-set number         "add line numbers
 set relativenumber "relative line numbers
+set number         "add line numbers
 set cursorline     "highlight current line
 set cursorcolumn   "highlight current column
 set showbreak=↪

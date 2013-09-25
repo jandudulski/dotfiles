@@ -27,7 +27,6 @@ Others:
   1. [javascipt](https://github.com/pangloss/vim-javascript) - javascript indentation done right
   1. [matchit](https://github.com/edsono/vim-matchit) - better matching under % sign
   1. [MatchTag](https://github.com/gregsexton/MatchTag) - show matching html tags
-  1. [numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle) - automatically toggle between number and relativenumber
   1. [ragtag](https://github.com/tpope/vim-ragtag) - several nice mappings for HTML/XML
   1. [rails.vim](https://github.com/tpope/vim-rails) - rails utilities
   1. [repeat](https://github.com/tpope/vim-repeat) - better dot usage
