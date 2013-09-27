@@ -60,14 +60,7 @@ set wrap linebreak
 set iskeyword+=-   "treat - as a part of word
 
 "End of line
-if v:version >= 703
-  set colorcolumn=80 "do not cross the red line!
-else
-  if has("autocmd")
-    autocmd BufRead * highlight OverLenght ctermbg=darkgrey guibg=#592929
-    autocmd BufRead * match OverLenght /\%79v.*/
-  endif
-endif
+set colorcolumn=80 "do not cross the red line!
 
 "Add some line space for easy reading
 set linespace=0
@@ -90,27 +83,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 "Turn off needless toolbar on gvim
 set guioptions-=T
 
-"Recalculate the tab warning flag when idle and after writing
-autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
-"Return '[&et]' if &et set wrong
-"Return '[mixed-indenting]' if spaces and tabs are used to indent
-"Return '' if everything is fine
-function! StatuslineTabWarning()
-  if !exists("b:statusline_tab_warning")
-    let tabs = search('^\t', 'nw') != 0
-    let spaces = search('^ ', 'nw') != 0
-
-    if tabs && spaces
-      let b:statusline_tab_warning = '[mixed-indenting]'
-    elseif (spaces && !&et) || (tabs && &et)
-      let b:statusline_tab_warning = '[&et]'
-    else
-      let b:statusline_tab_warning = ''
-    endif
-  endif
-  return b:statusline_tab_warning
-endfunction
-
 "Indent settings
 set tabstop=2      "two characters space for tab
 set shiftwidth=2   "two spaces for autoindent
@@ -130,7 +102,6 @@ set foldnestmax=3        "deepest fold is 3 levels
 set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:full     "make cmdline tab completion similar to bash
 set wildignore=*.o,*.obj,*~,*.pyc,*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store,*/source_maps/*,*/spec/reports/*
-
 
 "Some stuff to get the mouse going in term
 set mouse=a
