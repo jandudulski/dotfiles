@@ -124,3 +124,6 @@
 [submodule "Vim/_vim/bundle/vim-airline"]
 	path = Vim/_vim/bundle/vim-airline
 	url = git://github.com/bling/vim-airline.git
+[submodule "Vim/_vim/bundle/SyntaxRange"]
+	path = Vim/_vim/bundle/SyntaxRange
+	url = git://github.com/vim-scripts/SyntaxRange.git

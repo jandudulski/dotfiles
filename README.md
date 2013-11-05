@@ -39,6 +39,7 @@ Others:
   1. [sparkup](https://github.com/bingaman/vim-sparkup) - zen coding
   1. [surround](https://github.com/tpope/vim-surround) - manipulate surrounding characters
   1. [syntastic](https://github.com/scrooloose/syntastic) - syntax checker
+  1. [SyntaxRange](https://github.com/vim-scripts/SyntaxRange.git) - define different filetype syntax on regions of buffer
   1. [tabular](https://github.com/godlygeek/tabular) - text alignment
   1. [textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock) - better handling for ruby blocks
   1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects
