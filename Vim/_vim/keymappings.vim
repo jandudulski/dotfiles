@@ -22,6 +22,10 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
+inoremap <Left> <ESC>
+inoremap <Down> <ESC>
+inoremap <Up> <ESC>
+inoremap <Right> <ESC>
 
 "Stay in a home row
 "http://reefpoints.dockyard.com/2013/09/11/vim-staying-on-home-row-via-map.html
