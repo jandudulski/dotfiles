@@ -42,5 +42,13 @@ let g:rails_gem_projections = {
   \     "related": "app/models/%i.rb",
   \     "template": "require 'roar/representer/json'\n\nmodule %SRepresenter\n  include Roar::Representer::JSON\nend"
   \   }
+  \ },
+  \ "sidekiq": {
+  \   "app/workers/*_worker.rb": {
+  \     "command": "worker",
+  \     "affinity": "model",
+  \     "test": ["spec/workers/%s_worker_spec.rb", "test/workers/%s_worker_test.rb"],
+  \     "template": "class %SWorker\n  include Sidekiq::Worker\n\n  def perform\n  end\nend"
+  \   }
   \ }
   \}
