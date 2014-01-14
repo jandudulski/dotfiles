@@ -127,3 +127,6 @@
 [submodule "Vim/_vim/bundle/SyntaxRange"]
 	path = Vim/_vim/bundle/SyntaxRange
 	url = git://github.com/vim-scripts/SyntaxRange.git
+[submodule "Vim/_vim/bundle/vim-gtfo"]
+	path = Vim/_vim/bundle/vim-gtfo
+	url = git://github.com/justinmk/vim-gtfo

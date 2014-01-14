@@ -47,6 +47,7 @@ Others:
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
   1. [vim-airline](https://github.com/bling/vim-airline) - powerline like status bar
   1. [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - sign changes related to prev. commit
+  1. [vim-gtfo](https://github.com/justinmk/vim-gtfo) - Go to Terminal or File manager
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
   1. [vim-ruby-minitest](https://github.com/sunaku/vim-ruby-minitest) - highlight and completion for MiniTest
   1. [vim-qargs](https://github.com/nelstrom/vim-qargs) - populate arguments from quickfix list
