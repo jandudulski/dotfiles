@@ -130,3 +130,6 @@
 [submodule "Vim/_vim/bundle/vim-gtfo"]
 	path = Vim/_vim/bundle/vim-gtfo
 	url = git://github.com/justinmk/vim-gtfo
+[submodule "Vim/_vim/bundle/vim-exchange"]
+	path = Vim/_vim/bundle/vim-exchange
+	url = git://github.com/tommcdo/vim-exchange.git

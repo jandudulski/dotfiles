@@ -46,6 +46,7 @@ Others:
   1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
   1. [vim-airline](https://github.com/bling/vim-airline) - powerline like status bar
+  1. [vim-exchange](https://github.com/tommcdo/vim-exchange) - text exchange operator
   1. [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - sign changes related to prev. commit
   1. [vim-gtfo](https://github.com/justinmk/vim-gtfo) - Go to Terminal or File manager
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
