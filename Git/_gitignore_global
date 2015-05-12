@@ -4,9 +4,11 @@ public/system/*
 .rvmrc
 .ruby-version
 .rbenv-version
+.rbenv-vars
 # tmp files
 .DS_Store
 .*.un~
 ./config/database.yml
 # vim
 tags
+.sky
