@@ -22,12 +22,10 @@ Others:
   1. [Grep](https://github.com/vim-scripts/grep.vim) - any comments needed?
   1. [Gundo](https://github.com/sjl/gundo.vim) - wrapper for undo feature
   1. [Haml](https://github.com/tpope/vim-haml) - haml syntax
-  1. [Hammer](https://github.com/matthias-guenther/hammer.vim) - Markdown preview
   1. [Html5](https://github.com/othree/html5.vim) - syntax and omnicompletion
   1. [javascipt](https://github.com/pangloss/vim-javascript) - javascript indentation done right
   1. [matchit](https://github.com/edsono/vim-matchit) - better matching under % sign
   1. [MatchTag](https://github.com/gregsexton/MatchTag) - show matching html tags
-  1. [ragtag](https://github.com/tpope/vim-ragtag) - several nice mappings for HTML/XML
   1. [rails.vim](https://github.com/tpope/vim-rails) - rails utilities
   1. [repeat](https://github.com/tpope/vim-repeat) - better dot usage
   1. [rsi](https://github.com/tpope/vim-rsi) - readline style insertion
@@ -43,12 +41,11 @@ Others:
   1. [tabular](https://github.com/godlygeek/tabular) - text alignment
   1. [textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock) - better handling for ruby blocks
   1. [textobj-user](https://github.com/kana/vim-textobj-user) - support for user-defined text objects
-  1. [textobj-word-column](https://github.com/coderifous/textobj-word-column.vim) - word-based column text objects
   1. [unimpaired](https://github.com/tpope/vim-unimpaired) - pairs of handy bracket mappings
   1. [vim-airline](https://github.com/bling/vim-airline) - powerline like status bar
+  1. [vim-dispatch](https://github.com/tpope/vim-dispatch) - asynchronous build and test dispatcher
   1. [vim-exchange](https://github.com/tommcdo/vim-exchange) - text exchange operator
   1. [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - sign changes related to prev. commit
-  1. [vim-gtfo](https://github.com/justinmk/vim-gtfo) - Go to Terminal or File manager
   1. [vim-ruby](https://github.com/vim-ruby/vim-ruby) - better support for ruby language
   1. [vim-ruby-minitest](https://github.com/sunaku/vim-ruby-minitest) - highlight and completion for MiniTest
   1. [vim-qargs](https://github.com/nelstrom/vim-qargs) - populate arguments from quickfix list

@@ -46,9 +46,6 @@
 [submodule "Vim/_vim/bundle/gundo"]
 	path = Vim/_vim/bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
-[submodule "Vim/_vim/bundle/ragtag"]
-	path = Vim/_vim/bundle/ragtag
-	url = git://github.com/tpope/vim-ragtag.git
 [submodule "Vim/_vim/bundle/solarized"]
 	path = Vim/_vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -76,12 +73,6 @@
 [submodule "Vim/_vim/bundle/argtextobj"]
 	path = Vim/_vim/bundle/argtextobj
 	url = git://github.com/vim-scripts/argtextobj.vim.git
-[submodule "Vim/_vim/bundle/hammer"]
-	path = Vim/_vim/bundle/hammer
-	url = git://github.com/matthias-guenther/hammer.vim.git
-[submodule "Vim/_vim/bundle/textobj-word-column"]
-	path = Vim/_vim/bundle/textobj-word-column
-	url = git://github.com/coderifous/textobj-word-column.vim.git
 [submodule "Vim/_vim/bundle/ctrlp"]
 	path = Vim/_vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
@@ -127,9 +118,9 @@
 [submodule "Vim/_vim/bundle/SyntaxRange"]
 	path = Vim/_vim/bundle/SyntaxRange
 	url = git://github.com/vim-scripts/SyntaxRange.git
-[submodule "Vim/_vim/bundle/vim-gtfo"]
-	path = Vim/_vim/bundle/vim-gtfo
-	url = git://github.com/justinmk/vim-gtfo
 [submodule "Vim/_vim/bundle/vim-exchange"]
 	path = Vim/_vim/bundle/vim-exchange
 	url = git://github.com/tommcdo/vim-exchange.git
+[submodule "Vim/_vim/bundle/vim-dispatch"]
+	path = Vim/_vim/bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git

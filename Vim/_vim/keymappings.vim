@@ -27,13 +27,6 @@ inoremap <Down> <ESC>
 inoremap <Up> <ESC>
 inoremap <Right> <ESC>
 
-"Stay in a home row
-"http://reefpoints.dockyard.com/2013/09/11/vim-staying-on-home-row-via-map.html
-inoremap ;a <ESC>
-inoremap ;d <ESC>:update<CR>
-inoremap ;f <C-o>:update<CR>
-nnoremap ;f :update<CR>
-
 """""""""""""""
 "F<n> bindings"
 """""""""""""""
@@ -41,9 +34,5 @@ nnoremap ;f :update<CR>
 noremap <F1> <Esc>
 "Bufexplorer
 nnoremap <silent> <F2> :CtrlPBuffer<CR>
-"tagbar
-nnoremap <silent> <F4> :TagbarToggle<CR>
 "Gundo
 nnoremap <F5> :GundoToggle<CR>
-"Sort css
-nnoremap <F8> :g#\({\n\)\@<=#.,/}/sort<CR>

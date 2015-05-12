@@ -1,4 +1,3 @@
-"Has autocmd
 if has("autocmd")
   autocmd FileType html,htmldjango setlocal textwidth=0
 
