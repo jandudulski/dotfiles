@@ -15,7 +15,7 @@ Others:
   1. [Commentary](https://github.com/tpope/vim-commentary) - `gc` to comment the code
   1. [css-color](https://github.com/ap/vim-css-color.git) - highlights color's hexes
   1. [css3-syntax](https://github.com/hail2u/vim-css3-syntax) - support css3 syntax
-  1. [ctrlp](https://github.com/kien/ctrlp.vim) - fuzzy finder
+  1. [ctrlp](https://github.com/ctrlpvim/ctrlp.vim) - fuzzy finder
   1. [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in ruby
   1. [eunuch](https://github.com/tpope/vim-eunuch) - some unix shell commands
   1. [Fugitive](https://github.com/tpope/vim-fugitive) - git wrapper
