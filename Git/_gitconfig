@@ -16,6 +16,10 @@
 [init]
 	templatedir = /home/yanoo/.git_template
 [rerere]
-	enabled = true
+	enabled = false
 [help]
 	autocorrect = 1
+[alias]
+	co = checkout
+	st = status
+	cache = diff --cached
