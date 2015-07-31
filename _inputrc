@@ -1,3 +1,4 @@
+set bell-style visible
 set bind-tty-special-chars off
 set colored-stats on
 set completion-ignore-case on
