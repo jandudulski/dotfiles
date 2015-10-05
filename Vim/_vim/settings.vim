@@ -36,7 +36,7 @@ set foldnestmax=3        "deepest fold is 3 levels
 "Wild menu
 set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:full     "make cmdline tab completion similar to bash
-set wildignore=*.o,*.obj,*~,*.pyc,*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store,*/source_maps/*,*/spec/reports/*
+set wildignore=*.o,*.obj,*~,*.pyc,*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store,*/source_maps/*,*/spec/reports/*,*/coverage/*
 
 "Store lots of undos
 set undolevels=1000
