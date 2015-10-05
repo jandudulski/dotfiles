@@ -124,3 +124,6 @@
 [submodule "Vim/_vim/bundle/vim-dispatch"]
 	path = Vim/_vim/bundle/vim-dispatch
 	url = git://github.com/tpope/vim-dispatch.git
+[submodule "Vim/_vim/bundle/gruvbox"]
+	path = Vim/_vim/bundle/gruvbox
+	url = git://github.com/morhetz/gruvbox.git
