@@ -1,5 +1,10 @@
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark="hard"
+let &t_ZH = "\e[3m"
+let &t_ZR = "\e[23m"
+colorscheme gruvbox
 
 if has("gui_running")
   set guitablabel=%M%t
