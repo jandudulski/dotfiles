@@ -2,7 +2,7 @@
 	name = Jan Dudulski
 	email = jan@dudulski.pl
 [core]
-	editor = gvim -v -f
+	editor = nvim
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
@@ -24,3 +24,8 @@
 	st = status
 	cache = diff --cached
 	upall = submodule foreach git pull origin master
+	ignore = update-index --assume-unchanged
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
