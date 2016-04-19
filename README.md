@@ -65,3 +65,4 @@ Others:
 * [Example projections gist](https://gist.github.com/jsteiner/5556217)
 * [VIMRC you're doing it wrong!](http://bamgreeneggsandham.com/2013/11/19/vimrc-your-doing-it-wrong/)
 * [Improving the Command-Line Postgres Experience](http://robots.thoughtbot.com/improving-the-command-line-postgres-experience)
+* [Moving to Neovim from Vim](https://jacky.wtf/weblog/moving-to-neovim/)
