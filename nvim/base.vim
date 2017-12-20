@@ -21,19 +21,20 @@ Plug 'ctrlpvim/ctrlp.vim'
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'vim-scripts/grep.vim'
+Plug 'mileszs/ack.vim'
 Plug 'sjl/gundo.vim'
 Plug 'tommcdo/vim-exchange'
 Plug 'vim-scripts/SyntaxRange'
-Plug 'vim-scripts/YankRing.vim'
+" Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'godlygeek/tabular'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
 Plug 'benekastah/neomake'
 Plug 'janko-m/vim-test'
+Plug 'b4b4r07/vim-hcl'
 
 call plug#end()

@@ -2,7 +2,7 @@ let g:gruvbox_contrast_dark = "hard"
 
 colorscheme gruvbox
 
-set background=dark
+set background=light
 set number
 set ruler
 set cursorline

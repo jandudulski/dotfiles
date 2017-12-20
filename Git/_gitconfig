@@ -1,6 +1,7 @@
 [user]
 	name = Jan Dudulski
 	email = jan@dudulski.pl
+	signingkey = 2E81A03F
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
@@ -8,6 +9,7 @@
 	ui = auto
 [push]
 	default = current
+	followTags = true
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
@@ -25,7 +27,12 @@
 	cache = diff --cached
 	upall = submodule foreach git pull origin master
 	ignore = update-index --assume-unchanged
+	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
