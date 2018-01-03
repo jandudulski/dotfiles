@@ -1,0 +1,14 @@
+---
+- name: Generate git config
+  template:
+    src: gitconfig.j2
+    dest: /home/jdudulski/.gitconfig
+    owner: jdudulski
+    group: jdudulski
+
+- name: Generate global git ignore
+  template:
+    src: gitignore_global.j2
+    dest: /home/jdudulski/.gitignore_global
+    owner: jdudulski
+    group: jdudulski

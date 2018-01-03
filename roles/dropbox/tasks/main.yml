@@ -1,0 +1,12 @@
+---
+- name: Install Dropbox repository
+  dnf:
+    name: "https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2015.10.28-1.fedora.x86_64.rpm"
+    state: present
+
+- name: Install Dropbox daemon
+  become_user: jdudulski
+  shell: dropbox start --install
+  register: dropbox_start_result
+  changed_when: >
+    dropbox_start_result.rc == 0 and ("Dropbox is already running!" not in dropbox_start_result.stdout)

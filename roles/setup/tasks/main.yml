@@ -1,0 +1,15 @@
+---
+- name: Install dependencies
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - libselinux-python
+    - python-gpgme
+
+- name: Install software
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - keepassxc

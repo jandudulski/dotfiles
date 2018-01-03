@@ -1,0 +1,11 @@
+---
+- name: Setup Fedora Workstation
+  hosts: localhost
+  become: yes
+
+  roles:
+    - setup
+    - gnome
+    - neovim
+    - git
+    - dropbox
