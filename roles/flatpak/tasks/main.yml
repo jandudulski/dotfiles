@@ -1,0 +1,25 @@
+---
+- name: Install flathub repo
+  shell: flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+  register: flathub_repo
+  failed_when: >
+    flathub_repo.rc > 0 and ("Remote flathub already exists" not in flathub_repo.stderr)
+  changed_when: flathub_repo.rc == 0
+
+- name: Install freedesktop flatpak runtime
+  shell: flatpak install flathub org.freedesktop.Platform
+  register: flatpak_runtime
+  changed_when: >
+    flatpak_runtime.rc == 0 and (not flatpak_runtime.stderr|search("already installed, skipping"))
+
+- name: Install spotify
+  shell: flatpak install flathub com.spotify.Client
+  register: flatpak_spotify
+  changed_when: >
+    flatpak_spotify.rc == 0 and (not flatpak_spotify.stderr|search("already installed, skipping"))
+
+- name: Install Red Alert
+  shell: flatpak install flathub net.openra.OpenRA
+  register: flatpak_redalert
+  changed_when: >
+    flatpak_redalert.rc == 0 and (not flatpak_redalert.stderr|search("already installed, skipping"))
