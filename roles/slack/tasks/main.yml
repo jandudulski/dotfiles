@@ -1,0 +1,22 @@
+---
+- name: Install slack repository key
+  rpm_key:
+    state: present
+    key: https://slack.com/gpg/slack_pubkey.gpg
+
+- name: Install slack repository
+  yum_repository:
+    state: present
+    name: slack
+    description: slack
+    baseurl: https://packagecloud.io/slacktechnologies/slack/fedora/21/x86_64
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://packagecloud.io/gpg.key
+    sslverify: yes
+    sslcacert: /etc/pki/tls/certs/ca-bundle.crt
+
+- name: Install slack
+  dnf:
+    name: slack
+    state: present

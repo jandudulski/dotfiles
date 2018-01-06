@@ -19,3 +19,10 @@
     state: present
   with_items:
     - gnome-shell-extension-do-not-disturb-button
+
+- name: Enable do not disturb extension
+  become_user: "{{ user }}"
+  shell: gnome-shell-extension-tool --enable-extension=donotdisturb-button@nls1729
+  register: enable_donotdisturb
+  changed_when: >
+    enable_donotdisturb.rc == 0 and ("'donotdisturb-button@nls1729' is now enabled." in enable_donotdisturb.stdout)
