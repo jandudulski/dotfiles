@@ -13,6 +13,12 @@
     value: "['ctrl:nocaps']"
     state: present
 
+- name: Set favorite applications
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/shell/favorite-apps"
+    value: "['firefox.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'slack.desktop']"
+
 - name: Install Gnome extensions
   dnf:
     name: "{{ item }}"
@@ -24,5 +30,7 @@
   become_user: "{{ user }}"
   shell: gnome-shell-extension-tool --enable-extension=donotdisturb-button@nls1729
   register: enable_donotdisturb
+  failed_when: >
+    enable_donotdisturb.rc > 0 and ("'donotdisturb-button@nls1729' is already enabled." not in enable_donotdisturb.stderr)
   changed_when: >
     enable_donotdisturb.rc == 0 and ("'donotdisturb-button@nls1729' is now enabled." in enable_donotdisturb.stdout)
