@@ -1,14 +1,17 @@
 ---
 - name: Disable natural scrolling
-  gsetting:
-    user: jdudulski
-    key: org.gnome.desktop.peripherals.touchpad.natural-scroll
+  become_user: jdudulski
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
+    state: present
 
 - name: Swap caps lock with CTRL
-  gsetting: user=jdudulski
-            key=org.gnome.desktop.input-sources.xkb-options
-            value="['ctrl:nocaps']"
+  become_user: jdudulski
+  dconf:
+    key: "/org/gnome/desktop/input-sources/xkb-options"
+    value: "['ctrl:nocaps']"
+    state: present
 
 - name: Install Gnome extensions
   dnf:

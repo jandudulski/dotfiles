@@ -6,6 +6,7 @@
   with_items:
     - libselinux-python
     - python-gpgme
+    - python2-psutil
 
 - name: Install software
   dnf:
@@ -13,3 +14,4 @@
     state: present
   with_items:
     - keepassxc
+    - tilix
