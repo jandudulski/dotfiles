@@ -3,6 +3,9 @@
   hosts: localhost
   become: yes
 
+  vars:
+    user: jdudulski
+
   roles:
     - setup
     - gnome

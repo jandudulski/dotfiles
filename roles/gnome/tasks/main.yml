@@ -1,13 +1,13 @@
 ---
 - name: Disable natural scrolling
-  become_user: jdudulski
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
     state: present
 
 - name: Swap caps lock with CTRL
-  become_user: jdudulski
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/input-sources/xkb-options"
     value: "['ctrl:nocaps']"

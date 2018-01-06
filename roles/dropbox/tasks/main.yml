@@ -5,7 +5,7 @@
     state: present
 
 - name: Install Dropbox daemon
-  become_user: jdudulski
+  become_user: "{{ user }}"
   shell: dropbox start --install
   register: dropbox_start_result
   changed_when: >
