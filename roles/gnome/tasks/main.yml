@@ -13,6 +13,13 @@
     value: "['ctrl:nocaps']"
     state: present
 
+- name: Enable night light
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
+    state: present
+
 - name: Set favorite applications
   become_user: "{{ user }}"
   dconf:
