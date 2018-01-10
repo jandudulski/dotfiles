@@ -1,4 +1,12 @@
 ---
+- name: Install RPM Fusion repositories
+  dnf:
+    name: "https://download1.rpmfusion.org/{{ item }}/fedora/rpmfusion-{{ item }}-release-{{ ansible_distribution_version }}.noarch.rpm"
+    state: present
+  with_items:
+    - free
+    - nonfree
+
 - name: Install dependencies
   dnf:
     name: "{{ item }}"
@@ -14,4 +22,5 @@
     state: present
   with_items:
     - keepassxc
+    - kodi
     - tilix

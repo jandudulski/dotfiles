@@ -1,0 +1,23 @@
+---
+- name: Install elastic PGP key
+  rpm_key:
+    key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    state: present
+
+- name: Install elastic repository
+  yum_repository:
+    name: elasticsearch-6.x
+    state: present
+    description: Elasticsearch repository for 6.x packages
+    baseurl: https://artifacts.elastic.co/packages/6.x/yum
+    gpgcheck: yes
+    gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    enabled: yes
+
+- name: Install elastic tools
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - elasticsearch
+    - kibana

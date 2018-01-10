@@ -10,6 +10,7 @@
     - setup
     - gnome
     - neovim
+    - elasticsearch
     - git
     - slack
     - flatpak
