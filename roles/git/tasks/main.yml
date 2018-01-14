@@ -2,13 +2,13 @@
 - name: Generate git config
   template:
     src: gitconfig.j2
-    dest: "/home/{{ user }}/.gitconfig"
-    owner: "{{ user }}"
-    group: "{{ user }}"
+    dest: "/home/{{ ansible_user }}/.gitconfig"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 - name: Generate global git ignore
   template:
     src: gitignore_global.j2
-    dest: "/home/{{ user }}/.gitignore_global"
-    owner: "{{ user }}"
-    group: "{{ user }}"
+    dest: "/home/{{ ansible_user }}/.gitignore_global"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"

@@ -1,20 +1,20 @@
 ---
 - name: Disable natural scrolling
-  become_user: "{{ user }}"
+  become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
     state: present
 
 - name: Swap caps lock with CTRL
-  become_user: "{{ user }}"
+  become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/desktop/input-sources/xkb-options"
     value: "['ctrl:nocaps']"
     state: present
 
 - name: Enable night light
-  become_user: "{{ user }}"
+  become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
     value: "true"
@@ -28,7 +28,7 @@
     state: present
 
 - name: Set favorite applications
-  become_user: "{{ user }}"
+  become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/shell/favorite-apps"
     value: "['firefox.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'slack.desktop']"
@@ -41,7 +41,7 @@
     - gnome-shell-extension-do-not-disturb-button
 
 - name: Enable do not disturb extension
-  become_user: "{{ user }}"
+  become_user: "{{ ansible_user }}"
   shell: gnome-shell-extension-tool --enable-extension=donotdisturb-button@nls1729
   register: enable_donotdisturb
   failed_when: >

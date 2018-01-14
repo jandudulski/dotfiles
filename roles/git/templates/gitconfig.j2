@@ -4,7 +4,7 @@
 	signingkey = 2E81A03F
 [core]
 	editor = nvim
-	excludesfile = /home/{{ user }}/.gitignore_global
+	excludesfile = /home/{{ ansible_user }}/.gitignore_global
 [color]
 	ui = auto
 [push]
@@ -16,7 +16,7 @@
 [merge]
 	ff = true
 [init]
-	templatedir = /home/{{ user }}/.git_template
+	templatedir = /home/{{ ansible_user }}/.git_template
 [rerere]
 	enabled = false
 [help]

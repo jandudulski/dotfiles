@@ -1,10 +1,7 @@
 ---
 - name: Setup Fedora Workstation
-  hosts: localhost
+  hosts: local
   become: yes
-
-  vars:
-    user: jdudulski
 
   roles:
     - setup
