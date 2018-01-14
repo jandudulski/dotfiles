@@ -24,3 +24,7 @@
     - keepassxc
     - kodi
     - tilix
+    - VirtualBox
+    - akmod-VirtualBox
+    - vagrant
+    - mongo-tools

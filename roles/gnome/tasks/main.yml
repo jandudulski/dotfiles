@@ -27,6 +27,13 @@
     value: "0.75"
     state: present
 
+- name: Set Iosevka as terminal font
+  become_user: "{{ ansible_user }}"
+  dconf:
+    key: "/org/gnome/desktop/interface/monospace-font-name"
+    value: "'Iosevka Term 10'"
+    state: present
+
 - name: Set favorite applications
   become_user: "{{ ansible_user }}"
   dconf:
