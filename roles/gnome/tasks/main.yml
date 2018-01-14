@@ -20,6 +20,13 @@
     value: "true"
     state: present
 
+- name: Set scaling factor better for HiDPi
+  become_user: "{{ ansible_user }}"
+  dconf:
+    key: "/org/gnome/desktop/interface/text-scaling-factor"
+    value: "0.75"
+    state: present
+
 - name: Set favorite applications
   become_user: "{{ user }}"
   dconf:

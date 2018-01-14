@@ -66,3 +66,11 @@ Others:
 * [VIMRC you're doing it wrong!](http://bamgreeneggsandham.com/2013/11/19/vimrc-your-doing-it-wrong/)
 * [Improving the Command-Line Postgres Experience](http://robots.thoughtbot.com/improving-the-command-line-postgres-experience)
 * [Moving to Neovim from Vim](https://jacky.wtf/weblog/moving-to-neovim/)
+
+## Manual
+
+### Firefox
+
+1. Open `about:config`
+2. Find `layout.css.devPixelsPerPx`
+3. Adjust, e.g. `1.5`
