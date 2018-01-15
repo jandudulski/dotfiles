@@ -1,4 +1,9 @@
 ---
+- name: Install gnome shell browser integration
+  dnf:
+    name: chrome-gnome-shell
+    state: present
+
 - name: Disable natural scrolling
   become_user: "{{ ansible_user }}"
   dconf:

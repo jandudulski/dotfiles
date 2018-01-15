@@ -74,3 +74,7 @@ Others:
 1. Open `about:config`
 2. Find `layout.css.devPixelsPerPx`
 3. Adjust, e.g. `1.5`
+
+### Gnome
+
+1. Install [caffeine extension](https://extensions.gnome.org/extension/517/caffeine/)
