@@ -38,7 +38,7 @@
   become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "['firefox.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'slack.desktop']"
+    value: "['firefox.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'slack.desktop', 'com.spotify.Client.desktop']"
 
 - name: Install Gnome extensions
   dnf:
