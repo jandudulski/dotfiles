@@ -1,18 +1,29 @@
 ---
+- name: Create local fonts directory
+  file:
+    path: /usr/local/share/fonts
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
 - name: Create iosevka directory
   file:
     path: /usr/local/share/fonts/iosevka
     owner: root
     group: root
     mode: 0755
-    recurse: yes
     state: directory
+  tags:
+    - iosevka
 
 - name: Extract iosevka pack
   unarchive:
     src: "https://github.com/be5invis/Iosevka/releases/download/v{{ iosevka_version }}/iosevka-pack-{{ iosevka_version }}.zip"
     dest: /usr/local/share/fonts/iosevka
     remote_src: yes
+  tags:
+    - iosevka
   register: iosevka_result
 
 - name: Update fonts cache
