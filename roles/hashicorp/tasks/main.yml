@@ -1,0 +1,26 @@
+---
+- name: Obtain Terraform version
+  shell: "{{ terraform.bin_path }}/terraform --version | head -1 | sed 's/Terraform v//g'"
+  ignore_errors: yes
+  register: installed_terraform_version
+  changed_when: false
+  tags:
+    - terraform
+
+- name: Installed Terraform version
+  debug:
+    var: installed_terraform_version.stdout
+    verbosity: 2
+  tags:
+    - terraform
+
+- name: Install Terraform
+  unarchive:
+    src: "https://releases.hashicorp.com/terraform/{{ terraform.version }}/terraform_{{ terraform.version }}_linux_amd64.zip"
+    dest: "{{ terraform.bin_path }}"
+    remote_src: yes
+    owner: root
+    group: root
+  when: installed_terraform_version.stdout != terraform.version
+  tags:
+    - terraform

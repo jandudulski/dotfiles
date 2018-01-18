@@ -10,6 +10,9 @@
     - neovim
     - elasticsearch
     - git
+    - role: hashicorp
+      tags: 
+        - hashicorp
     - slack
     - flatpak
     - dropbox
