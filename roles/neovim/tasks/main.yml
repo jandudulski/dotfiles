@@ -3,3 +3,19 @@
   dnf:
     name: neovim
     state: present
+
+- name: Generate local neovim config directory
+  file:
+    path: /etc/xdg/nvim
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Generate neovim config
+  template:
+    src: init.vim.j2
+    dest: /etc/xdg/nvim/init.vim
+    owner: root
+    group: root
+    mode: 0644

@@ -23,7 +23,6 @@
   with_items:
     - keepassxc
     - kodi
-    - tilix
     - VirtualBox
     - akmod-VirtualBox
     - vagrant

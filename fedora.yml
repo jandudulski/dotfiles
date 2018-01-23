@@ -5,13 +5,33 @@
 
   roles:
     - setup
-    - iosevka
+    - role: iosevka
+      tags:
+        - iosevka
+        - fonts
+        - devtools
     - gnome
-    - neovim
-    - elasticsearch
-    - git
+    - role: neovim
+      tags:
+        - nvim
+        - devtools
+    - role: tilix
+      tags:
+        - tilix
+    - role: elasticsearch
+      tags:
+        - elasticsearch
+        - devtools
+    - role: ruby
+      tags:
+        - ruby
+        - devtools
+    - role: git
+      tags:
+        - git
+        - devtools
     - role: hashicorp
-      tags: 
+      tags:
         - hashicorp
     - slack
     - flatpak

@@ -1,0 +1,61 @@
+---
+- name: Install dependencies
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - openssl-devel
+    - readline-devel
+    - ruby-devel
+    - gcc-c++
+
+- name: Clone rbenv repo
+  become_user: "{{ ansible_user }}"
+  git:
+    repo: https://github.com/rbenv/rbenv.git
+    dest: "/home/{{ ansible_user }}/.rbenv"
+
+- name: Create directory for rbenv plugins
+  file:
+    path: "/home/{{ ansible_user }}/.rbenv/plugins"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: Clone ruby-build repo
+  become_user: "{{ ansible_user }}"
+  git:
+    repo: https://github.com/rbenv/ruby-build.git
+    dest: "/home/{{ ansible_user }}/.rbenv/plugins/ruby-build"
+
+- name: Create local bin directory
+  file:
+    path: "/home/{{ ansible_user }}/.local/bin"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0700
+
+- name: Add rbenv to known PATH
+  file:
+    src: "/home/{{ ansible_user }}/.rbenv/bin/rbenv"
+    dest: "/home/{{ ansible_user }}/.local/bin/rbenv"
+    state: link
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: Initialize rbenv
+  lineinfile:
+    dest: "/home/{{ ansible_user }}/.bash_profile"
+    regexp: "rbenv init"
+    line: "eval \"$(rbenv init -)\""
+    state: present
+    insertafter: EOF
+
+- name: Install ruby with rbenv
+  become_user: "{{ ansible_user }}"
+  shell: "rbenv install -k {{ item }}"
+  args:
+    creates: "/home/{{ ansible_user }}/.rbenv/versions/{{ item }}"
+  with_items:
+    - 2.5.0
