@@ -8,6 +8,7 @@
     - readline-devel
     - ruby-devel
     - gcc-c++
+    - libffi-devel
 
 - name: Clone rbenv repo
   become_user: "{{ ansible_user }}"
@@ -59,3 +60,4 @@
     creates: "/home/{{ ansible_user }}/.rbenv/versions/{{ item }}"
   with_items:
     - 2.5.0
+    - 2.4.3

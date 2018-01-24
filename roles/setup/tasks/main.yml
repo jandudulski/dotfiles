@@ -26,4 +26,6 @@
     - VirtualBox
     - akmod-VirtualBox
     - vagrant
+    - mongodb
+    - mongodb-server
     - mongo-tools
