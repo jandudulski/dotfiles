@@ -6,11 +6,23 @@
 
 - name: Generate local neovim config directory
   file:
-    path: /etc/xdg/nvim
+    path: "/etc/xdg/{{ item }}"
     state: directory
     owner: root
     group: root
     mode: 0755
+  with_items:
+    - nvim
+    - nvim/autoload
+    - nvim/plugged
+
+- name: Install vim-plug
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: /etc/xdg/nvim/autoload/plug.vim
+    owner: root
+    group: root
+    mode: 0644
 
 - name: Generate neovim config
   template:
