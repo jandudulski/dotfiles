@@ -5,6 +5,9 @@
 
   roles:
     - setup
+    - role: inputrc
+      tags:
+        - inputrc
     - role: iosevka
       tags:
         - iosevka

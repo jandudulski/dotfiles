@@ -1,0 +1,98 @@
+---
+- name: Enable visible bell style
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set bell-style"
+    line: "set bell-style visible"
+    state: present
+    insertbefore: BOF
+
+# https://unix.stackexchange.com/questions/296822/readline-treat-dash-as-a-word-break-character/296840
+- name: Disable tty special chars
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set bind-tty-special-chars"
+    line: "set bind-tty-special-chars off"
+    state: present
+    insertbefore: BOF
+
+- name: Enable auto-complete with colors
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set colored-stats"
+    line: "set colored-stats on"
+    state: present
+    insertbefore: BOF
+
+- name: Ignore case for completion
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set completion-ignore-case"
+    line: "set completion-ignore-case on"
+    state: present
+    insertbefore: BOF
+
+- name: Mark symlinked directories by appending slash
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set mark-symlinked-directories"
+    line: "set mark-symlinked-directories on"
+    state: present
+    insertbefore: BOF
+
+- name: Display common prefix of the completion
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set menu-complete-display-prefix"
+    line: "set menu-complete-display-prefix on"
+    state: present
+    insertbefore: BOF
+
+- name: Show multiple matching completions instead of ringing the bell
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set show-all-if-ambiguous"
+    line: "set show-all-if-ambiguous on"
+    state: present
+    insertbefore: BOF
+
+- name: Enable smarter completions when cursor in the middle of a word
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "set skip-completed-text"
+    line: "set skip-completed-text on"
+    state: present
+    insertbefore: BOF
+
+- name: Enable menu-complete under TAB
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: "TAB:"
+    line: "TAB: menu-complete"
+    state: present
+    insertafter: ^\$if mode=emacs
+
+- name: Enable backward menu-complete under S-TAB
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: '^"\\e\[Z":'
+    line: "\"\\e[Z\": menu-complete-backward"
+    state: present
+    insertafter: ^\$if mode=emacs
+
+- name: Kill word with C-w
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: '^\"\\C-w\":'
+    line: "\"\\C-w\": backward-kill-word"
+    state: present
+    insertafter: ^\$if mode=emacs
+
+- name: Kill filename-word with C-b
+  lineinfile:
+    dest: /etc/inputrc
+    regexp: '^\"\\C-b\":'
+    line: "\"\\C-b\": unix-filename-rubout"
+    state: present
+    insertafter: ^\$if mode=emacs
+
