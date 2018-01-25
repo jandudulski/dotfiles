@@ -1,8 +1,5 @@
-call plug#begin('/etc/xdg/nvim/plugged')
-
-Plug 'tpope/vim-surround'
-
-call plug#end()
+{% include "plug.vim.j2" %}
+{% include "mappings.vim.j2" %}
 
 set background=light
 set list
@@ -29,4 +26,4 @@ set softtabstop=2
 set expandtab
 set copyindent
 
-" vim:set filetype=vim:
+{# vim:set filetype=vim: #}
