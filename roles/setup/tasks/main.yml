@@ -29,3 +29,5 @@
     - mongodb
     - mongodb-server
     - mongo-tools
+    - asciinema
+    - nmap
