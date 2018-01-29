@@ -87,12 +87,3 @@
     line: "\"\\C-w\": backward-kill-word"
     state: present
     insertafter: ^\$if mode=emacs
-
-- name: Kill filename-word with C-b
-  lineinfile:
-    dest: /etc/inputrc
-    regexp: '^\"\\C-b\":'
-    line: "\"\\C-b\": unix-filename-rubout"
-    state: present
-    insertafter: ^\$if mode=emacs
-
