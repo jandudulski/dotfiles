@@ -36,6 +36,11 @@
     - role: hashicorp
       tags:
         - hashicorp
+    - role: postgres
+      tags:
+        - db
+        - devtools
+        - postgres
     - slack
     - flatpak
     - dropbox
