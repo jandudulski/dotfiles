@@ -21,14 +21,15 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - keepassxc
-    - kodi
     - VirtualBox
     - akmod-VirtualBox
-    - vagrant
+    - asciinema
+    - gimp
+    - keepassxc
+    - kodi
+    - mongo-tools
     - mongodb
     - mongodb-server
-    - mongo-tools
-    - asciinema
     - nmap
     - unrar
+    - vagrant

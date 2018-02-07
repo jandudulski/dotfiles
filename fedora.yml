@@ -4,7 +4,9 @@
   become: yes
 
   roles:
-    - setup
+    - role: setup
+      tags:
+        - setup
     - role: inputrc
       tags:
         - inputrc
