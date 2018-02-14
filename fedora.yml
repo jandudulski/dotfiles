@@ -44,5 +44,9 @@
         - devtools
         - postgres
     - slack
+    - role: docker
+      tags:
+        - docker
+        - devtools
     - flatpak
     - dropbox
