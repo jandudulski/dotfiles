@@ -67,3 +67,18 @@
     enable_donotdisturb.rc > 0 and ("'donotdisturb-button@nls1729' is already enabled." not in enable_donotdisturb.stderr)
   changed_when: >
     enable_donotdisturb.rc == 0 and ("'donotdisturb-button@nls1729' is now enabled." in enable_donotdisturb.stdout)
+
+- name: Create local backgrounds directory
+  file:
+    path: /usr/local/share/backgrounds
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
+- name: Copy backgrounds
+  copy:
+    src: backgrounds
+    dest: /usr/local/share/backgrounds
+    owner: root
+    group: root

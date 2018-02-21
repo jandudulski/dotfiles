@@ -33,3 +33,5 @@
     - nmap
     - unrar
     - vagrant
+    - nodejs
+    - ripgrep

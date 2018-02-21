@@ -6,6 +6,7 @@
   with_items:
     - docker
     - docker-compose
+    - sen
 
 - name: Create docker group
   group:
