@@ -78,7 +78,14 @@
 
 - name: Copy backgrounds
   copy:
-    src: backgrounds
-    dest: /usr/local/share/backgrounds
+    src: "{{ background_name }}"
+    dest: "{{ backgrounds_path }}"
     owner: root
     group: root
+
+- name: Set background
+  become_user: "{{ ansible_user }}"
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file://{{ backgrounds_path }}/{{ background_name }}'"
+    state: present
