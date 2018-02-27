@@ -1,0 +1,5 @@
+# {{ ansible_managed }}
+
+# TYPE  DATABASE    USER       ADDRESS        METHOD
+local   all         postgres                  trust
+host    all         {{ ansible_user }}  127.0.0.1/32  trust

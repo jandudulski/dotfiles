@@ -23,11 +23,16 @@
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
 
-- name: Clone ruby-build repo
+- name: Clone rbenv plugins
   become_user: "{{ ansible_user }}"
   git:
-    repo: https://github.com/rbenv/ruby-build.git
-    dest: "/home/{{ ansible_user }}/.rbenv/plugins/ruby-build"
+    repo: "{{ item.repo_url }}"
+    dest: "/home/{{ ansible_user }}/.rbenv/plugins/{{ item.name }}"
+  with_items:
+    - repo_url: https://github.com/rbenv/ruby-build.git
+      name: ruby-build
+    - repo_url: https://github.com/rbenv/rbenv-vars
+      name: rbenv-vars
 
 - name: Create local bin directory
   file:

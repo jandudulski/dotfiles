@@ -6,4 +6,31 @@
   with_items:
     - postgresql
     - postgresql-server
+    - postgresql-contrib
     - postgresql-devel
+    - python-psycopg2
+
+- name: Initialize Postgres
+  command: postgresql-setup --initdb --unit postgresql
+  args:
+    creates: "{{ postgresql_config_dir }}/postgresql.conf"
+
+- name: Generate pg_hba.conf
+  template:
+    src: pg_hba.conf.j2
+    dest: "{{ postgresql_config_dir }}/pg_hba.conf"
+    backup: yes
+    owner: postgres
+    group: postgres
+
+- name: Enable and start PostgreSQL server
+  service:
+    name: postgresql
+    state: started
+
+- name: Create Postgres developer user
+  become_user: postgres
+  postgresql_user:
+    name: "{{ ansible_user }}"
+    role_attr_flags: "SUPERUSER,CREATEDB,CREATEROLE,LOGIN"
+    state: present
