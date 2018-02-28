@@ -12,7 +12,6 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-qargs'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'elixir-lang/vim-elixir'
-Plug 'ctrlpvim/ctrlp.vim'
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction

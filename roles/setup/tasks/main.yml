@@ -35,3 +35,4 @@
     - vagrant
     - nodejs
     - ripgrep
+    - https://github.com/jhawthorn/fzy/releases/download/0.9/fzy-0.9-1.x86_64.rpm
