@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-endwise'
 Plug 'vim-airline/vim-airline'
