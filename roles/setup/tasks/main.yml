@@ -25,6 +25,7 @@
     - akmod-VirtualBox
     - asciinema
     - gimp
+    - darktable
     - keepassxc
     - kodi
     - mongo-tools
@@ -36,4 +37,6 @@
     - nodejs
     - ripgrep
     - htop
+    - sqlite
+    - sqlite-devel
     - https://github.com/jhawthorn/fzy/releases/download/0.9/fzy-0.9-1.x86_64.rpm
