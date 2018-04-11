@@ -28,4 +28,4 @@
 
 - name: Update fonts cache
   command: fc-cache -f -v
-  when: iosevka_result|changed
+  when: iosevka_result is changed

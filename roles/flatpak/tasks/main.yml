@@ -10,7 +10,7 @@
   shell: "flatpak install flathub {{ item }}"
   register: flatpak
   changed_when: >
-    flatpak.rc == 0 and (not flatpak.stderr|search("already installed, skipping"))
+    flatpak.rc == 0 and (not flatpak.stderr is search("already installed, skipping"))
   with_items:
     - org.freedesktop.Platform
     - com.spotify.Client
