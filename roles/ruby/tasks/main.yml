@@ -64,5 +64,5 @@
   args:
     creates: "/home/{{ ansible_user }}/.rbenv/versions/{{ item }}"
   with_items:
-    - 2.5.0
-    - 2.4.3
+    - 2.5.1
+    - 2.4.4
