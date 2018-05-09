@@ -50,3 +50,6 @@
         - devtools
     - flatpak
     - dropbox
+    - role: keybase
+      tags:
+        - keybase
