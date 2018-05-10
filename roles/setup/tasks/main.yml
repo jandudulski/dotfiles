@@ -34,7 +34,6 @@
     - nmap
     - unrar
     - vagrant
-    - nodejs
     - ripgrep
     - htop
     - sqlite

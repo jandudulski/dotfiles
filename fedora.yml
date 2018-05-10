@@ -10,6 +10,9 @@
     - role: inputrc
       tags:
         - inputrc
+    - role: nodejs
+      tags:
+        - nodejs
     - role: iosevka
       tags:
         - iosevka

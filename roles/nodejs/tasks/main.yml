@@ -1,0 +1,37 @@
+---
+- name: Install nodejs
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - nodejs
+
+- name: Create npm global directory
+  file:
+    path: "/home/{{ ansible_user }}/.npm_global"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0755
+    state: directory
+
+- name: Configure npm
+  become_user: "{{ ansible_user }}"
+  shell: npm config set prefix '~/.npm_global'
+
+- name: Export npm bin path
+  lineinfile:
+    dest: "/home/{{ ansible_user }}/.bashrc"
+    regexp: "export PATH=~/.npm_global"
+    line: "export PATH=~/.npm_global/bin:$PATH"
+    state: present
+    insertbefore: EOF
+
+- name: Install npm packages
+  become_user: "{{ ansible_user }}"
+  npm:
+    name: "{{ item }}"
+    global: yes
+    state: present
+  with_items:
+    - yarn
+    - dredd
