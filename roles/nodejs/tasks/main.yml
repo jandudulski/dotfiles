@@ -34,4 +34,4 @@
     state: present
   with_items:
     - yarn
-    - dredd
+    - newman
