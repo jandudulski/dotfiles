@@ -24,19 +24,20 @@
     - VirtualBox
     - akmod-VirtualBox
     - asciinema
-    - gimp
     - darktable
+    - entr
+    - gimp
+    - htop
+    - jq
     - keepassxc
     - kodi
     - mongo-tools
     - mongodb
     - mongodb-server
     - nmap
-    - unrar
-    - vagrant
     - ripgrep
-    - htop
     - sqlite
     - sqlite-devel
-    - entr
+    - unrar
+    - vagrant
     - https://github.com/jhawthorn/fzy/releases/download/0.9/fzy-0.9-1.x86_64.rpm
