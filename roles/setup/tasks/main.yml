@@ -36,6 +36,8 @@
     - mongodb-server
     - nmap
     - ripgrep
+    - seafile
+    - seafile-client
     - sqlite
     - sqlite-devel
     - unrar
