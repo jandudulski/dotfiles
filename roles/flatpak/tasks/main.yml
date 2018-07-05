@@ -1,16 +1,14 @@
 ---
 - name: Install flathub repo
-  shell: flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
-  register: flathub_repo
-  failed_when: >
-    flathub_repo.rc > 0 and ("Remote flathub already exists" not in flathub_repo.stderr)
-  changed_when: flathub_repo.rc == 0
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
 
 - name: Install flatpak applications
-  shell: "flatpak install flathub {{ item }}"
-  register: flatpak
-  changed_when: >
-    flatpak.rc == 0 and (not flatpak.stderr is search("already installed, skipping"))
+  flatpak:
+    name: "{{ item }}"
+    state: present
   with_items:
     - org.freedesktop.Platform
     - com.spotify.Client

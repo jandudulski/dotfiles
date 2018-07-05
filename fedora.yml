@@ -52,7 +52,9 @@
       tags:
         - docker
         - devtools
-    - flatpak
+    - role: flatpak
+      tags:
+        - flatpak
     - dropbox
     - role: keybase
       tags:
