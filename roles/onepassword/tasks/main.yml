@@ -1,0 +1,20 @@
+---
+- name: Obtain 1password version
+  shell: "{{ onepassword.bin_path }}/op --version | head -1"
+  ignore_errors: yes
+  register: installed_onepassword_version
+  changed_when: false
+
+- name: Installed 1password version
+  debug:
+    var: installed_onepassword_version.stdout
+    verbosity: 2
+
+- name: Install 1password command line tool
+  unarchive:
+    src: "https://cache.agilebits.com/dist/1P/op/pkg/v{{ onepassword.version }}/op_linux_amd64_v{{ onepassword.version }}.zip"
+    dest: "{{ onepassword.bin_path }}"
+    remote_src: yes
+    owner: root
+    group: root
+  when: installed_onepassword_version.stdout != onepassword.version
