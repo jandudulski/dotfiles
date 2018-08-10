@@ -19,7 +19,7 @@
 
 - name: Extract iosevka pack
   unarchive:
-    src: "https://github.com/be5invis/Iosevka/releases/download/v{{ iosevka_version }}/iosevka-pack-{{ iosevka_version }}.zip"
+    src: "https://github.com/be5invis/Iosevka/releases/download/v{{ iosevka_version }}/ttc-iosevka-{{ iosevka_version }}.zip"
     dest: /usr/local/share/fonts/iosevka
     remote_src: yes
   tags:
