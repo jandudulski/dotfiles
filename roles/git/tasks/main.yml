@@ -1,4 +1,28 @@
 ---
+- name: Generate git template directory
+  file:
+    path: "/home/{{ ansible_user }}/{{ item }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0755
+    state: directory
+  with_items:
+    - .git_template
+    - .git_template/hooks
+
+- name: Copy git template hooks
+  copy:
+    src: "{{ item }}"
+    dest: "/home/{{ ansible_user }}/.git_template/hooks"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0755
+  with_items:
+    - ctags
+    - post-checkout
+    - post-commit
+    - post-merge
+
 - name: Generate git config
   template:
     src: gitconfig.j2

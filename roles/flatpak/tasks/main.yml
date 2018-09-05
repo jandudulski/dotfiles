@@ -10,7 +10,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - org.freedesktop.Platform
+    - org.freedesktop.Platform//18.08
     - com.spotify.Client
     - net.openra.OpenRA
     - com.valvesoftware.Steam
