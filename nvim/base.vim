@@ -13,7 +13,6 @@ endfunction
 " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'sjl/gundo.vim'
 Plug 'vim-scripts/SyntaxRange'
 " Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/argtextobj.vim'

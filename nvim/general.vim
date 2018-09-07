@@ -24,10 +24,6 @@ set wildmenu               "enable ctrl-n and ctrl-p to scroll thru matches
 set wildmode=list:full     "make cmdline tab completion similar to bash
 set wildignore=*.o,*.obj,*~,*.pyc,*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/system/*,*/tmp/*,*/log/*,*/.jhw-cache/*,*/solr/data/*,*/node_modules/*,*/.DS_Store,*/source_maps/*,*/spec/reports/*,*/coverage/*
 
-"Store lots of undos
-set undolevels=1000
-set undofile
-
 "Don't use backup files
 set nobackup
 set nowritebackup

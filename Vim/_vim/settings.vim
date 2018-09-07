@@ -40,7 +40,6 @@ set wildignore=*.o,*.obj,*~,*.pyc,*/.hg/*,*/.svn/*,*/vendor/cache/*,*/public/sys
 
 "Store lots of undos
 set undolevels=1000
-set undofile
 
 "Don't use backup files
 set nobackup
