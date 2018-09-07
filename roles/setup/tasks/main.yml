@@ -36,6 +36,7 @@
     - mongodb
     - mongodb-server
     - nmap
+    - redis
     - ripgrep
     - seafile
     - seafile-client
