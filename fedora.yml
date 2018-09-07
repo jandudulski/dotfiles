@@ -18,7 +18,9 @@
         - iosevka
         - fonts
         - devtools
-    - gnome
+    - role: gnome
+      tags:
+        - gnome
     - role: neovim
       tags:
         - nvim

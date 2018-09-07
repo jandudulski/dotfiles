@@ -1,8 +1,11 @@
 ---
-- name: Install gnome shell browser integration
+- name: Install gnome shell extensions
   dnf:
-    name: chrome-gnome-shell
+    name: "{{ item }}"
     state: present
+  with_items:
+    - chrome-gnome-shell
+    - gnome-shell-extension-pomodoro
 
 - name: Disable natural scrolling
   become_user: "{{ ansible_user }}"
