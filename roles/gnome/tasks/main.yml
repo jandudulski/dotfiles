@@ -39,7 +39,7 @@
   become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/desktop/interface/text-scaling-factor"
-    value: "0.75"
+    value: "1.0"
     state: present
 
 - name: Set Iosevka as terminal font
