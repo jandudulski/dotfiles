@@ -21,6 +21,8 @@
     name: "{{ item }}"
     state: present
   with_items:
+    - ImageMagick
+    - ImageMagick-devel
     - VirtualBox
     - akmod-VirtualBox
     - asciinema
@@ -41,6 +43,7 @@
     - seafile
     - seafile-client
     - sqlite
+    - qt5-qtwebkit-devel
     - sqlite-devel
     - unrar
     - vagrant
