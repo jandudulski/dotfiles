@@ -35,6 +35,7 @@
     - jq
     - keepassxc
     - kodi
+    - lm_sensors
     - mongo-tools
     - mongodb
     - mongodb-server
