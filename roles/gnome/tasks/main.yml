@@ -1,4 +1,11 @@
 ---
+- name: Remove redundant software
+  dnf:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - gnome-documents
+
 - name: Install gnome shell extensions
   dnf:
     name: "{{ item }}"
@@ -6,6 +13,12 @@
   with_items:
     - chrome-gnome-shell
     - gnome-shell-extension-pomodoro
+
+- name: Enable lcdfilter
+  file:
+    src: /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf
+    path: /etc/fonts/conf.d/11-lcdfilter-default.conf
+    state: link
 
 - name: Disable natural scrolling
   become_user: "{{ ansible_user }}"
