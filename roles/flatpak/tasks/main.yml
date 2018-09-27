@@ -11,6 +11,7 @@
     state: present
   with_items:
     - org.freedesktop.Platform//18.08
+    - com.getpostman.Postman
     - com.spotify.Client
-    - net.openra.OpenRA
     - com.valvesoftware.Steam
+    - net.openra.OpenRA
