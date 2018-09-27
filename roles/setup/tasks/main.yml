@@ -23,15 +23,12 @@
   with_items:
     - ImageMagick
     - ImageMagick-devel
-    - VirtualBox
-    - akmod-VirtualBox
     - asciinema
     - darktable
     - entr
     - freetype-freeworld
     - gimp
     - gnome-todo
-    - htop
     - jq
     - keepassxc
     - kodi
@@ -48,6 +45,5 @@
     - qt5-qtwebkit-devel
     - sqlite-devel
     - unrar
-    - vagrant
     - xclip
     - https://github.com/jhawthorn/fzy/releases/download/0.9/fzy-0.9-1.x86_64.rpm

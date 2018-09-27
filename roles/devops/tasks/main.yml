@@ -24,3 +24,39 @@
   when: installed_terraform_version.stdout != terraform.version
   tags:
     - terraform
+
+- name: Install DevOps tools
+  dnf:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - VirtualBox
+    - akmod-VirtualBox
+    - docker
+    - docker-compose
+    - htop
+    - kubernetes-client
+    - sen
+    - vagrant
+  tags:
+    - docker
+    - kubernetes
+    - k8s
+    - vagrant
+    - virtualbox
+
+- name: Create docker group
+  group:
+    name: docker
+    state: present
+  tags:
+    - docker
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups:
+      - docker
+    append: yes
+  tags:
+    - docker

@@ -46,19 +46,15 @@
       tags:
         - git
         - devtools
-    - role: hashicorp
+    - role: devops
       tags:
-        - hashicorp
+        - devops
     - role: postgres
       tags:
         - db
         - devtools
         - postgres
     - slack
-    - role: docker
-      tags:
-        - docker
-        - devtools
     - role: flatpak
       tags:
         - flatpak
