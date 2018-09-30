@@ -55,6 +55,13 @@
     value: "1.0"
     state: present
 
+- name: Set antialiasing for LCD
+  become_user: "{{ ansible_user }}"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/xsettings/antialiasing"
+    value: "rgba"
+    state: present
+
 - name: Set Iosevka as terminal font
   become_user: "{{ ansible_user }}"
   dconf:
