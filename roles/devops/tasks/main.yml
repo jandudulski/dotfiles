@@ -25,6 +25,18 @@
   tags:
     - terraform
 
+- name: Add Google Cloud repository
+  yum_repository:
+    name: google-cloud-sdk
+    description: Google Cloud SDK
+    baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+    enabled: yes
+    gpgcheck: yes
+    repo_gpgcheck: yes
+    gpgkey:
+      - https://packages.cloud.google.com/yum/doc/yum-key.gpg
+      - https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
 - name: Install DevOps tools
   dnf:
     name: "{{ item }}"
@@ -34,6 +46,7 @@
     - akmod-VirtualBox
     - docker
     - docker-compose
+    - google-cloud-sdk
     - htop
     - kubernetes-client
     - sen
