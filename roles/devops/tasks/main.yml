@@ -48,7 +48,7 @@
     - docker-compose
     - google-cloud-sdk
     - htop
-    - kubernetes-client
+    - kubectl
     - sen
     - vagrant
   tags:
