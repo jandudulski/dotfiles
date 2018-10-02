@@ -52,7 +52,7 @@
 
 - name: Initialize rbenv
   lineinfile:
-    dest: "/home/{{ ansible_user }}/.bash_profile"
+    dest: "/home/{{ ansible_user }}/.bashrc"
     regexp: "rbenv init"
     line: "eval \"$(rbenv init -)\""
     state: present

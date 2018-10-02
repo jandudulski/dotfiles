@@ -38,11 +38,12 @@
     - mongodb-server
     - nmap
     - redis
+    - qt5-qtwebkit-devel
     - ripgrep
     - seafile
     - seafile-client
+    - snapd
     - sqlite
-    - qt5-qtwebkit-devel
     - sqlite-devel
     - unrar
     - xclip

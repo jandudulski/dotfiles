@@ -59,7 +59,7 @@
   become_user: "{{ ansible_user }}"
   dconf:
     key: "/org/gnome/settings-daemon/plugins/xsettings/antialiasing"
-    value: "rgba"
+    value: "'rgba'"
     state: present
 
 - name: Set Iosevka as terminal font
