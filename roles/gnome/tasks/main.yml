@@ -5,6 +5,11 @@
     state: absent
   with_items:
     - gnome-documents
+    - gnome-shell-extension-alternate-tab
+    - gnome-shell-extension-background-logo
+    - gnome-shell-extension-launch-new-instance
+    - gnome-shell-extension-places-menu
+    - gnome-shell-extension-window-list
 
 - name: Install gnome shell extensions
   dnf:
