@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-scripts/argtextobj.vim'
-Plug 'elixir-lang/vim-elixir'
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
