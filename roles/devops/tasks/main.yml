@@ -37,6 +37,15 @@
       - https://packages.cloud.google.com/yum/doc/yum-key.gpg
       - https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 
+- name: Add Docker CE repository
+  yum_repository:
+    name: docker-ce
+    description: Docker CE Stable - $basearch
+    baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://download.docker.com/linux/fedora/gpg
+
 - name: Install DevOps tools
   dnf:
     name: "{{ item }}"
@@ -44,7 +53,7 @@
   with_items:
     - VirtualBox
     - akmod-VirtualBox
-    - docker
+    - docker-ce
     - docker-compose
     - google-cloud-sdk
     - htop

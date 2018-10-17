@@ -15,6 +15,10 @@
     - role: inputrc
       tags:
         - inputrc
+    - role: elixir
+      tags:
+        - elixir
+        - devtools
     - role: nodejs
       tags:
         - nodejs

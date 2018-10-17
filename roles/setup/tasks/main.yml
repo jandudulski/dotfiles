@@ -26,6 +26,7 @@
     - asciinema
     - darktable
     - entr
+    - fish
     - freetype-freeworld
     - gimp
     - gnome-todo
@@ -48,3 +49,11 @@
     - unrar
     - xclip
     - https://github.com/jhawthorn/fzy/releases/download/0.9/fzy-0.9-1.x86_64.rpm
+
+- name: Configure user
+  user:
+    name: "{{ ansible_user }}"
+    shell: /usr/bin/fish
+    groups:
+      - docker
+      - wheel
