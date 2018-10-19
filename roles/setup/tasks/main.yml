@@ -82,3 +82,8 @@
     group: "{{ ansible_user }}"
     mode: 0644
 
+- name: Disable bluetooth
+  systemd:
+    name: bluetooth
+    state: stopped
+    enabled: false
