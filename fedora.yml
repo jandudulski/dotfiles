@@ -58,10 +58,13 @@
         - db
         - devtools
         - postgres
-    - slack
     - role: flatpak
       tags:
         - flatpak
+        - postman
+        - slack
+        - spotify
+        - steam
     - dropbox
     - role: keybase
       tags:

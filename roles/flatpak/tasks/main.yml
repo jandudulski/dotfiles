@@ -12,6 +12,6 @@
   with_items:
     - org.freedesktop.Platform//18.08
     - com.getpostman.Postman
+    - com.slack.Slack
     - com.spotify.Client
     - com.valvesoftware.Steam
-    - net.openra.OpenRA
