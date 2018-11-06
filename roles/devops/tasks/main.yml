@@ -42,7 +42,7 @@
     name: docker-ce
     description: Docker CE Stable - $basearch
     baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
-    enabled: yes
+    enabled: no
     gpgcheck: yes
     gpgkey: https://download.docker.com/linux/fedora/gpg
 
