@@ -16,8 +16,7 @@
 
 - name: Install elastic tools
   dnf:
-    name: "{{ item }}"
+    name:
+      - elasticsearch
+      - kibana
     state: present
-  with_items:
-    - elasticsearch
-    - kibana
