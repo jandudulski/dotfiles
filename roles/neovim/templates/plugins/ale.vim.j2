@@ -1,7 +1,16 @@
 let g:ale_fixers = {
+\  'elixir': ['mix_format'],
 \  'ruby': ['rubocop'],
 \}
 
+let g:ale_linters = {
+\  'elixir': ['elixir-ls', 'mix'],
+\}
+
+let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 0
+let g:ale_elixir_elixir_ls_release = '/home/{{ ansible_user }}/Code/elixir-ls/rel'
+
+nmap <leader>f <Plug>(ale_fix)
 
 {# vim:set filetype=vim: #}

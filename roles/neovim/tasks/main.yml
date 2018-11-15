@@ -7,11 +7,10 @@
 
 - name: Install neovim and ctags
   dnf:
-    name: "{{ item }}"
+    name:
+      - neovim
+      - universal-ctags
     state: present
-  with_items:
-    - neovim
-    - universal-ctags
 
 - name: Generate local neovim config directory
   file:
