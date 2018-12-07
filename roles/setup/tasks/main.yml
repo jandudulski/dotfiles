@@ -40,6 +40,7 @@
     - mongodb-server
     - nmap
     - redis
+    - pwgen
     - qt5-qtwebkit-devel
     - ripgrep
     - seafile
