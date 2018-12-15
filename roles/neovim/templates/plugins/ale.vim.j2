@@ -1,10 +1,6 @@
 let g:ale_fixers = {
-\  'elixir': ['mix_format'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'ruby': ['rubocop'],
-\}
-
-let g:ale_linters = {
-\  'elixir': ['elixir-ls', 'mix'],
 \}
 
 let g:ale_completion_enabled = 1

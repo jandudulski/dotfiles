@@ -23,6 +23,7 @@
     - nvim
     - nvim/autoload
     - nvim/plugged
+    - nvim/ftplugin
 
 - name: Install vim-plug
   get_url:
@@ -39,3 +40,13 @@
     owner: root
     group: root
     mode: 0644
+
+- name: Generate file type plugins
+  template:
+    src: "ftplugin/{{ item }}.vim.j2"
+    dest: "/etc/xdg/nvim/ftplugin/{{ item }}.vim"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - elixir
