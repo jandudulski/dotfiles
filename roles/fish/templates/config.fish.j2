@@ -1,6 +1,5 @@
 source /usr/share/fzf/shell/key-bindings.fish
-
-status --is-interactive; and source (rbenv init -|psub)
+source /home/{{ ansible_user }}/.asdf/asdf.fish
 
 eval (direnv hook fish)
 

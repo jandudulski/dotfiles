@@ -45,8 +45,9 @@
       tags:
         - elasticsearch
         - devtools
-    - role: ruby
+    - role: asdf
       tags:
+        - asdf
         - ruby
         - devtools
     - role: git
@@ -69,9 +70,6 @@
         - spotify
         - steam
     - dropbox
-    - role: keybase
-      tags:
-        - keybase
     - role: onepassword
       tags:
         - onepassword

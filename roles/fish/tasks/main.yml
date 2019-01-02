@@ -5,13 +5,16 @@
       - fish
     state: present
 
-- name: Create functions fish directory
+- name: Create fish directories
   file:
-    path: "/home/{{ ansible_user }}/.config/fish/functions"
+    path: "/home/{{ ansible_user }}/.config/fish/{{ item }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     state: directory
     mode: 0755
+  with_items:
+    - functions
+    - completions
 
 - name: Configure fish shell
   template:

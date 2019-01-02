@@ -1,0 +1,29 @@
+---
+- name: Install dependencies
+  dnf:
+    name:
+      - automake
+      - autoconf
+      - readline-devel
+      - ncurses-devel
+      - openssl-devel
+      - libyaml-devel
+      - libxslt-devel
+      - libffi-devel
+      - libtool
+      - unixODBC-devel
+
+- name: Clone asdf repo
+  become_user: "{{ ansible_user }}"
+  git:
+    repo: https://github.com/asdf-vm/asdf
+    dest: "/home/{{ ansible_user }}/.asdf"
+
+- name: Copy fish completions for asdf
+  copy:
+    remote_src: yes
+    src: "/home/{{ ansible_user }}/.asdf/completions/asdf.fish"
+    dest: "/home/{{ ansible_user }}/.config/fish/completions/asdf.fish"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
