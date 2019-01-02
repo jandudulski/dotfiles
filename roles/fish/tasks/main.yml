@@ -1,0 +1,30 @@
+---
+- name: Install software
+  dnf:
+    name:
+      - fish
+    state: present
+
+- name: Create functions fish directory
+  file:
+    path: "/home/{{ ansible_user }}/.config/fish/functions"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: 0755
+
+- name: Configure fish shell
+  template:
+    src: config.fish.j2
+    dest: "/home/{{ ansible_user }}/.config/fish/config.fish"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
+
+- name: Enable fish user bindings
+  template:
+    src: fish_user_key_bindings.fish.j2
+    dest: "/home/{{ ansible_user }}/.config/fish/functions/fish_user_key_bindings.fish"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644

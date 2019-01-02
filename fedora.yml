@@ -7,6 +7,9 @@
     - role: setup
       tags:
         - setup
+    - role: fish
+      tags:
+        - fish
     - role: power
       tags:
         - power

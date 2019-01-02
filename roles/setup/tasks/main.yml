@@ -18,38 +18,37 @@
 
 - name: Install software
   dnf:
-    name: "{{ item }}"
+    name:
+      - ImageMagick
+      - ImageMagick-devel
+      - asciinema
+      - darktable
+      - direnv
+      - entr
+      - freetype-freeworld
+      - fzf
+      - gimp
+      - gnome-todo
+      - jq
+      - keepassxc
+      - kodi
+      - lm_sensors
+      - mongo-tools
+      - mongodb
+      - mongodb-server
+      - nmap
+      - redis
+      - pwgen
+      - qt5-qtwebkit-devel
+      - ripgrep
+      - seafile
+      - seafile-client
+      - snapd
+      - sqlite
+      - sqlite-devel
+      - unrar
+      - xclip
     state: present
-  with_items:
-    - ImageMagick
-    - ImageMagick-devel
-    - asciinema
-    - darktable
-    - entr
-    - fish
-    - freetype-freeworld
-    - fzf
-    - gimp
-    - gnome-todo
-    - jq
-    - keepassxc
-    - kodi
-    - lm_sensors
-    - mongo-tools
-    - mongodb
-    - mongodb-server
-    - nmap
-    - redis
-    - pwgen
-    - qt5-qtwebkit-devel
-    - ripgrep
-    - seafile
-    - seafile-client
-    - snapd
-    - sqlite
-    - sqlite-devel
-    - unrar
-    - xclip
 
 - name: Configure user
   user:
@@ -58,30 +57,6 @@
     groups:
       - docker
       - wheel
-
-- name: Create functions fish directory
-  file:
-    path: "/home/{{ ansible_user }}/.config/fish/functions"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    state: directory
-    mode: 0755
-
-- name: Configure fish shell
-  template:
-    src: config.fish.j2
-    dest: "/home/{{ ansible_user }}/.config/fish/config.fish"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0644
-
-- name: Enable fish user bindings
-  template:
-    src: fish_user_key_bindings.fish.j2
-    dest: "/home/{{ ansible_user }}/.config/fish/functions/fish_user_key_bindings.fish"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0644
 
 - name: Disable bluetooth
   systemd:
