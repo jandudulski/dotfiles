@@ -21,13 +21,16 @@
       - ImageMagick
       - ImageMagick-devel
       - asciinema
+      - bat
       - darktable
       - direnv
       - entr
+      - fd-find
       - freetype-freeworld
       - fzf
       - gimp
       - gnome-todo
+      - httpie
       - jq
       - keepassxc
       - kodi
