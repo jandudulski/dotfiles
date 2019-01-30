@@ -11,6 +11,7 @@
     state: present
   with_items:
     - org.freedesktop.Platform//18.08
+    - org.signal.Signal
     - com.getpostman.Postman
     - com.slack.Slack
     - com.spotify.Client
