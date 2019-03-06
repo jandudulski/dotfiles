@@ -48,22 +48,26 @@
 
 - name: Install DevOps tools
   dnf:
-    name: "{{ item }}"
+    name:
+      - VirtualBox
+      - akmod-VirtualBox
+      - buildah
+      - docker-ce
+      - docker-compose
+      - google-cloud-sdk
+      - htop
+      - kubectl
+      - podman
+      - sen
+      - skopeo
+      - vagrant
     state: present
-  with_items:
-    - VirtualBox
-    - akmod-VirtualBox
-    - docker-ce
-    - docker-compose
-    - google-cloud-sdk
-    - htop
-    - kubectl
-    - sen
-    - vagrant
   tags:
+    - buildah
     - docker
-    - kubernetes
     - k8s
+    - kubernetes
+    - podman
     - vagrant
     - virtualbox
 
