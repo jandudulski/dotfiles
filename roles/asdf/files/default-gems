@@ -1,0 +1,5 @@
+bundler
+gem-ctags
+pry
+rubocop
+standardrb

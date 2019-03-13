@@ -27,3 +27,10 @@
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     mode: 0644
+
+- name: Setup default gems
+  copy:
+    src: default-gems
+    dest: "/home/{{ ansible_user }}/.default-gems"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
