@@ -3,8 +3,9 @@ let g:ale_fixers = {
 \}
 
 let g:ale_completion_enabled = 1
-let g:ale_fix_on_save = 0
 let g:ale_elixir_elixir_ls_release = '/home/{{ ansible_user }}/Code/elixir-ls/rel'
+let g:ale_fix_on_save = 0
+let g:ale_lint_on_enter = 0
 
 nmap <leader>f <Plug>(ale_fix)
 
