@@ -1,6 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-dispatch'
 Plug 'vim-scripts/argtextobj.vim'
 function! DoRemote(arg)
@@ -11,7 +10,6 @@ Plug 'honza/vim-snippets'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'godlygeek/tabular'
-Plug 'benekastah/neomake'
 Plug 'janko-m/vim-test'
 Plug 'b4b4r07/vim-hcl'
 

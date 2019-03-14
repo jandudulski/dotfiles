@@ -2,13 +2,11 @@ call plug#begin('/etc/xdg/nvim/plugged')
 
 Plug 'w0rp/ale'
 
-Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'kana/vim-textobj-user'
 Plug 'mbbill/undotree'
-Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'wellle/targets.vim'
 
 Plug 'tommcdo/vim-exchange'
@@ -16,11 +14,18 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+
+" elixir
+Plug 'elixir-lang/vim-elixir'
+
+" ruby
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
 
 call plug#end()
 
