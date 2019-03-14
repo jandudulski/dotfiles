@@ -1,0 +1,38 @@
+let g:rails_projections = {
+      \ "config/projections.json": {
+      \   "command": "projections"
+      \ }
+      \}
+
+let g:rails_gem_projections = {
+      \ "factory_bot_rails": {
+      \   "spec/factories/*.rb": {
+      \     "command": "factory",
+      \     "affinity": "collection",
+      \     "alternate": "app/models/%i.rb",
+      \     "related": "db/schema.rb#%s",
+      \     "test": "spec/models/%i_spec.rb",
+      \     "template": "FactoryBot.define do\n  factory :%i do\n  end\nend",
+      \     "keywords": "factory sequence"
+      \   },
+      \   "test/factories/*.rb": {
+      \     "command": "factory",
+      \     "affinity": "collection",
+      \     "alternate": "app/models/%i.rb",
+      \     "related": "db/schema.rb#%s",
+      \     "test": "test/models/%i_test.rb",
+      \     "template": "FactoryBot.define do\n  factory :%i do\n  end\nend",
+      \     "keywords": "factory sequence"
+      \   }
+      \ },
+      \ "sidekiq": {
+      \   "app/workers/*_worker.rb": {
+      \     "command": "worker",
+      \     "affinity": "model",
+      \     "test": ["spec/workers/%s_worker_spec.rb", "test/workers/%s_worker_test.rb"],
+      \     "template": "class %SWorker\n  include Sidekiq::Worker\n\n  def perform\n  end\nend"
+      \   }
+      \ }
+      \}
+
+{# vim:set filetype=vim: #}
