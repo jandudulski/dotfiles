@@ -13,6 +13,8 @@
       - libselinux-python
       - python-gpgme
       - python2-psutil
+      - python2-devel
+      - python3-devel
     state: present
 
 - name: Install software
