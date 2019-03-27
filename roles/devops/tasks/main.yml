@@ -37,23 +37,12 @@
       - https://packages.cloud.google.com/yum/doc/yum-key.gpg
       - https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 
-- name: Add Docker CE repository
-  yum_repository:
-    name: docker-ce
-    description: Docker CE Stable - $basearch
-    baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
-    enabled: no
-    gpgcheck: yes
-    gpgkey: https://download.docker.com/linux/fedora/gpg
-
 - name: Install DevOps tools
   dnf:
     name:
       - VirtualBox
       - akmod-VirtualBox
       - buildah
-      - docker-ce
-      - docker-compose
       - google-cloud-sdk
       - htop
       - kubectl
@@ -70,19 +59,3 @@
     - podman
     - vagrant
     - virtualbox
-
-- name: Create docker group
-  group:
-    name: docker
-    state: present
-  tags:
-    - docker
-
-- name: Add user to docker group
-  user:
-    name: "{{ ansible_user }}"
-    groups:
-      - docker
-    append: yes
-  tags:
-    - docker
