@@ -5,32 +5,40 @@ let g:rails_projections = {
       \}
 
 let g:rails_gem_projections = {
+      \ "dry-validation": {
+      \   "contracts/*.rb": {
+      \     "command": "contract",
+      \     "affinity": "model",
+      \     "test": "spec/contracts/{}_spec.rb",
+      \     "template": ["class {camelcase|capitalize|colons}Contract < Dry::Validation::Contract", "  params do", "  end", "end"],
+      \     "rubyMacro": ["params", "schema", "json", "rule"],
+      \     "rubyHelper": ["required", "optional"],
+      \   }
+      \ },
       \ "factory_bot_rails": {
       \   "spec/factories/*.rb": {
       \     "command": "factory",
       \     "affinity": "collection",
-      \     "alternate": "app/models/%i.rb",
-      \     "related": "db/schema.rb#%s",
-      \     "test": "spec/models/%i_spec.rb",
-      \     "template": "FactoryBot.define do\n  factory :%i do\n  end\nend",
-      \     "keywords": "factory sequence"
+      \     "alternate": "app/models/{singular}.rb",
+      \     "related": "db/schema.rb#{}",
+      \     "template": "FactoryBot.define do\n  factory :{singular} do\n  end\nend",
+      \     "rubyMacro": ["factory", "sequence"]
       \   },
       \   "test/factories/*.rb": {
       \     "command": "factory",
       \     "affinity": "collection",
-      \     "alternate": "app/models/%i.rb",
-      \     "related": "db/schema.rb#%s",
-      \     "test": "test/models/%i_test.rb",
-      \     "template": "FactoryBot.define do\n  factory :%i do\n  end\nend",
-      \     "keywords": "factory sequence"
+      \     "alternate": "app/models/{singular}.rb",
+      \     "related": "db/schema.rb#{}",
+      \     "template": "FactoryBot.define do\n  factory :{singular} do\n  end\nend",
+      \     "rubyMacro": ["factory", "sequence"]
       \   }
       \ },
       \ "sidekiq": {
       \   "app/workers/*_worker.rb": {
       \     "command": "worker",
       \     "affinity": "model",
-      \     "test": ["spec/workers/%s_worker_spec.rb", "test/workers/%s_worker_test.rb"],
-      \     "template": "class %SWorker\n  include Sidekiq::Worker\n\n  def perform\n  end\nend"
+      \     "test": ["spec/workers/{}_worker_spec.rb", "test/workers/{}_worker_test.rb"],
+      \     "template": "class {camelcase|capitalize|colons}Worker\n  include Sidekiq::Worker\n\n  def perform\n  end\nend"
       \   }
       \ }
       \}
