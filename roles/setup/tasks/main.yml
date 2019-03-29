@@ -33,6 +33,7 @@
       - gimp
       - gnome-todo
       - httpie
+      - inotify-tools
       - jq
       - keepassxc
       - kodi
