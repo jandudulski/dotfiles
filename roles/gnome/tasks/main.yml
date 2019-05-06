@@ -1,23 +1,22 @@
 ---
 - name: Remove redundant software
   dnf:
-    name: "{{ item }}"
+    name:
+      - gnome-documents
+      - gnome-shell-extension-alternate-tab
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
     state: absent
-  with_items:
-    - gnome-documents
-    - gnome-shell-extension-alternate-tab
-    - gnome-shell-extension-background-logo
-    - gnome-shell-extension-launch-new-instance
-    - gnome-shell-extension-places-menu
-    - gnome-shell-extension-window-list
 
 - name: Install gnome shell extensions
   dnf:
-    name: "{{ item }}"
+    name:
+      - chrome-gnome-shell
+      - gnome-shell-extension-do-not-disturb-button
+      - gnome-shell-extension-pomodoro
     state: present
-  with_items:
-    - chrome-gnome-shell
-    - gnome-shell-extension-pomodoro
 
 - name: Enable lcdfilter
   file:
@@ -79,13 +78,6 @@
   dconf:
     key: "/org/gnome/shell/favorite-apps"
     value: "['firefox.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'com.gexperts.Tilix.desktop', 'slack.desktop', 'com.spotify.Client.desktop']"
-
-- name: Install Gnome extensions
-  dnf:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - gnome-shell-extension-do-not-disturb-button
 
 - name: Enable do not disturb extension
   become_user: "{{ ansible_user }}"

@@ -1,11 +1,10 @@
 ---
 - name: Install software for power management
   dnf:
-    name: "{{ item }}"
+    name:
+      - tlp
+      - powertop
     state: present
-  with_items:
-    - tlp
-    - powertop
 
 - name: Start and enable tlp
   systemd:
