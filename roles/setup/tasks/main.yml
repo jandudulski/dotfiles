@@ -12,8 +12,7 @@
     name:
       - libselinux-python
       - python-gpgme
-      - python2-psutil
-      - python2-devel
+      - python3-psutil
       - python3-devel
     state: present
 
@@ -39,8 +38,6 @@
       - kodi
       - lm_sensors
       - mongo-tools
-      - mongodb
-      - mongodb-server
       - nmap
       - redis
       - pwgen

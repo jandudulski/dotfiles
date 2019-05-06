@@ -1,14 +1,13 @@
 ---
 - name: Install Postgres
   dnf:
-    name: "{{ item }}"
+    name:
+      - postgresql
+      - postgresql-server
+      - postgresql-contrib
+      - postgresql-devel
+      - python3-psycopg2
     state: present
-  with_items:
-    - postgresql
-    - postgresql-server
-    - postgresql-contrib
-    - postgresql-devel
-    - python-psycopg2
 
 - name: Initialize Postgres
   command: postgresql-setup --initdb --unit postgresql
