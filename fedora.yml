@@ -22,9 +22,6 @@
       tags:
         - elixir
         - devtools
-    - role: nodejs
-      tags:
-        - nodejs
     - role: iosevka
       tags:
         - iosevka
