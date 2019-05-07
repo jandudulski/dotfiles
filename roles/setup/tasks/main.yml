@@ -33,6 +33,7 @@
       - gnome-todo
       - httpie
       - inotify-tools
+      - joplin
       - jq
       - keepassxc
       - kodi

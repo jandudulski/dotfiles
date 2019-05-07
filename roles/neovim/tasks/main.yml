@@ -1,10 +1,4 @@
 ---
-- name: Enable universal-ctags copr
-  become: yes
-  shell: dnf copr --assumeyes enable thindil/universal-ctags
-  args:
-    creates: /etc/yum.repos.d/_copr_thindil-universal-ctags.repo
-
 - name: Install neovim and ctags
   dnf:
     name:
