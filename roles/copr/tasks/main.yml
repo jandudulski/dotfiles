@@ -9,5 +9,5 @@
   become: yes
   shell: dnf copr --assumeyes enable taw/joplin
   args:
-    creates: /etc/yum.repos.d/_copr_taw-joplin.repo
+    creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:taw:joplin.repo
 

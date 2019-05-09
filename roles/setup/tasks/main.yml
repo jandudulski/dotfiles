@@ -1,11 +1,10 @@
 ---
 - name: Install RPM Fusion repositories
   dnf:
-    name: "https://download1.rpmfusion.org/{{ item }}/fedora/rpmfusion-{{ item }}-release-{{ ansible_distribution_version }}.noarch.rpm"
+    name:
+      - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_version }}.noarch.rpm"
+      - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_version }}.noarch.rpm"
     state: present
-  with_items:
-    - free
-    - nonfree
 
 - name: Install dependencies
   dnf:
