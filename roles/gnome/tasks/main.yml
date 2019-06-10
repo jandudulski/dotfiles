@@ -109,3 +109,17 @@
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file://{{ backgrounds_path }}/{{ background_name }}'"
     state: present
+
+- name: Scale background
+  become_user: "{{ ansible_user }}"
+  dconf:
+    key: "/org/gnome/desktop/background/picture-options"
+    value: "'scaled'"
+    state: present
+
+- name: Set background color
+  become_user: "{{ ansible_user }}"
+  dconf:
+    key: "/org/gnome/desktop/background/primary-color"
+    value: "'#000000'"
+    state: present
