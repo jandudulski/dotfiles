@@ -37,11 +37,12 @@
       - keepassxc
       - kodi
       - lm_sensors
+      - lutris
       - mongo-tools
       - nmap
-      - redis
       - pwgen
       - qt5-qtwebkit-devel
+      - redis
       - ripgrep
       - seafile
       - seafile-client
