@@ -44,3 +44,4 @@
     mode: 0644
   with_items:
     - elixir
+    - ruby
