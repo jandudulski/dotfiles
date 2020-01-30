@@ -70,3 +70,6 @@
     - role: onepassword
       tags:
         - onepassword
+    - role: kitty
+      tags:
+        - kitty

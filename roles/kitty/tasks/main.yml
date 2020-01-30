@@ -1,0 +1,19 @@
+---
+- name: Install kitty
+  dnf:
+    name: kitty
+    state: present
+
+- name: Generate Onehalf Colorscheme
+  template:
+    src: onehalf.conf.j2
+    dest: "/home/{{ ansible_user }}/.config/kitty/onehalf-light.conf"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
+
+- name: Enable onehalf theme
+  lineinfile:
+    dest: "/home/{{ ansible_user }}/.config/kitty/kitty.conf"
+    line: "include onehalf-light.conf"
+    state: present
