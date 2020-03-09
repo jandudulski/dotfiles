@@ -60,9 +60,3 @@
     groups:
       - docker
       - wheel
-
-- name: Disable bluetooth
-  systemd:
-    name: bluetooth
-    state: stopped
-    enabled: false
