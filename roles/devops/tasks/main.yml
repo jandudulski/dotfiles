@@ -42,6 +42,7 @@
     name:
       - VirtualBox
       - akmod-VirtualBox
+      - awscli
       - buildah
       - google-cloud-sdk
       - htop
@@ -52,6 +53,7 @@
       - vagrant
     state: present
   tags:
+    - aws
     - buildah
     - docker
     - k8s
