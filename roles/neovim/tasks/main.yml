@@ -1,8 +1,13 @@
 ---
-- name: Install neovim and ctags
+- name: Install neovim
   dnf:
     name:
       - neovim
+    state: present
+
+- name: Install ctags
+  snap:
+    name:
       - universal-ctags
     state: present
 
