@@ -9,8 +9,6 @@
 - name: Install dependencies
   dnf:
     name:
-      - libselinux-python
-      - python-gpgme
       - python3-psutil
       - python3-devel
     state: present
