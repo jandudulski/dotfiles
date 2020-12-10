@@ -10,7 +10,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - org.freedesktop.Platform//18.08
+    - org.freedesktop.Platform//20.08
     - com.discrodapp.Discord
     - com.getpostman.Postman
     - com.slack.Slack
