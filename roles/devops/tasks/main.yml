@@ -40,8 +40,6 @@
 - name: Install DevOps tools
   dnf:
     name:
-      - VirtualBox
-      - akmod-VirtualBox
       - awscli
       - buildah
       - google-cloud-sdk
@@ -50,7 +48,6 @@
       - podman
       - sen
       - skopeo
-      - vagrant
     state: present
   tags:
     - aws
@@ -59,5 +56,3 @@
     - k8s
     - kubernetes
     - podman
-    - vagrant
-    - virtualbox

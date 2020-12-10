@@ -18,15 +18,6 @@
     - role: inputrc
       tags:
         - inputrc
-    - role: elixir
-      tags:
-        - elixir
-        - devtools
-    - role: iosevka
-      tags:
-        - iosevka
-        - fonts
-        - devtools
     - role: gnome
       tags:
         - gnome
@@ -34,13 +25,6 @@
       tags:
         - nvim
         - neovim
-        - devtools
-    - role: tilix
-      tags:
-        - tilix
-    - role: elasticsearch
-      tags:
-        - elasticsearch
         - devtools
     - role: asdf
       tags:
@@ -54,11 +38,6 @@
     - role: devops
       tags:
         - devops
-    - role: postgres
-      tags:
-        - db
-        - devtools
-        - postgres
     - role: flatpak
       tags:
         - flatpak
@@ -67,9 +46,6 @@
         - spotify
         - steam
     - dropbox
-    - role: onepassword
-      tags:
-        - onepassword
     - role: kitty
       tags:
         - kitty

@@ -1,17 +1,11 @@
 ---
-#- name: Install flathub repo
-#  flatpak_remote:
-#    name: flathub
-#    state: present
-#    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
-
 - name: Install flatpak applications
   flatpak:
     name: "{{ item }}"
     state: present
   with_items:
     - org.freedesktop.Platform//18.08
-    - org.signal.Signal
+    - com.discrodapp.Discord
     - com.getpostman.Postman
     - com.slack.Slack
     - com.spotify.Client

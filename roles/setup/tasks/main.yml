@@ -2,8 +2,8 @@
 - name: Install RPM Fusion repositories
   dnf:
     name:
-      - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_version }}.noarch.rpm"
-      - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_version }}.noarch.rpm"
+      - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+      - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
     state: present
 
 - name: Install dependencies
@@ -29,7 +29,6 @@
       - freetype-freeworld
       - fzf
       - gimp
-      - gnome-todo
       - httpie
       - inotify-tools
       - joplin
@@ -37,12 +36,9 @@
       - keepassxc
       - kodi
       - lm_sensors
-      - lutris
-      - mongo-tools
       - nmap
       - pwgen
       - qt5-qtwebkit-devel
-      - redis
       - ripgrep
       - seafile
       - seafile-client
