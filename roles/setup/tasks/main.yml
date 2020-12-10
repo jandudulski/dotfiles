@@ -52,5 +52,4 @@
     name: "{{ ansible_user }}"
     shell: /usr/bin/fish
     groups:
-      - docker
       - wheel
