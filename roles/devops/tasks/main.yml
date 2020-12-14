@@ -46,8 +46,13 @@
       - htop
       - kubectl
       - podman
+      - postgresql
+      - postgresql-devel
+      - rabbitmq-server
       - sen
       - skopeo
+      - sqlite
+      - sqlite-devel
     state: present
   tags:
     - aws
