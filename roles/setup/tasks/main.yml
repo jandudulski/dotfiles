@@ -27,6 +27,7 @@
       - freetype-freeworld
       - fzf
       - gimp
+      - gtk-murrine-engine
       - httpie
       - inotify-tools
       - joplin
@@ -35,6 +36,8 @@
       - kodi
       - lm_sensors
       - nmap
+      - postgresql
+      - postgresql-devel
       - pwgen
       - qt5-qtwebkit-devel
       - ripgrep

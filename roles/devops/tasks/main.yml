@@ -56,3 +56,22 @@
     - k8s
     - kubernetes
     - podman
+
+- name: Create snap symlink
+  file:
+    src: /var/lib/snapd/snap
+    dest: /snap
+    state: link
+    owner: root
+    group: root
+  tags:
+    - heroku
+
+- name: Install heroku cli
+  snap:
+    name:
+      - heroku
+    classic: yes
+    state: present
+  tags:
+    - heroku
