@@ -49,6 +49,7 @@
       - postgresql
       - postgresql-devel
       - rabbitmq-server
+      - redis
       - sen
       - skopeo
       - sqlite
