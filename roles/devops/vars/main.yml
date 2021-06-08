@@ -1,4 +1,4 @@
 ---
 terraform:
   bin_path: /usr/local/bin
-  version: 0.15.1
+  version: 1.0.0
