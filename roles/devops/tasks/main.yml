@@ -40,7 +40,6 @@
 - name: Install DevOps tools
   dnf:
     name:
-      - awscli
       - buildah
       - google-cloud-sdk
       - htop
