@@ -1,5 +1,30 @@
 # NeoVim
 
+## Coc extensions
+
+* coc-json
+* coc-snippets
+* coc-elixir
+* coc-solargraph
+
+## Coc config
+
+```json
+{
+  "languageserver": {
+    "sorbet": {
+      "command": "srb",
+      "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features", "--disable-watchman"],
+      "filetypes": ["ruby"],
+      "rootPatterns": ["sorbet/config"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  },
+  "diagnostic.displayByAle": true
+}
+```
+
 ## Some of the inspirations
 
 * [Vimcasts](http://vimcasts.org/)
