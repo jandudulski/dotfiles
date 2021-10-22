@@ -41,10 +41,12 @@
   dnf:
     name:
       - buildah
+      - docker-compose
       - google-cloud-sdk
       - htop
       - kubectl
       - podman
+      - podman-docker
       - postgresql
       - postgresql-devel
       - rabbitmq-server
