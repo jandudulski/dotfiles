@@ -13,10 +13,10 @@
 
 - name: Generate local neovim config directory
   file:
-    path: "/etc/xdg/{{ item }}"
+    path: "/home/{{ ansible_user }}/.config/{{ item }}"
     state: directory
-    owner: root
-    group: root
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: 0755
   with_items:
     - nvim
@@ -27,25 +27,25 @@
 - name: Install vim-plug
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    dest: /etc/xdg/nvim/autoload/plug.vim
-    owner: root
-    group: root
+    dest: "/home/{{ ansible_user }}/.config/nvim/autoload/plug.vim"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: 0644
 
 - name: Generate neovim config
   template:
     src: init.vim.j2
-    dest: /etc/xdg/nvim/init.vim
-    owner: root
-    group: root
+    dest: "/home/{{ ansible_user }}/.config/nvim/init.vim"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: 0644
 
 - name: Generate file type plugins
   template:
     src: "ftplugin/{{ item }}.vim.j2"
-    dest: "/etc/xdg/nvim/ftplugin/{{ item }}.vim"
-    owner: root
-    group: root
+    dest: "/home/{{ ansible_user }}/.config/nvim/ftplugin/{{ item }}.vim"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: 0644
   with_items:
     - elixir
