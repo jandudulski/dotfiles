@@ -30,6 +30,7 @@
       - gtk-murrine-engine
       - httpie
       - inotify-tools
+      - jetbrains-mono-fonts-all
       - joplin
       - jq
       - keepassxc
