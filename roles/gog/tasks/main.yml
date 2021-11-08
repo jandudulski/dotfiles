@@ -1,0 +1,16 @@
+---
+- name: Install dependecies
+  dnf:
+    name:
+      - openal-soft
+
+- name: Copy old ssl
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "/usr/lub64/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - libssl.so.1.0.0
+    - libcrypto.so.1.0.0

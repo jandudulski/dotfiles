@@ -49,3 +49,7 @@
     - role: kitty
       tags:
         - kitty
+    - role: gog
+      tags:
+        - gog
+        - games
