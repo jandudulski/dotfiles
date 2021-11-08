@@ -14,7 +14,6 @@
   dnf:
     name:
       - chrome-gnome-shell
-      - gnome-shell-extension-do-not-disturb-button
       - gnome-shell-extension-pomodoro
     state: present
 
