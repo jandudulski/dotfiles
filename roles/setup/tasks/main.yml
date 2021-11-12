@@ -20,6 +20,7 @@
       - ImageMagick-devel
       - asciinema
       - bat
+      - composer
       - darktable
       - direnv
       - entr
