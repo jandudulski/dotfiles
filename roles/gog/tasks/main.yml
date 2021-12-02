@@ -4,6 +4,27 @@
     name:
       - openal-soft
 
+- name: Install 32-bit dependecies
+  dnf:
+    name:
+      - libglvnd-glx.i686
+      - libXcursor.i686
+      - libXrandr.i686
+      - libXinerama.i686
+      - glibc-devel.i686
+      - alsa-lib.i686
+      - alsa-plugins-arcamav.i686
+      - alsa-plugins-maemo.i686
+      - alsa-plugins-pulseaudio.i686
+      - alsa-plugins-samplerate.i686
+      - alsa-plugins-speex.i686
+      - alsa-plugins-oss.i686
+      - alsa-plugins-upmix.i686
+      - alsa-plugins-usbstream.i686
+      - alsa-plugins-vdownmix.i686
+      - mesa-dri-drivers.i686
+      - SDL2.i686
+
 - name: Copy old ssl
   ansible.builtin.copy:
     src: "{{ item }}"
