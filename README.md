@@ -24,3 +24,4 @@ Dotfiles managed through ansbile for my Fedora workstation.
 * `rsync -r -l -P` (recursive, copy symlinks, show progress, keep partial transfers)
 * `asdf plugin add elixir ruby erlang python nodejs`
 * install 1Password client
+* install ngrok client

@@ -11,8 +11,10 @@
     state: present
   with_items:
     - org.freedesktop.Platform//21.08
+    - org.zotero.Zotero
     - com.discrodapp.Discord
     - com.getpostman.Postman
     - com.slack.Slack
     - com.spotify.Client
     - com.valvesoftware.Steam
+    - us.zoom.Zoom
