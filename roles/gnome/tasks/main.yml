@@ -4,6 +4,7 @@
     name:
       - gnome-documents
       - gnome-shell-extension-alternate-tab
+      - gnome-shell-extension-apps-menu
       - gnome-shell-extension-background-logo
       - gnome-shell-extension-launch-new-instance
       - gnome-shell-extension-places-menu
@@ -14,6 +15,7 @@
   dnf:
     name:
       - chrome-gnome-shell
+      - gnome-shell-extension-caffeine
       - gnome-shell-extension-pomodoro
     state: present
 
