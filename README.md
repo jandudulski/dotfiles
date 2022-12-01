@@ -7,7 +7,6 @@ Dotfiles managed through ansbile for my Fedora workstation.
 * copy `ssh` keys
 * copy `gpg` keys
 * copy `.aws`
-* copy `~/.config/joplin-desktop`
 * copy `.gem`
 * copy `~/.config/fish/functions/fish_prompt.fish`
 * remove filter on flathub
