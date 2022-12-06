@@ -45,7 +45,6 @@
         - slack
         - spotify
         - steam
-    - dropbox
     - role: kitty
       tags:
         - kitty

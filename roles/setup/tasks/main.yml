@@ -36,6 +36,7 @@
       - keepassxc
       - kodi
       - lm_sensors
+      - nextcloud-client
       - nmap
       - pwgen
       - qt5-qtwebkit-devel
