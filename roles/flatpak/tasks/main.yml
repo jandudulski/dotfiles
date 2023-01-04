@@ -1,16 +1,21 @@
 ---
 - name: Install flathub repo
-  flatpak_remote:
+  community.general.flatpak_remote:
     name: flathub
     state: present
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
 
+- name: Remove filter from flathub repo
+  shell: flatpak remote-modify flathub --no-filter
+  ignore_errors: yes
+  changed_when: false
+
 - name: Install flatpak applications
-  flatpak:
+  community.general.flatpak:
     name: "{{ item }}"
     state: present
   with_items:
-    - com.discrodapp.Discord
+    - com.discordapp.Discord
     - com.getpostman.Postman
     - com.github.tchx84.Flatseal
     - com.heroicgameslauncher.hgl
@@ -18,6 +23,6 @@
     - com.spotify.Client
     - com.valvesoftware.Steam
     - com.zettlr.Zettlr
-    - org.freedesktop.Platform//21.08
+    - org.freedesktop.Platform//22.08
     - org.zotero.Zotero
     - us.zoom.Zoom

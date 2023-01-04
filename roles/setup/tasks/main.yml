@@ -40,6 +40,7 @@
       - nmap
       - pwgen
       - qt5-qtwebkit-devel
+      - perl-FindBin
       - ripgrep
       - seafile
       - seafile-client

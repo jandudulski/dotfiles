@@ -74,6 +74,14 @@
   tags:
     - heroku
 
+- name: Start podman socket
+  become_user: "{{ ansible_user }}"
+  systemd:
+    name: podman.socket
+    state: started
+    enabled: yes
+    scope: user
+
 - name: Install heroku cli
   snap:
     name:

@@ -33,5 +33,4 @@
     mode: 0644
   with_items:
     - "fish_user_key_bindings"
-    - "start_gutwin_services"
 

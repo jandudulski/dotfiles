@@ -41,14 +41,14 @@
     - role: flatpak
       tags:
         - flatpak
+        - discord
         - postman
         - slack
         - spotify
         - steam
+        - zettlr
+        - zoom
+        - zotero
     - role: kitty
       tags:
         - kitty
-    - role: gog
-      tags:
-        - gog
-        - games

@@ -14,7 +14,6 @@
 - name: Install gnome shell extensions
   dnf:
     name:
-      - chrome-gnome-shell
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-pomodoro
     state: present
