@@ -44,6 +44,7 @@
       - docker-compose
       - google-cloud-sdk
       - htop
+      - kcat
       - kubectl
       - podman
       - podman-docker
@@ -61,6 +62,7 @@
     - buildah
     - docker
     - k8s
+    - kafka
     - kubernetes
     - podman
 
