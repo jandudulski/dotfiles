@@ -1,0 +1,15 @@
+-- Disable arrow keys
+
+vim.keymap.set('n', '<Left>', function() vim.api.nvim_err_writeln('Use h') end, { noremap = true })
+vim.keymap.set('n', '<Down>', function() vim.api.nvim_err_writeln('Use j') end, { noremap = true })
+vim.keymap.set('n', '<Up>', function() vim.api.nvim_err_writeln('Use k') end, { noremap = true })
+vim.keymap.set('n', '<Right>', function() vim.api.nvim_err_writeln('Use l') end, { noremap = true })
+vim.keymap.set('i', '<Left>', '<ESC>', { noremap = true })
+vim.keymap.set('i', '<Down>', '<ESC>', { noremap = true })
+vim.keymap.set('i', '<Up>', '<ESC>', { noremap = true })
+vim.keymap.set('i', '<Right>', '<ESC>', { noremap = true })
+
+-- Undo tree
+vim.keymap.set('n', '<F5>', ':UndotreeToggle<CR>', { noremap = true })
+
+{# vim:set filetype=lua: #}

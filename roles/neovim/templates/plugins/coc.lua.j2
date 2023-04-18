@@ -1,0 +1,9 @@
+vim.keymap.set('i', '<C-l>', '<Plug>(coc-snippets-expand)')
+vim.keymap.set('v', '<C-j>', '<Plug>(coc-snippets-select)')
+vim.keymap.set('n', '<Leader>h', ":call CocActionAsync('doHover')<CR>", { silent = true })
+vim.keymap.set('n', '<Leader>r', '<Plug>(coc-rename)', { silent = true })
+vim.keymap.set('n', '<Leader>t', '<Plug>(coc-refactor)', { silent = true })
+vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { silent = true })
+vim.keymap.set('n', 'gr', '<Plug>(coc-references)', { silent = true })
+
+{# vim:set filetype=lua: #}

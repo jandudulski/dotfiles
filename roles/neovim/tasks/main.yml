@@ -34,16 +34,16 @@
 
 - name: Generate neovim config
   template:
-    src: init.vim.j2
-    dest: "/home/{{ ansible_user }}/.config/nvim/init.vim"
+    src: init.lua.j2
+    dest: "/home/{{ ansible_user }}/.config/nvim/init.lua"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     mode: 0644
 
 - name: Generate file type plugins
   template:
-    src: "ftplugin/{{ item }}.vim.j2"
-    dest: "/home/{{ ansible_user }}/.config/nvim/ftplugin/{{ item }}.vim"
+    src: "ftplugin/{{ item }}.lua.j2"
+    dest: "/home/{{ ansible_user }}/.config/nvim/ftplugin/{{ item }}.lua"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     mode: 0644

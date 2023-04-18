@@ -1,0 +1,4 @@
+-- Auto-clean fugitive buffers (Vimcast#34)
+vim.cmd([[ autocmd BufReadPost fugitive://* set bufhidden=delete ]])
+
+{# vim:set filetype=lua: #}

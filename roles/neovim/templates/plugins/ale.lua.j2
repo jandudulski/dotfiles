@@ -1,0 +1,14 @@
+vim.g.ale_fixers = {
+   ['*'] = { 'remove_trailing_lines', 'trim_whitespace' }
+}
+
+vim.g.ale_virtualtext_cursor = 1
+vim.g.ale_disable_lsp = 1
+vim.g.ale_completion_enabled = 1
+vim.g.ale_elixir_elixir_ls_release = '/home/{{ ansible_user }}/Code/elixir-ls/rel'
+vim.g.ale_fix_on_save = 0
+vim.g.ale_lint_on_enter = 0
+
+vim.keymap.set('n', '<leader>f', '<Plug>(ale_fix)')
+
+{# vim:set filetype=lua: #}

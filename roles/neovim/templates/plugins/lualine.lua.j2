@@ -1,0 +1,16 @@
+require('lualine').setup {
+  sections = {
+    lualine_b = {
+      'branch',
+      'diff',
+      { 'diagnostics', sources = { 'nvim_diagnostic', 'coc', 'ale' } }
+    }
+  },
+  inactive_sections = {
+    lualine_c = {
+      { 'filename', path = 3 }
+    }
+  }
+}
+
+{# vim:set filetype=lua: #}
