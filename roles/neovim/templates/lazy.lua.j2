@@ -19,8 +19,11 @@ require("lazy").setup({
   },
   {
     "sonph/onehalf",
+    lazy = false,
+    priority = 1000,
     config = function(plugin)
       vim.opt.rtp:append(plugin.dir .. "/vim")
+      vim.cmd.colorscheme("onehalflight")
     end
   },
   {
@@ -60,10 +63,25 @@ require("lazy").setup({
       "nvim-telescope/telescope.nvim"
     }
   },
-  "elixir-lang/vim-elixir",
-  "nelstrom/vim-textobj-rubyblock",
-  "tpope/vim-bundler",
-  "tpope/vim-rails",
+  {
+    "elixir-lang/vim-elixir",
+    ft = "elixir"
+  },
+  {
+    "nelstrom/vim-textobj-rubyblock",
+    ft = "ruby",
+    dependencies = {
+      "kana/vim-textobj-user"
+    }
+  },
+  {
+    "tpope/vim-bundler",
+    ft = "ruby"
+  },
+  {
+    "tpope/vim-rails",
+    ft = "ruby"
+  }
 })
 
 {# vim:set filetype=lua: #}
