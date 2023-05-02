@@ -33,3 +33,4 @@
     name: "{{ ansible_user }}"
     role_attr_flags: "SUPERUSER,CREATEDB,CREATEROLE,LOGIN"
     state: present
+
