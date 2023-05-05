@@ -11,6 +11,12 @@ vim.keymap.set('n', '<leader>gt', builtin.git_stash, {})
 
 require('telescope').load_extension('fzf')
 
-vim.api.nvim_create_user_command('Rg', function(opts) builtin.grep_string({ search = opts.args }) end, { nargs = 1 })
+vim.api.nvim_create_user_command(
+  'Rg',
+  function(opts)
+    builtin.grep_string({ search = opts.args })
+  end,
+  { nargs = 1 }
+)
 
-{# vim:set filetype=lua: #}
+-- vim:set filetype=lua:

@@ -20,9 +20,9 @@
     mode: 0755
   with_items:
     - nvim
-    - nvim/autoload
-    - nvim/plugged
-    - nvim/ftplugin
+    - nvim/lua
+    - nvim/lua/core
+    - nvim/lua/plugins
 
 - name: Generate neovim config
   template:
@@ -32,13 +32,21 @@
     group: "{{ ansible_user }}"
     mode: 0644
 
-- name: Generate file type plugins
+- name: Generate lua config files
   template:
-    src: "ftplugin/{{ item }}.lua.j2"
-    dest: "/home/{{ ansible_user }}/.config/nvim/ftplugin/{{ item }}.lua"
+    src: "lua/{{ item }}.lua.j2"
+    dest: "/home/{{ ansible_user }}/.config/nvim/lua/{{ item }}.lua"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
     mode: 0644
   with_items:
-    - elixir
-    - ruby
+    - "plugins/lazy-config"
+    - "core/mappings"
+    - "plugins/mason-config"
+    - "plugins/cmp-config"
+    - "plugins/null-config"
+    - "plugins/fugitive-config"
+    - "plugins/lualine-config"
+    - "plugins/rails-config"
+    - "plugins/projectionist-config"
+    - "plugins/telescope-config"

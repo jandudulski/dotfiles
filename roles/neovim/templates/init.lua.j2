@@ -1,12 +1,13 @@
-{% include "lazy.lua.j2" %}
-{% include "mappings.lua.j2" %}
-{% include "plugins/ale.lua.j2" %}
-{% include "plugins/coc.lua.j2" %}
-{% include "plugins/fugitive.lua.j2" %}
-{% include "plugins/lualine.lua.j2" %}
-{% include "plugins/rails.lua.j2" %}
-{% include "plugins/projectionist.lua.j2" %}
-{% include "plugins/telescope.lua.j2" %}
+require "plugins/lazy-config"
+require "core/mappings"
+require "plugins/mason-config"
+require "plugins/cmp-config"
+require "plugins/null-config"
+require "plugins/fugitive-config"
+require "plugins/lualine-config"
+require "plugins/rails-config"
+require "plugins/projectionist-config"
+require "plugins/telescope-config"
 
 vim.opt.background = 'light'
 vim.opt.list = true
@@ -19,7 +20,7 @@ vim.opt.scrolloff = 3
 vim.opt.showbreak = '↪'
 vim.opt.wrap = true
 vim.opt.linebreak = true
-table.insert(vim.opt.iskeyword, '-')
+vim.opt.iskeyword:append { "-" }
 vim.opt.hidden = true
 vim.opt.undofile = true
 
@@ -39,7 +40,7 @@ vim.opt.copyindent = true
 
 -- Completion
 vim.opt.completeopt = 'menu,menuone,preview,noselect,noinsert'
-table.insert(vim.opt.tags, '.git/tags')
+vim.opt.tags:append { ".git/tags" }
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "ruby", "elixir" },
@@ -53,4 +54,4 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-{# vim:set filetype=lua: #}
+-- vim:set filetype=lua:
