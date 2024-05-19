@@ -44,7 +44,7 @@
     - "core/mappings"
     - "plugins/mason-config"
     - "plugins/cmp-config"
-    - "plugins/null-config"
+    - "plugins/lspconfig-config"
     - "plugins/fugitive-config"
     - "plugins/lualine-config"
     - "plugins/rails-config"
