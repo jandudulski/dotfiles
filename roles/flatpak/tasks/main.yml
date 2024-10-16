@@ -16,11 +16,11 @@
     state: present
   with_items:
     - com.discordapp.Discord
-    - com.getpostman.Postman
     - com.github.tchx84.Flatseal
     - com.heroicgameslauncher.hgl
     - com.slack.Slack
     - com.spotify.Client
+    - com.usebruno.Bruno
     - com.valvesoftware.Steam
     - com.zettlr.Zettlr
     - org.freedesktop.Platform//22.08

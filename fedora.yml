@@ -40,9 +40,9 @@
         - devops
     - role: flatpak
       tags:
-        - flatpak
+        - bruno
         - discord
-        - postman
+        - flatpak
         - slack
         - spotify
         - steam
