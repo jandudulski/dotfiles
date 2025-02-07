@@ -19,3 +19,15 @@
     dest: "/home/{{ ansible_user }}/.default-gems"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
+
+- name: Setup mise config
+  copy:
+    src: config.toml
+    dest: "/home/{{ ansible_user }}/.config/mise/config.toml"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: Install mise completions
+  shell: "mise completion fish > /home/{{ ansible_user }}/.config/fish/completions/mise.fish"
+  ignore_errors: yes
+  changed_when: false
