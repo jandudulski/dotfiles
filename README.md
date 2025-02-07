@@ -17,7 +17,6 @@ Dotfiles managed through ansbile for my Fedora workstation.
 * `set -xU EDITOR /usr/bin/nvim` (will work after restart)
 * `set -xU DOCKER_HOST Unix:///run/user/(id -u)/podman/podman.sock`
 * `rsync -r -l -P` (recursive, copy symlinks, show progress, keep partial transfers)
-* `asdf plugin add elixir ruby erlang python nodejs`
 * install 1Password client
 * enable directories for Zettlr in flatseal
 * download sunsama, setup desktop icon

@@ -26,9 +26,9 @@
         - nvim
         - neovim
         - devtools
-    - role: asdf
+    - role: mise
       tags:
-        - asdf
+        - mise
         - ruby
         - devtools
     - role: git

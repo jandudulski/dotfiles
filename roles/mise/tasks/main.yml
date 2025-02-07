@@ -1,0 +1,21 @@
+---
+- name: Enable mise repository
+  yum_repository:
+    name: mise
+    description: mise
+    baseurl: https://mise.jdx.dev/rpm
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://mise.jdx.dev/rpm/gpg-key.pub
+
+- name: Install mise
+  dnf:
+    name: mise
+    state: present
+
+- name: Setup default gems
+  copy:
+    src: default-gems
+    dest: "/home/{{ ansible_user }}/.default-gems"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"

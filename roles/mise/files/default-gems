@@ -1,6 +1,5 @@
 bundler
 gem-ctags
-rubocop
 standardrb
-starscope
+ruby-lsp
 neovim
